@@ -17,6 +17,24 @@
   --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+[data-theme='dark'] {
+  color-scheme: dark;
+  --primary: #34d399;
+  --primary-hover: #10b981;
+  --primary-light: #064e3b;
+  --danger: #f87171;
+  --danger-hover: #ef4444;
+  --background: #0f172a;
+  --surface: #111827;
+  --text: #f9fafb;
+  --text-muted: #cbd5f5;
+  --text-light: #94a3b8;
+  --border: #1f2937;
+  --border-dark: #374151;
+  --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 6px 12px rgba(0, 0, 0, 0.45);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
