@@ -6,7 +6,7 @@ defineProps({
   }
 })
 
-defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients'])
+defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-backup'])
 </script>
 
 <template>
@@ -21,6 +21,14 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients'])
             <line x1="12" y1="3" x2="12" y2="15"/>
           </svg>
           Import
+        </button>
+        <button class="btn btn-secondary" @click="$emit('export-backup')">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 16 12 21 17 16"/>
+            <line x1="12" y1="3" x2="12" y2="21"/>
+          </svg>
+          Export Backup
         </button>
         <button
           class="btn btn-secondary"

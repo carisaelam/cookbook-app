@@ -148,6 +148,24 @@ async function handleBackfillIngredients() {
   isBackfilling.value = false
 }
 
+function handleExportBackup() {
+  const backup = {
+    exported_at: new Date().toISOString(),
+    recipes: recipes.value || [],
+    categories: categories.value || []
+  }
+
+  const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.download = `cookbook-backup-${backup.exported_at.slice(0, 10)}.json`
+  document.body.appendChild(link)
+  link.click()
+  link.remove()
+  URL.revokeObjectURL(url)
+}
+
 // Initialize
 onMounted(async () => {
   await Promise.all([fetchCategories(), fetchRecipes()])
@@ -160,6 +178,7 @@ onMounted(async () => {
       @add-recipe="handleAddRecipe"
       @import-recipes="showImportModal = true"
       @backfill-ingredients="handleBackfillIngredients"
+      @export-backup="handleExportBackup"
       :is-backfilling="isBackfilling"
     />
 
