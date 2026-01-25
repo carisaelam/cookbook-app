@@ -25,3 +25,6 @@ npm-debug.log*
 
 # Claude
 .claude/
+AGENTS.md
+plans/
+PLAN.md

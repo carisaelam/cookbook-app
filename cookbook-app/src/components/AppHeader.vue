@@ -1,5 +1,12 @@
 <script setup>
-defineEmits(['add-recipe', 'import-recipes'])
+defineProps({
+  isBackfilling: {
+    type: Boolean,
+    default: false
+  }
+})
+
+defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients'])
 </script>
 
 <template>
@@ -14,6 +21,17 @@ defineEmits(['add-recipe', 'import-recipes'])
             <line x1="12" y1="3" x2="12" y2="15"/>
           </svg>
           Import
+        </button>
+        <button
+          class="btn btn-secondary"
+          :disabled="isBackfilling"
+          @click="$emit('backfill-ingredients')"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12a9 9 0 1 1-2.64-6.36"/>
+            <polyline points="21 3 21 9 15 9"/>
+          </svg>
+          {{ isBackfilling ? 'Backfilling...' : 'Backfill Ingredients' }}
         </button>
         <button class="btn btn-primary" @click="$emit('add-recipe')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

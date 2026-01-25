@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 import { useCategories } from './composables/useCategories'
 import { useRecipes } from './composables/useRecipes'
 import { useSearch } from './composables/useSearch'
@@ -27,7 +27,10 @@ const {
   addRecipe,
   updateRecipe,
   deleteRecipe,
-  importRecipes
+  importRecipes,
+  extractIngredientsForRecipe,
+  backfillIngredients,
+  saveIngredientsForRecipe
 } = useRecipes()
 
 const {
@@ -44,6 +47,26 @@ const editingRecipe = ref(null)
 const showDeleteConfirm = ref(false)
 const deletingRecipe = ref(null)
 const showImportModal = ref(false)
+const isBackfilling = ref(false)
+const selectedStatus = ref('all')
+
+function getIngredientsStatus(recipe) {
+  if (recipe.ingredients_status) return recipe.ingredients_status
+  if (Array.isArray(recipe.ingredients) && recipe.ingredients.length) return 'success'
+  if (!recipe.url) return 'failed'
+  return 'pending'
+}
+
+const filteredRecipesByCategory = computed(() => {
+  if (selectedStatus.value === 'all') return recipesByCategory.value
+
+  return recipesByCategory.value
+    .map(group => ({
+      ...group,
+      recipes: group.recipes.filter(recipe => getIngredientsStatus(recipe) === selectedStatus.value)
+    }))
+    .filter(group => group.recipes.length > 0)
+})
 
 // Handlers
 function handleAddRecipe() {
@@ -62,10 +85,15 @@ function handleDeleteClick(recipe) {
 }
 
 async function handleSaveRecipe(recipeData) {
+  let savedRecipe = null
   if (recipeData.id) {
-    await updateRecipe(recipeData.id, recipeData)
+    savedRecipe = await updateRecipe(recipeData.id, recipeData)
   } else {
-    await addRecipe(recipeData)
+    savedRecipe = await addRecipe(recipeData)
+  }
+
+  if (savedRecipe?.url) {
+    await extractIngredientsForRecipe(savedRecipe)
   }
   showRecipeForm.value = false
   editingRecipe.value = null
@@ -104,6 +132,22 @@ async function handleImport(parseResult) {
   await fetchRecipes()
 }
 
+async function handleImportIngredients(recipe) {
+  if (!recipe?.url) return
+  await extractIngredientsForRecipe(recipe)
+}
+
+async function handleSaveIngredients(payload) {
+  if (!payload?.recipe) return
+  await saveIngredientsForRecipe(payload.recipe, payload.ingredients)
+}
+
+async function handleBackfillIngredients() {
+  isBackfilling.value = true
+  await backfillIngredients()
+  isBackfilling.value = false
+}
+
 // Initialize
 onMounted(async () => {
   await Promise.all([fetchCategories(), fetchRecipes()])
@@ -115,6 +159,8 @@ onMounted(async () => {
     <AppHeader
       @add-recipe="handleAddRecipe"
       @import-recipes="showImportModal = true"
+      @backfill-ingredients="handleBackfillIngredients"
+      :is-backfilling="isBackfilling"
     />
 
     <main class="main-content">
@@ -131,6 +177,16 @@ onMounted(async () => {
               {{ totalRecipes }} recipes
             </span>
           </div>
+
+          <div class="status-filter">
+            <label for="status-filter" class="text-muted text-sm">Status</label>
+            <select id="status-filter" v-model="selectedStatus" class="input select">
+              <option value="all">All</option>
+              <option value="success">Ready</option>
+              <option value="pending">Pending</option>
+              <option value="failed">Failed</option>
+            </select>
+          </div>
         </div>
 
         <CategoryFilter
@@ -142,10 +198,12 @@ onMounted(async () => {
 
         <!-- Recipe List -->
         <RecipeList
-          :recipes-by-category="recipesByCategory"
+          :recipes-by-category="filteredRecipesByCategory"
           :loading="recipesLoading || categoriesLoading"
           @edit="handleEditRecipe"
           @delete="handleDeleteClick"
+          @import-ingredients="handleImportIngredients"
+          @save-ingredients="handleSaveIngredients"
         />
       </div>
     </main>
@@ -202,6 +260,16 @@ onMounted(async () => {
   white-space: nowrap;
 }
 
+.status-filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-filter .input {
+  min-width: 160px;
+}
+
 @media (max-width: 640px) {
   .filters-section {
     flex-direction: column;
@@ -210,6 +278,10 @@ onMounted(async () => {
 
   .filter-info {
     text-align: center;
+  }
+
+  .status-filter {
+    width: 100%;
   }
 }
 </style>

@@ -12,7 +12,7 @@ defineProps({
   }
 })
 
-defineEmits(['edit', 'delete'])
+defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 </script>
 
 <template>
@@ -49,6 +49,8 @@ defineEmits(['edit', 'delete'])
             :recipe="recipe"
             @edit="$emit('edit', $event)"
             @delete="$emit('delete', $event)"
+            @import-ingredients="$emit('import-ingredients', $event)"
+            @save-ingredients="$emit('save-ingredients', $event)"
           />
         </div>
       </section>

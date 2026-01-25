@@ -16,6 +16,10 @@ CREATE TABLE IF NOT EXISTS recipes (
   url TEXT DEFAULT '',
   category_id BIGINT REFERENCES categories(id) ON DELETE SET NULL,
   notes TEXT DEFAULT '',
+  ingredients JSONB DEFAULT '[]'::jsonb,
+  ingredients_status TEXT DEFAULT 'pending',
+  ingredients_error TEXT DEFAULT NULL,
+  ingredients_updated_at TIMESTAMPTZ DEFAULT NULL,
   created_at TIMESTAMPTZ DEFAULT NOW(),
   updated_at TIMESTAMPTZ DEFAULT NOW()
 );

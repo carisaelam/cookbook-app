@@ -7,13 +7,38 @@ export function useRecipes() {
   const loading = ref(false)
   const error = ref(null)
 
+  function normalizeRecipe(recipe) {
+    const ingredients = Array.isArray(recipe.ingredients) ? recipe.ingredients : []
+    const status = recipe.ingredients_status
+      || (ingredients.length ? 'success' : (recipe.url ? 'pending' : 'failed'))
+    const ingredientsError = recipe.ingredients_error ?? (recipe.url ? null : 'Missing URL')
+
+    return {
+      ...recipe,
+      ingredients,
+      ingredients_status: status,
+      ingredients_error: ingredientsError
+    }
+  }
+
+  function updateLocalRecipe(id, updates) {
+    const index = recipes.value.findIndex(r => r.id === id)
+    if (index === -1) return null
+
+    recipes.value[index] = normalizeRecipe({
+      ...recipes.value[index],
+      ...updates
+    })
+    return recipes.value[index]
+  }
+
   async function fetchRecipes() {
     loading.value = true
     error.value = null
 
     // Demo mode: use local data
     if (!isSupabaseConfigured) {
-      recipes.value = [...demoRecipes]
+      recipes.value = demoRecipes.map(normalizeRecipe)
       loading.value = false
       return
     }
@@ -31,7 +56,7 @@ export function useRecipes() {
         .order('name', { ascending: true })
 
       if (fetchError) throw fetchError
-      recipes.value = data || []
+      recipes.value = (data || []).map(normalizeRecipe)
     } catch (e) {
       error.value = e.message
       console.error('Error fetching recipes:', e)
@@ -46,14 +71,14 @@ export function useRecipes() {
     // Demo mode
     if (!isSupabaseConfigured) {
       const category = demoCategories.find(c => c.id === recipe.category_id)
-      const newRecipe = {
+      const newRecipe = normalizeRecipe({
         id: getNextRecipeId(),
         name: recipe.name,
         url: recipe.url || '',
         category_id: recipe.category_id,
         notes: recipe.notes || '',
         categories: category ? { id: category.id, name: category.name } : null
-      }
+      })
       recipes.value.push(newRecipe)
       return newRecipe
     }
@@ -77,8 +102,9 @@ export function useRecipes() {
         .single()
 
       if (insertError) throw insertError
-      recipes.value.push(data)
-      return data
+      const normalized = normalizeRecipe(data)
+      recipes.value.push(normalized)
+      return normalized
     } catch (e) {
       error.value = e.message
       console.error('Error adding recipe:', e)
@@ -91,20 +117,14 @@ export function useRecipes() {
 
     // Demo mode
     if (!isSupabaseConfigured) {
-      const index = recipes.value.findIndex(r => r.id === id)
-      if (index !== -1) {
-        const category = demoCategories.find(c => c.id === updates.category_id)
-        recipes.value[index] = {
-          ...recipes.value[index],
-          name: updates.name,
-          url: updates.url || '',
-          category_id: updates.category_id,
-          notes: updates.notes || '',
-          categories: category ? { id: category.id, name: category.name } : null
-        }
-        return recipes.value[index]
-      }
-      return null
+      const category = demoCategories.find(c => c.id === updates.category_id)
+      return updateLocalRecipe(id, {
+        name: updates.name,
+        url: updates.url || '',
+        category_id: updates.category_id,
+        notes: updates.notes || '',
+        categories: category ? { id: category.id, name: category.name } : null
+      })
     }
 
     try {
@@ -127,12 +147,7 @@ export function useRecipes() {
         .single()
 
       if (updateError) throw updateError
-
-      const index = recipes.value.findIndex(r => r.id === id)
-      if (index !== -1) {
-        recipes.value[index] = data
-      }
-      return data
+      return updateLocalRecipe(id, data)
     } catch (e) {
       error.value = e.message
       console.error('Error updating recipe:', e)
@@ -177,14 +192,14 @@ export function useRecipes() {
         // Demo mode
         if (!isSupabaseConfigured) {
           const category = demoCategories.find(c => c.id === categoryId)
-          const newRecipe = {
+          const newRecipe = normalizeRecipe({
             id: getNextRecipeId(),
             name: recipe.name,
             url: recipe.url || '',
             category_id: categoryId,
             notes: recipe.notes || '',
             categories: category ? { id: category.id, name: category.name } : null
-          }
+          })
           recipes.value.push(newRecipe)
           results.success++
           continue
@@ -219,6 +234,130 @@ export function useRecipes() {
     return results
   }
 
+  async function extractIngredientsForRecipe(recipe) {
+    if (!recipe?.url) {
+      return updateLocalRecipe(recipe?.id, {
+        ingredients_status: 'failed',
+        ingredients_error: 'Missing URL',
+        ingredients_updated_at: new Date().toISOString()
+      })
+    }
+
+    updateLocalRecipe(recipe.id, {
+      ingredients_status: 'pending',
+      ingredients_error: null
+    })
+
+    if (!isSupabaseConfigured) {
+      return updateLocalRecipe(recipe.id, {
+        ingredients_status: 'failed',
+        ingredients_error: 'Supabase not configured.',
+        ingredients_updated_at: new Date().toISOString()
+      })
+    }
+
+    try {
+      const { data, error: invokeError } = await supabase.functions.invoke('extract-ingredients', {
+        body: { url: recipe.url }
+      })
+
+      if (invokeError) {
+        throw invokeError
+      }
+
+      const ingredients = Array.isArray(data?.ingredients) ? data.ingredients : []
+      const status = ingredients.length ? 'success' : 'failed'
+      const ingredientsError = status === 'success' ? null : (data?.error || 'No ingredients found.')
+
+      const { data: updated, error: updateError } = await supabase
+        .from('recipes')
+        .update({
+          ingredients,
+          ingredients_status: status,
+          ingredients_error: ingredientsError,
+          ingredients_updated_at: new Date().toISOString()
+        })
+        .eq('id', recipe.id)
+        .select(`
+          *,
+          categories (
+            id,
+            name
+          )
+        `)
+        .single()
+
+      if (updateError) throw updateError
+
+      return updateLocalRecipe(recipe.id, updated)
+    } catch (e) {
+      const message = e?.message || 'Ingredient extraction failed.'
+      return updateLocalRecipe(recipe.id, {
+        ingredients_status: 'failed',
+        ingredients_error: message,
+        ingredients_updated_at: new Date().toISOString()
+      })
+    }
+  }
+
+  async function saveIngredientsForRecipe(recipe, ingredients) {
+    const normalized = Array.isArray(ingredients)
+      ? ingredients.map(item => String(item).trim()).filter(Boolean)
+      : []
+
+    if (!isSupabaseConfigured) {
+      return updateLocalRecipe(recipe.id, {
+        ingredients: normalized,
+        ingredients_status: normalized.length ? 'success' : 'failed',
+        ingredients_error: normalized.length ? null : 'No ingredients provided.',
+        ingredients_updated_at: new Date().toISOString()
+      })
+    }
+
+    try {
+      updateLocalRecipe(recipe.id, {
+        ingredients: normalized,
+        ingredients_status: normalized.length ? 'success' : 'failed',
+        ingredients_error: normalized.length ? null : 'No ingredients provided.',
+        ingredients_updated_at: new Date().toISOString()
+      })
+
+      const { data: updated, error: updateError } = await supabase
+        .from('recipes')
+        .update({
+          ingredients: normalized,
+          ingredients_status: normalized.length ? 'success' : 'failed',
+          ingredients_error: normalized.length ? null : 'No ingredients provided.',
+          ingredients_updated_at: new Date().toISOString()
+        })
+        .eq('id', recipe.id)
+        .select(`
+          *,
+          categories (
+            id,
+            name
+          )
+        `)
+        .single()
+
+      if (updateError) throw updateError
+      return updateLocalRecipe(recipe.id, updated)
+    } catch (e) {
+      const message = e?.message || 'Failed to save ingredients.'
+      return updateLocalRecipe(recipe.id, {
+        ingredients_status: 'failed',
+        ingredients_error: message
+      })
+    }
+  }
+
+  async function backfillIngredients() {
+    const targets = recipes.value.filter(recipe => recipe.url && recipe.ingredients_status !== 'success')
+    for (const recipe of targets) {
+      await extractIngredientsForRecipe(recipe)
+    }
+  }
+
   return {
     recipes,
     loading,
@@ -227,6 +366,9 @@ export function useRecipes() {
     addRecipe,
     updateRecipe,
     deleteRecipe,
-    importRecipes
+    importRecipes,
+    extractIngredientsForRecipe,
+    backfillIngredients,
+    saveIngredientsForRecipe
   }
 }
