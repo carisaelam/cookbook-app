@@ -52,6 +52,18 @@ const isBackfilling = ref(false)
 const selectedStatus = ref('all')
 const isDemoMode = !isSupabaseConfigured
 const isSavingRecipe = ref(false)
+const theme = ref('light')
+const isDarkMode = computed(() => theme.value === 'dark')
+
+function applyTheme(value) {
+  theme.value = value
+  document.documentElement.setAttribute('data-theme', value)
+  localStorage.setItem('theme', value)
+}
+
+function toggleTheme() {
+  applyTheme(isDarkMode.value ? 'light' : 'dark')
+}
 
 function getIngredientsStatus(recipe) {
   if (recipe.ingredients_status) return recipe.ingredients_status
@@ -176,6 +188,15 @@ function handleExportBackup() {
 
 // Initialize
 onMounted(async () => {
+  const savedTheme = localStorage.getItem('theme')
+  if (savedTheme === 'light' || savedTheme === 'dark') {
+    applyTheme(savedTheme)
+  } else if (window.matchMedia?.('(prefers-color-scheme: dark)').matches) {
+    applyTheme('dark')
+  } else {
+    applyTheme('light')
+  }
+
   await Promise.all([fetchCategories(), fetchRecipes()])
 })
 </script>
@@ -187,8 +208,10 @@ onMounted(async () => {
       @import-recipes="showImportModal = true"
       @backfill-ingredients="handleBackfillIngredients"
       @export-backup="handleExportBackup"
+      @toggle-theme="toggleTheme"
       :is-demo-mode="isDemoMode"
       :is-backfilling="isBackfilling"
+      :theme="theme"
     />
 
     <main class="main-content">
