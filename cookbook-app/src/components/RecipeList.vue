@@ -25,11 +25,6 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 
     <!-- Empty state -->
     <div v-else-if="recipesByCategory.length === 0" class="empty-state">
-      <div class="empty-icons" aria-hidden="true">
-        <span>🧁</span>
-        <span>🍜</span>
-        <span>🥑</span>
-      </div>
       <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
         <path d="M12 2L2 7l10 5 10-5-10-5z"/>
         <path d="M2 17l10 5 10-5"/>
@@ -81,21 +76,6 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 .empty-state svg {
   color: var(--text-light);
   margin-bottom: 1rem;
-}
-
-.empty-icons {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-}
-
-.empty-icons span {
-  background: var(--surface);
-  border-radius: 999px;
-  padding: 0.35rem 0.5rem;
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow);
 }
 
 .empty-state h3 {
