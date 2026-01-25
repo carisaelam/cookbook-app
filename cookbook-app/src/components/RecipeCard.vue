@@ -46,6 +46,7 @@ function formatUpdatedAt(value) {
 
 const isEditingIngredients = ref(false)
 const manualIngredients = ref('')
+const isIngredientsOpen = ref(false)
 
 function hasIngredients(recipe) {
   return Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0
@@ -56,6 +57,7 @@ function toggleIngredientsEditor() {
     manualIngredients.value = hasIngredients(props.recipe)
       ? props.recipe.ingredients.join('\n')
       : ''
+    isIngredientsOpen.value = true
   }
   isEditingIngredients.value = !isEditingIngredients.value
 }
@@ -116,11 +118,27 @@ function saveIngredients() {
         <p v-if="getIngredientsStatus(recipe) === 'failed' && recipe.ingredients_error" class="text-muted text-xs">
           {{ recipe.ingredients_error }}
         </p>
-        <ul v-if="Array.isArray(recipe.ingredients) && recipe.ingredients.length" class="ingredients-list text-sm">
-          <li v-for="(item, index) in recipe.ingredients" :key="`${recipe.id}-ingredient-${index}`">
-            {{ item }}
-          </li>
-        </ul>
+        <button
+          class="ingredients-toggle text-sm"
+          type="button"
+          :aria-expanded="isIngredientsOpen"
+          :aria-controls="`ingredients-panel-${recipe.id}`"
+          @click="isIngredientsOpen = !isIngredientsOpen"
+        >
+          <span class="ingredients-toggle-label">Ingredients</span>
+          <span class="text-muted text-xs">{{ isIngredientsOpen ? 'Hide' : 'Show' }}</span>
+        </button>
+        <div v-if="isIngredientsOpen" :id="`ingredients-panel-${recipe.id}`" class="ingredients-panel">
+          <ul
+            v-if="Array.isArray(recipe.ingredients) && recipe.ingredients.length"
+            class="ingredients-list text-sm"
+          >
+            <li v-for="(item, index) in recipe.ingredients" :key="`${recipe.id}-ingredient-${index}`">
+              {{ item }}
+            </li>
+          </ul>
+          <p v-else class="text-muted text-xs">No ingredients yet.</p>
+        </div>
 
         <button
           class="btn btn-ghost btn-sm ingredients-edit-btn"
@@ -273,6 +291,27 @@ function saveIngredients() {
 
 .ingredients-list li + li {
   margin-top: 0.2rem;
+}
+
+.ingredients-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0;
+  background: none;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.ingredients-toggle:hover {
+  color: var(--primary);
+}
+
+.ingredients-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .ingredients-edit-btn {
