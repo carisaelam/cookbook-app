@@ -116,6 +116,22 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
 .header-actions {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .app-title {
+    flex: 1 1 100%;
+  }
+
+  .header-actions {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -125,7 +141,18 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
   }
 
   .header-actions {
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+  }
+
+  .header-actions .btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    scroll-snap-align: start;
   }
 }
 </style>
