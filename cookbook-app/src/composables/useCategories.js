@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 import { supabase, isSupabaseConfigured } from '../lib/supabase'
 import { demoCategories, getNextCategoryId } from '../lib/demoData'
+import { loadSeedData } from '../lib/demoSeed'
 
 export function useCategories() {
   const categories = ref([])
@@ -13,7 +14,12 @@ export function useCategories() {
 
     // Demo mode: use local data
     if (!isSupabaseConfigured) {
-      categories.value = [...demoCategories]
+      const seed = await loadSeedData()
+      if (seed && Array.isArray(seed.categories)) {
+        categories.value = seed.categories
+      } else {
+        categories.value = [...demoCategories]
+      }
       loading.value = false
       return
     }

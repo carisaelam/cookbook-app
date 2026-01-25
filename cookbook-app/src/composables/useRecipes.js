@@ -1,6 +1,7 @@
 import { ref } from 'vue'
 import { supabase, isSupabaseConfigured } from '../lib/supabase'
 import { demoRecipes, demoCategories, getNextRecipeId } from '../lib/demoData'
+import { loadSeedData } from '../lib/demoSeed'
 
 export function useRecipes() {
   const recipes = ref([])
@@ -38,7 +39,12 @@ export function useRecipes() {
 
     // Demo mode: use local data
     if (!isSupabaseConfigured) {
-      recipes.value = demoRecipes.map(normalizeRecipe)
+      const seed = await loadSeedData()
+      if (seed && Array.isArray(seed.recipes)) {
+        recipes.value = seed.recipes.map(normalizeRecipe)
+      } else {
+        recipes.value = demoRecipes.map(normalizeRecipe)
+      }
       loading.value = false
       return
     }

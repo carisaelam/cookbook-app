@@ -3,6 +3,7 @@ import { ref, onMounted, computed } from 'vue'
 import { useCategories } from './composables/useCategories'
 import { useRecipes } from './composables/useRecipes'
 import { useSearch } from './composables/useSearch'
+import { isSupabaseConfigured } from './lib/supabase'
 
 import AppHeader from './components/AppHeader.vue'
 import RecipeSearch from './components/RecipeSearch.vue'
@@ -49,6 +50,7 @@ const deletingRecipe = ref(null)
 const showImportModal = ref(false)
 const isBackfilling = ref(false)
 const selectedStatus = ref('all')
+const isDemoMode = !isSupabaseConfigured
 
 function getIngredientsStatus(recipe) {
   if (recipe.ingredients_status) return recipe.ingredients_status
@@ -179,6 +181,7 @@ onMounted(async () => {
       @import-recipes="showImportModal = true"
       @backfill-ingredients="handleBackfillIngredients"
       @export-backup="handleExportBackup"
+      :is-demo-mode="isDemoMode"
       :is-backfilling="isBackfilling"
     />
 

@@ -1,0 +1,5488 @@
+{
+  "exported_at": "2026-01-25T00:47:42.490Z",
+  "recipes": [
+    {
+      "id": 150,
+      "name": "Acorn Squash with Ground Turkey",
+      "url": "https://www.realfoodwithjessica.com/2019/09/23/paleo-whole30-sausage-stuffed-acorn-squash/",
+      "category_id": 11,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:04.382796+00:00",
+      "ingredients": [
+        "2 medium acorn squash",
+        "1 pound ground turkey",
+        "2 tablespoons garlic oil",
+        "1  teaspoon  salt",
+        "1/4 teaspoon pepper",
+        "1 1/2 teaspoons  dried sage",
+        "1 medium apple, chopped*",
+        "2 tablespoons chopped chives",
+        "2 tablespoons  chopped pecans **"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:04.229+00:00",
+      "categories": {
+        "id": 11,
+        "name": "Turkey"
+      }
+    },
+    {
+      "id": 119,
+      "name": "Airfryer Paprika Chicken",
+      "url": "https://nutrient-matters.com/recipe/air-fryer-paprika-chicken/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:05.990457+00:00",
+      "ingredients": [
+        "6  Chicken thighs",
+        "1 tsp Smoked paprika",
+        "1 tsp Red pepper flakes",
+        "1 tsp Dried parsley",
+        "1/2 tsp Fresh thyme",
+        "1/2 tsp Garlic powder",
+        "5-6  Garlic cloves",
+        "1  Lemon's juice",
+        "1 tbsp Olive oil",
+        "1 tbsp Avocado oil",
+        "1 tsp Salt",
+        "1/2 tsp Black pepper",
+        "3-4  Yellow potatoes",
+        "1 tbsp Avocado oil",
+        "Garlic salt",
+        "1/2 tsp Fresh Thyme leaves"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:05.866+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 91,
+      "name": "Aloo Palak (Spinach Potatoes)",
+      "url": "https://docs.google.com/document/d/1hhXTp1k0Xb4DZV2oGYRmwFd3vPtuxzqpGB2gi92sWtw/edit?usp=sharing",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 152,
+      "name": "Asian Ground Turkey Stir Fry",
+      "url": "",
+      "category_id": 11,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 11,
+        "name": "Turkey"
+      }
+    },
+    {
+      "id": 177,
+      "name": "Avocado White Bean Sandwich",
+      "url": "https://plantbasedrdblog.com/2022/09/high-protein-avocado-white-bean-sandwich/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:08.159387+00:00",
+      "ingredients": [
+        "1, 15 oz can cannellini beans, rinsed and drained",
+        "1 medium avocado",
+        "1 scallion, sliced",
+        "3, quartered marinated artichoke hearts plus more as desired, roughly chopped",
+        "Zest and juice of one small lime or lemon",
+        "1 chili pepper or 1/2 a deseeded jalapeno, finely chopped (optional)",
+        "1 tbsp nutritional yeast",
+        "1 clove garlic, crushed or finely minced",
+        "1 tsp dry oregano",
+        "3 tbsp fresh minced dill",
+        "Salt and pepper to taste",
+        "6 slices of whole grain bread",
+        "1 cup of green lettuce",
+        "Mustard",
+        "Cucumber Slices",
+        "Extra artichoke hearts, optional"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:08.019+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 31,
+      "name": "Bagels",
+      "url": "https://www.alyonascooking.com/whole-wheat-sourdough-bagels/",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:09.33523+00:00",
+      "ingredients": [
+        "1 1/4 cup warm water ((267 grams))",
+        "1 cup  sourdough starter  ((218 grams of active and bubbly starter))",
+        "2 Tbsp honey ((21 grams))",
+        "2 tsp  salt ((10 grams))",
+        "560 grams hard white wheat berries ((about 4 cups of freshly milled flour))",
+        "3 quarts water",
+        "1 Tbsp baking soda",
+        "1  Tbsp  brown sugar"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:09.198+00:00",
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 200,
+      "name": "Baked Salad: Salsa Macha",
+      "url": "https://justinesnacks.com/sunflower-salsa-macha/#recipe",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:10.550409+00:00",
+      "ingredients": [
+        "1 cup avocado oil (divided)",
+        "3-4  large garlic cloves",
+        "1/4 cup peanuts (see Note)",
+        "1/4 cup sunflower seeds",
+        "2  New Mexican chilis (stems and seeds removed)",
+        "2-3  Chipotle Morita chilis (stems and seeds removed)",
+        "2  Arbol chilis (stems and seeds removed)",
+        "1  large Ancho chili (stem and seeds removed)",
+        "1 teaspoon Diamond Crystal kosher salt (use half if using Morton's)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:10.406+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Bean Steak Salad",
+      "url": "https://violetcooks.substack.com/p/grilled-corn-steak-and-peach-dense",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-25T00:17:19.731836+00:00",
+      "ingredients": [
+        "2 ears of corn",
+        "2 tbs avocado oil",
+        "1 lb of flank or bavette steak (you can do up to 1 1/2 lbs, butcher cuts can be inconsistent but this recipe is very forgiving!)",
+        "2 tsp sea salt",
+        "1 pint of cherry tomatoes",
+        "3 peaches",
+        "1/2 a red onion",
+        "1 bunch of cilantro",
+        "1 bunch of chives",
+        "1 ball of fresh burrata to serve",
+        "1 can of white beans",
+        "1 can of chickpeas",
+        "For the Balsamic dressing",
+        "2 tbs balsamic vinegar (I used fig balsamic and it was really good)",
+        "juice of 1 lemon",
+        "1/4 cup olive oil",
+        "1/2 tsp Dijon mustardd",
+        "big pinch of sea salt",
+        "1/2 tsp herbs de Provence",
+        "1 tbs honey",
+        "1 clove of grated garlic"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-25T00:17:19.367+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 61,
+      "name": "Beef Bourguignon",
+      "url": "https://cafedelites.com/beef-bourguignon/#recipe",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:12.687097+00:00",
+      "ingredients": [
+        "1 tablespoons extra-virgin olive oil",
+        "6 ounces bacon (roughly chopped)",
+        "3 pounds beef brisket (trimmed of fat, chuck steak or stewing beef cut into 2-inch chunks)",
+        "1  carrot (large, sliced 1/2-inch thick)",
+        "1  white onion (large, diced)",
+        "6 cloves garlic (minced (divided))",
+        "1 pinch coarse salt",
+        "1 pinch ground pepper",
+        "2 tablespoons flour",
+        "12  pearl onions (small, optional)",
+        "3 cups red wine (like Merlot, Pinot Noir, or a Chianti - for a milder sauce, use only 2 cups of wine)",
+        "2-3 cups beef stock ((if using 2 cups of wine, use 3 cups beef stock))",
+        "2 tablespoons tomato paste",
+        "1  beef bouillon cube (crushed)",
+        "1 teaspoon fresh thyme (finely chopped)",
+        "2 tablespoons fresh parsley (finely chopped, divided)",
+        "2  bay leaves",
+        "1 pound white mushrooms (fresh, small or brown mushrooms ,quartered)",
+        "2 tablespoons butter"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:12.524+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 120,
+      "name": "Beef Empanadas",
+      "url": "https://www.bonappetit.com/recipe/argentinian-beef-empanadas/amp",
+      "category_id": 8,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:13.552051+00:00",
+      "ingredients": [
+        "3 Tbsp. extra-virgin olive oil, divided",
+        "2 lb. ground beef (20% fat)",
+        "2 medium onions, chopped",
+        "2 small red bell peppers, seeded, chopped",
+        "Kosher salt, freshly ground pepper",
+        "3 Tbsp. ground cumin",
+        "2 Tbsp. sweet paprika",
+        "1 Tbsp. dried oregano",
+        "¼ tsp. cayenne pepper",
+        "1½ cups low-sodium chicken stock or broth",
+        "2 tsp. sugar",
+        "½ cup raisins",
+        "3 packages (12 each) Puff Pastry Dough for Turnovers/Empanadas (preferably Goya)",
+        "½ cup pitted green olives (Picholine or Spanish), rinsed well, cut in half lengthwise, divided"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:13.4+00:00",
+      "categories": {
+        "id": 8,
+        "name": "Steak/Beef"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Blueberry Corn and Avocado Chopped Salad",
+      "url": "https://www.gimmesomeoven.com/blueberry-corn-and-avocado-chopped-salad/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:14.223509+00:00",
+      "ingredients": [
+        "9 ounces Romaine lettuce, chopped",
+        "5 ounces crumbled feta cheese",
+        "1 large avocado, peeled, pitted and diced",
+        "1 pint (2 cups) blueberries",
+        "1 cup chopped fresh basil leaves",
+        "1 cup chopped toasted almonds",
+        "3/4 cup whole-kernel corn",
+        "1/2 cup finely-diced red onion",
+        "1/3 cup olive oil",
+        "3 tablespoons lemon juice",
+        "1 teaspoon Dijon mustard",
+        "1 clove garlic, minced",
+        "1 teaspoon sea salt",
+        "1/2 teaspoon coarse black pepper"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:14.059+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 35,
+      "name": "Blueberry Muffin Cookie Skillet",
+      "url": "",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 188,
+      "name": "Blueberry Scones",
+      "url": "https://www.bonappetit.com/recipe/easy-blueberry-cream-scones",
+      "category_id": 14,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:16.972944+00:00",
+      "ingredients": [
+        "1 lemon",
+        "⅓ cup plus 2 Tbsp. sugar",
+        "2 cups all-purpose flour, plus more for dusting",
+        "1 cup plus 2 Tbsp. old-fashioned oats",
+        "2½ tsp. baking powder",
+        "½ tsp. kosher salt",
+        "1⅓ cups plus 1 Tbsp. chilled heavy cream",
+        "2 Tbsp. honey",
+        "1 cup frozen blueberries, preferably wild",
+        "1 large egg yolk"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:16.824+00:00",
+      "categories": {
+        "id": 14,
+        "name": "Desserts"
+      }
+    },
+    {
+      "id": 77,
+      "name": "Boursin Fig Dip",
+      "url": "https://docs.google.com/document/d/15VQ4PGd12u4LkQmsUic53cM2UiB-8mKkLnQYVupZ5dY/edit?usp=sharing",
+      "category_id": 5,
+      "notes": "TikTok",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 5,
+        "name": "Apps"
+      }
+    },
+    {
+      "id": 83,
+      "name": "Broccoli Salad",
+      "url": "https://minimalistbaker.com/creamy-vegan-broccoli-salad-mayo-free",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:19.176322+00:00",
+      "ingredients": [
+        "3/4 cup coconut bacon",
+        "7 cups chopped broccoli  ((~2 small heads broccoli as recipe is written))",
+        "1/2 cup roasted salted sunflower seeds  ((or sub other salted nut of choice))",
+        "1/2 cup finely diced red onion or shallot",
+        "1/4 cup dried cranberries or currants  ((unsweetened // or sub chopped pitted dates))",
+        "7 Tbsp cashew butter",
+        "2 Tbsp maple syrup",
+        "3 Tbsp apple cider vinegar",
+        "1/2 tsp sea salt  ((plus more to taste))",
+        "1 pinch black pepper  ((plus more to taste))",
+        "3-4 Tbsp water"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:19.036+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Brussel Sprout Salad",
+      "url": "https://jenneatsgoood.com/roasted-brussels-sprouts-salad-with-maple-tahini-dressing/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-25T00:29:58.976247+00:00",
+      "ingredients": [
+        "3/4 cup dry white or tricolor quinoa",
+        "10 ounces shaved brussels sprouts",
+        "olive oil",
+        "kosher salt",
+        "ground black pepper",
+        "6 ounces shredded curly or tuscan kale (about packed 4 cups)",
+        "1  honeycrisp apple, 1/4-inch dice",
+        "2/3 cup pomegranate arils (seeds)",
+        "1/2 cup chopped  walnuts",
+        "4 ounces crumbled goat cheese",
+        "1/4 cup tahini",
+        "juice of 1 lemon (about 3 tablespoons)",
+        "2 tablespoons apple cider vinegar",
+        "2 tablespoons pure maple syrup",
+        "2 tablespoons olive oil",
+        "1 tablespoon dijon mustard",
+        "1 teaspoon kosher salt",
+        "1/2 teaspoon ground black pepper",
+        "1/2 teaspoon garlic powder"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-25T00:29:58.857+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 195,
+      "name": "Bulgogi Bean Salad",
+      "url": "https://mishkamakesfood.substack.com/p/bulgogi-bean-salad-with-scallion",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:21.480567+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:21.206+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 158,
+      "name": "Butternut Squash and Brussels Miso Bowl",
+      "url": "https://minimalistbaker.com/butternut-squash-miso-brussels-sprouts-nourish-bowl/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:23.527159+00:00",
+      "ingredients": [
+        "2 cups cooked cooled grains",
+        "2 Tbsp slivered almonds",
+        "1 Tbsp coconut aminos",
+        "2 cups baby spinach  ((or other leafy green))",
+        "1/2 batch Roasted Butternut Squash ((no curry powder // as recipe is written, ~3.5 cups cubed butternut squash))",
+        "2 ½ cups Brussels sprouts, browned outer leaves removed, large stalks trimmed off, halved ((quartered if very large in size))",
+        "1 tsp avocado oil ((or other neutral-flavored cooking fat that can withstand high heat))",
+        "1 healthy pinch  sea salt and black pepper",
+        "3 medium cloves garlic, skin removed and smashed or roughly chopped",
+        "1 ½ tsp miso paste",
+        "1 Tbsp rice vinegar ((or sub apple cider or white wine vinegar))",
+        "1 ½ tsp maple syrup",
+        "2 Tbsp tahini",
+        "1-2 tsp maple syrup",
+        "2 cloves garlic  ((use less for less intense garlic flavor))",
+        "2 Tbsp water",
+        "2 Tbsp coconut aminos"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:23.392+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 69,
+      "name": "Butternut Squash Curry",
+      "url": "https://themodernproper.com/slow-cooker-chicken-pumpkin-curry",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:24.747402+00:00",
+      "ingredients": [
+        "1 (14-ounce) can full-fat coconut milk, shaken",
+        "2 tablespoons red curry paste",
+        "1 tablespoon fish sauce",
+        "1 tablespoon soy sauce or tamari",
+        "1 tablespoon light brown sugar",
+        "1 ½-2 pounds sugar pie pumpkin or butternut squash, cut into ¾-inch pieces (about 4 cups) or 2 (14-ounce) cans pumpkin puree",
+        "1 ½ pounds boneless skinless chicken breast",
+        "1 teaspoon kosher salt",
+        "1 red bell pepper, sliced",
+        "4 cups loosely packed baby spinach",
+        "1 tablespoon fresh lime juice (from 1 lime)",
+        "Cooked rice",
+        "Lime wedges",
+        "Minced fresh cilantro",
+        "Toasted cashews"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:24.607+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Butternut Squash Nourish Bowl",
+      "url": "https://minimalistbaker.com/butternut-squash-miso-brussels-sprouts-nourish-bowl/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:25.969247+00:00",
+      "ingredients": [
+        "2 cups cooked cooled grains",
+        "2 Tbsp slivered almonds",
+        "1 Tbsp coconut aminos",
+        "2 cups baby spinach  ((or other leafy green))",
+        "1/2 batch Roasted Butternut Squash ((no curry powder // as recipe is written, ~3.5 cups cubed butternut squash))",
+        "2 ½ cups Brussels sprouts, browned outer leaves removed, large stalks trimmed off, halved ((quartered if very large in size))",
+        "1 tsp avocado oil ((or other neutral-flavored cooking fat that can withstand high heat))",
+        "1 healthy pinch  sea salt and black pepper",
+        "3 medium cloves garlic, skin removed and smashed or roughly chopped",
+        "1 ½ tsp miso paste",
+        "1 Tbsp rice vinegar ((or sub apple cider or white wine vinegar))",
+        "1 ½ tsp maple syrup",
+        "2 Tbsp tahini",
+        "1-2 tsp maple syrup",
+        "2 cloves garlic  ((use less for less intense garlic flavor))",
+        "2 Tbsp water",
+        "2 Tbsp coconut aminos"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:25.835+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 168,
+      "name": "Butternut Squash Orzo with Mushrooms",
+      "url": "",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 123,
+      "name": "Carne Asada",
+      "url": "https://www.gimmesomeoven.com/carne-asada/",
+      "category_id": 8,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:27.22186+00:00",
+      "ingredients": [
+        "1 1/2 to 2 pounds flank steak",
+        "5 garlic cloves, minced",
+        "1 lime, juiced",
+        "1 orange, juiced",
+        "1 jalapeño, cored and finely minced (optional)",
+        "1/2 cup finely-chopped fresh cilantro",
+        "1/4 cup avocado oil (or olive oil)",
+        "1 teaspoon chili powder",
+        "1 teaspoon ground cumin",
+        "1/2 teaspoon dried oregano",
+        "coarse sea salt and black pepper, to taste"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:27.063+00:00",
+      "categories": {
+        "id": 8,
+        "name": "Steak/Beef"
+      }
+    },
+    {
+      "id": 104,
+      "name": "Cashew Chicken",
+      "url": "https://letsdishrecipes.com/easy-cashew-chicken",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:28.74485+00:00",
+      "ingredients": [
+        "1 1/2 pounds boneless, skinless chicken breasts, ( cut into 1-inch cubes)",
+        "1 tablespoon cornstarch",
+        "2 tablespoons vegetable oil",
+        "6 cloves garlic (minced)",
+        "8  scallions (sliced, white and green parts separated)",
+        "2 tablespoons rice vinegar",
+        "3 tablespoons hoisin sauce",
+        "1/4 cup water",
+        "3/4 cup raw cashews (toasted)",
+        "Salt and pepper (to taste)",
+        "White rice (for serving (optional))"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:28.597+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 1,
+      "name": "Cashew Crunch Salad with Sesame Dressing",
+      "url": "https://pinchofyum.com/cashew-crunch-salad-with-sesame-dressing",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:47:54.41641+00:00",
+      "ingredients": [
+        "1/2 head of green cabbage, finely shredded",
+        "1/2 head of purple cabbage, finely shredded",
+        "2 cups carrots, matchstick-cut or shredded",
+        "1 cup fresh cilantro, chopped",
+        "1/2 cup sliced green onion",
+        "2 cups cooked edamame (see FAQs)",
+        "1-2 cup roasted cashews (see notes)",
+        "2 cups crunchy chow mein noodles (optional)",
+        "chicken, shrimp, or any other protein you like",
+        "1/4 cup olive oil (you can use any other oil as well)",
+        "3 tablespoons white vinegar",
+        "2 tablespoons sesame oil &#8211; very important for flavor!",
+        "2 tablespoons sugar",
+        "1 teaspoon salt",
+        "a few shakes of garlic powder",
+        "optional: 1/4 cup Greek yogurt or mayo (more or less to taste &#8211; this changes it from a vinaigrette to more of a creamy dressing)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:47:54.274+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 103,
+      "name": "Chicken Dutch Oven Dates and Lemon",
+      "url": "https://anewsletter.alisoneroman.com/p/onepotchicken",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:22.906818+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:22.729+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 25,
+      "name": "Chicken Kale Salad",
+      "url": "",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 64,
+      "name": "Chicken Noodle Soup",
+      "url": "https://docs.google.com/document/d/1vxTM0hmcIRawlstEjg34BuIIjj6OI09lvQQb7shIcF0/edit?usp=sharing",
+      "category_id": 3,
+      "notes": "cooking school",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 111,
+      "name": "Chicken Pot Pie",
+      "url": "https://allezlefood.com/2019/02/22/chicken-pot-pie-from-salt-fat-acid-heat/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:25.130873+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:24.917+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 68,
+      "name": "Chicken Wonton",
+      "url": "https://pinchofyum.com/chicken-wontons-in-spicy-chili-sauce",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:32.83862+00:00",
+      "ingredients": [
+        "3 tablespoons sesame oil, divided",
+        "8 ounces shiitake mushrooms, sliced",
+        "1 clove garlic, grated",
+        "one 12-ounce bag frozen wontons (I like the mini chicken cilantro ones from Trader Joe&#8217;s or Costco)",
+        "1-2 cups chicken broth (depending on how soupy you like it)",
+        "1/2 cup teriyaki sauce",
+        "1-2 tablespoons chili crisp",
+        "green onions, sliced",
+        "sesame seeds"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:32.696+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 106,
+      "name": "Chicken/Tuna Salad",
+      "url": "",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 50,
+      "name": "Chickpea and Eggplant Curry",
+      "url": "https://www.bonappetit.com/recipe/chickpea-and-eggplant-curry-with-mint-chutney",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:35.412069+00:00",
+      "ingredients": [
+        "2 tablespoons coconut or canola oil",
+        "1 teaspoon cumin seeds",
+        "1 teaspoon mustard seeds",
+        "3 garlic cloves, chopped",
+        "1 tablespoon finely chopped fresh ginger",
+        "1 medium onion, chopped",
+        "Fine sea salt",
+        "1 teaspoon ground turmeric",
+        "Pinch of cayenne pepper",
+        "2 large tomatoes, grated on a large grate, with juices reserved",
+        "1¼ pounds eggplant, cut into ½-inch cubes (about 5 cups)",
+        "1 15-ounce can chickpeas, drained, rinsed, or 1¼ cups drained cooked chickpeas",
+        "4 teaspoons finely chopped jalapeño",
+        "1 shallot, finely chopped",
+        "1 tablespoon fresh lime juice, plus more",
+        "1 teaspoon honey",
+        "2 tablespoons unsweetened flaked coconut",
+        "1 cup coarsely chopped mint leaves",
+        "¼ cup coarsely chopped cilantro leaves",
+        "Freshly ground black pepper",
+        "Plain yogurt (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:35.257+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Chickpea Chopped Kale Salad Adobo Dressing",
+      "url": "https://minimalistbaker.com/chickpea-chopped-kale-salad-with-adobo-dressing/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:36.52095+00:00",
+      "ingredients": [
+        "1 15-ounce can chickpeas  ((rinsed, drained, and thoroughly dried))",
+        "1 ½ Tbsp avocado oil",
+        "2 ½ - 3 Tbsp tandoori masala spice blend* ((see notes for DIY blend))",
+        "1 healthy pinch sea salt",
+        "1/2 batch Candied Pecans  ((or other nuts of choice))",
+        "6 cups chopped kale",
+        "1 Tbsp lime juice",
+        "1 Tbsp avocado or olive oil",
+        "1/2 cup grape tomatoes, halved",
+        "5-Minute Smoky Chipotle Dressing"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:36.383+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 179,
+      "name": "Chickpea/Roasted Red Pepper/Sun-Dried Tomato",
+      "url": "https://justinesnacks.com/sauteed-kale-salad-with-ricotta-salata/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:38.07279+00:00",
+      "ingredients": [
+        "1  15 oz. can of chickpeas (drained and rinsed)",
+        "1/3 cup roasted red peppers",
+        "2 tbsp sun dried tomatoes",
+        "1/2 tsp Diamond Crystal kosher salt (use half if using Morton&#39;s)",
+        "1/2  lemon (for juicing)",
+        "2 tbsp balsamic vinegar",
+        "2 tbsp honey",
+        "2 tbsp olive oil",
+        "5  shallots (sliced and quartered)",
+        "4  garlic cloves (finely grated with a microplane)",
+        "1 tbsp calabrian chili paste (or 1 tsp red pepper flakes)",
+        "3 cups kale (stems removed, chopped)",
+        "4 cups dandelion greens (chopped, can be subbed for swiss chard or spinach)",
+        "Kosher salt and fresh cracked black pepper as needed",
+        "2 slices focaccia (toasted)",
+        "2 oz. ricotta salata (cut into thin slices)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:37.92+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 40,
+      "name": "Chorizo Chili",
+      "url": "https://docs.google.com/document/d/1qZdN3al7COoh2q9uaeucd8mRJGxW9Nfh4-yHke39QCo/edit?usp=sharing",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:26.405948+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:26.225+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 140,
+      "name": "Coconut Curry Salmon",
+      "url": "https://pinchofyum.com/coconut-curry-salmon",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:40.42672+00:00",
+      "ingredients": [
+        "1 1/2 lbs. salmon",
+        "1 tablespoon brown sugar",
+        "1 teaspoon curry powder",
+        "1/2 teaspoon onion powder",
+        "1/2 teaspoon garlic powder",
+        "1/2 teaspoon kosher salt (more for a larger filet)",
+        "1-2 teaspoons olive oil",
+        "1 tablespoon olive oil",
+        "2 cloves garlic (minced)",
+        "1 small knob of ginger (minced)",
+        "1 tablespoon of lemongrass paste",
+        "1 tablespoon brown sugar",
+        "1 tablespoon red curry paste",
+        "1 can coconut milk",
+        "2 tablespoons fish sauce or soy sauce",
+        "lots of lime juice and zest",
+        "3 cups fresh spinach, chopped",
+        "cilantro, basil, mint, or other fresh herbs",
+        "rice"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:40.225+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 197,
+      "name": "Coconut Milk Poached Fish",
+      "url": "https://zenaskitchen.com/coconut-milk-poached-fish/",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:42.06121+00:00",
+      "ingredients": [
+        "4 cod loins or fillets (around 150g each), or any flaky white fish",
+        "1 onion",
+        "4 garlic cloves",
+        "15g fresh ginger, peeled",
+        "1 red chilli (optional)",
+        "2 lemongrass stalks, tough outer layer removed",
+        "vegetable or coconut oil",
+        "2 x 400g tin good-quality coconut milk (ideally, at least 70% coconut extract)",
+        "2 tbsp fish sauce",
+        "1 stock cube (vegetable or chicken)",
+        "1 tsp sugar",
+        "1 spring onion, thinly sliced",
+        "1 small handful fresh coriander, finely chopped",
+        "drizzle of chilli oil (optional)",
+        "cooked rice and lime wedges"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:41.909+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 131,
+      "name": "Coconut Pineapple Shrimp Kebabs",
+      "url": "https://www.wellplated.com/coconut-pineapple-shrimp-skewers/",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:43.19522+00:00",
+      "ingredients": [
+        "1/2  cup light coconut milk*",
+        "4 teaspoons Tabasco Original Red Sauce (or hot sauce of choice)",
+        "2 teaspoons soy sauce",
+        "1/4 cup freshly squeezed orange juice",
+        "1/4 cup freshly squeezed lime juice (from about 2 large limes)",
+        "1 pound large shrimp (31-40 count, peeled and deveined (you can use fresh or frozen, thawed shrimp))",
+        "3/4 pound pineapple chunks (1 inch-cut)",
+        "Canola oil (for grilling)",
+        "Freshly chopped cilantro and/or green onion (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:43.039+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Corn and Chickpea Salad with Miso Jalapeno Tahini",
+      "url": "https://www.bonappetit.com/recipe/corn-and-chickpea-bowl-with-miso-jalapeno-tahini",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:48.979628+00:00",
+      "ingredients": [
+        "1 ¾-inch piece ginger, peeled, finely grated",
+        "2 small jalapeños, seeded, chopped",
+        "2 small garlic cloves, finely grated",
+        "1 cup (packed) cilantro leaves with tender stems",
+        "⅓ cup fresh lime juice",
+        "⅓ cup tahini",
+        "1½ tablespoons miso",
+        "Kosher salt",
+        "3 tablespoons olive oil, divided, plus more for drizzling",
+        "2 garlic cloves, lightly crushed",
+        "1 14-ounce can chickpeas rinsed, drained",
+        "3 ears of corn, shucked, kernels removed",
+        "1 tablespoon za’atar (another flavorful spice blend like curry powder is great here too)",
+        "Kosher salt",
+        "4 cups Little Gem or other small lettuce leaves, torn if large",
+        "Crumbled feta, lime wedges, and cilantro (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:48.747+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 147,
+      "name": "Corn Leek Bacon Pancakes",
+      "url": "https://docs.google.com/document/d/e/2PACX-1vTmESucqOBJuWxkgMq15A32FgR5af7N6KhPPNaKoGUXKz5vuSfZvY-obrQ1-87dGh3pTXoTV7iXVME0/pub",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:27.496544+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:27.349+00:00",
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Cranberry Maple Vinaigrette",
+      "url": "https://docs.google.com/document/d/1ha1BsO_91aFc_4WDyJV92WsLJCquHNnIgxjv64M2oVM/edit?usp=sharing",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:28.575388+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:28.413+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 174,
+      "name": "Creamy Chipotle Beans",
+      "url": "https://plantbasedrdblog.com/2024/08/creamy-chipotle-bean-salad/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:53.071478+00:00",
+      "ingredients": [
+        "1 tbsp avocado oil",
+        "2 ears of corn, kernels cut away from the cob",
+        "1/2 small red onion, diced",
+        "Kosher salt",
+        "2 cloves garlic, grated",
+        "1, 15 oz can pinto beans, drained and rinsed",
+        "1, 15 oz can cannellini beans, drained and rinsed",
+        "1 bell pepper (any color you like), diced",
+        "6 radishes, diced or cut into matchsticks",
+        "1/4 cup julienned sun-dried tomatoes (I used a the type in a jar packed in oil, drained)",
+        "1/2 cup cilantro leaves, minced",
+        "3-4 chipotle peppers from a can packed in adobo sauce",
+        "1 clove garlic, grated",
+        "1/2 cup plain plant-based yogurt",
+        "2 tbsp vegan mayo",
+        "Juice and zest of 1 lime",
+        "1 tbsp agave or maple syrup",
+        "1 tbsp apple cider vinegar",
+        "1/4 tsp or more kosher salt to taste"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:52.856+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 127,
+      "name": "Creamy Lemon Shrimp Pearl Couscous Scampi",
+      "url": "https://docs.google.com/document/d/1lptO9k-0-P106QTomoQbvAdDlTlxrdd-CUhzPMLHlFE/edit?usp=sharing",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:29.956172+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:29.809+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 172,
+      "name": "Creamy Lentil Japanese Sweet Pot Skillet",
+      "url": "https://gatherednutrition.com/one-pan-creamy-lentils-japanese-sweet-potatoes-kale/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:55.43773+00:00",
+      "ingredients": [
+        "2 tbsp olive oil",
+        "1 Japanese sweet potato, peeled and cubed",
+        "1/2 tsp oregano",
+        "1/2 tsp garlic powder",
+        "1/2 tsp onion powder",
+        "1/2 tsp black pepper",
+        "1/2 tsp sea salt, more to taste",
+        "Optional: 1/4 tsp red pepper flakes",
+        "1 cup low sodium broth (I used bone broth)",
+        "1 can of lentils, drained and rinsed",
+        "2 large handful of chopped kale",
+        "1/2 cup heavy cream",
+        "Juice of 1 lemon",
+        "Tahini",
+        "Chili oil",
+        "Pita or sourdough"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:55.251+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 184,
+      "name": "Creamy Nutty Ramen",
+      "url": "",
+      "category_id": 13,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 13,
+        "name": "Noodles"
+      }
+    },
+    {
+      "id": 65,
+      "name": "Creamy Potato Leek Soup",
+      "url": "https://plantbasedrdblog.com/2024/12/creamy-potato-leek-soup-with-garlic-scallion-oil/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:48:56.622178+00:00",
+      "ingredients": [
+        "2 leeks",
+        "2 tbsp extra virgin olive oil",
+        "1 small yellow onion, diced",
+        "6 cloves garlic, minced",
+        "1 tsp ground coriander",
+        "1/2 tsp red pepper flakes (optional)",
+        "12 oz yellow baby potatoes, roughly chopped",
+        "2 cans cannellini beans, drained and rinsed",
+        "5 cups good quality vegetable broth (I used reconstituted Vegetable Better Than Bouillon)",
+        "1 tbsp fresh thyme",
+        "2 sprigs fresh sage",
+        "2 bay leaves",
+        "Zest and juice of 1/2 a lemon or more to taste (I like lemon, so I always use more)",
+        "2 cups baby spinach",
+        "Kosher salt and fresh black pepper to taste",
+        "1/4 cup parsley, minced",
+        "2 green scallions, thinly sliced",
+        "1 garlic clove, grated",
+        "Zest of 1 lemon",
+        "3 tbsp extra virgin olive oil"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:48:56.447+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 66,
+      "name": "Creamy Sausage Gnocchi Soup",
+      "url": "https://www.lemon8-app.com/foodiefromvt/7438788185612698168?region=us",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:31.627204+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:31.446+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 176,
+      "name": "Creamy Tomato and Basil Beans",
+      "url": "https://docs.google.com/document/d/1C4sVYLW3lgrg7jd97AEJpOuqNi5Y-dyKIwMpmIkeYHQ/edit?usp=sharing",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 183,
+      "name": "Creamy Tomato Basil Beans",
+      "url": "https://docs.google.com/document/d/1qXKk7hoIlIA4zblfnIpls1vo0Mj2BzXKjnYmlQ9qj1o/edit?usp=sharing",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 62,
+      "name": "Creamy Wild Rice and Mushroom Soup",
+      "url": "https://gooodeats.com/2023/09/25/creamy-dairy-free-mushroom-wild-rice-soup/#",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 173,
+      "name": "Crispy Buffalo White Bean Tacos",
+      "url": "https://www.youtube.com/watch?v=iGJRMjLcwVM",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:38.107436+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:37.918+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 192,
+      "name": "Crispy Rice Salad",
+      "url": "https://dishedbykate.com/satay-crispy-rice-salad/",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:09.561749+00:00",
+      "ingredients": [
+        "2 cups cooked long-grain rice (or ⅔ cup uncooked rice)",
+        "1 tablespoon sesame oil",
+        "1 tablespoon chilli oil",
+        "1 tablespoon soy sauce (GF soy sauce or tamari)",
+        "2 cooked chicken breasts, chopped or shredded",
+        "1 cup podded edamame beans",
+        "3 scallions, finely sliced",
+        "1 cucumber, diced",
+        "1 tablespoon sesame seeds",
+        "A handful of Thai basil, chopped",
+        "A handful of mint leaves, chopped",
+        "A handful of cilantro, chopped",
+        "⅓ cup roasted peanuts, crushed",
+        "1 red chilli, finely sliced (optional)",
+        "½ cup natural peanut butter",
+        "2 tablespoons soy sauce",
+        "1 tablespoon sesame oil",
+        "2 teaspoons fish sauce",
+        "1 tablespoon sweet chilli jam",
+        "½ cup water"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:09.355+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 73,
+      "name": "Crock Pot Turkey Chili",
+      "url": "https://docs.google.com/document/d/1WOarnYTVYAox_cm5S2ndwq-6Rsj5JJyPf-kSs4QndYw/edit?usp=sharing",
+      "category_id": 4,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:39.473811+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:39.332+00:00",
+      "categories": {
+        "id": 4,
+        "name": "Crock Pot"
+      }
+    },
+    {
+      "id": 30,
+      "name": "Crunchy Sour Dough Bread",
+      "url": "",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 55,
+      "name": "Curried Lentils",
+      "url": "https://www.girlversusdough.com/spiced-lentils-with-poached-eggs/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:12.01315+00:00",
+      "ingredients": [
+        "1 cup dried red lentils",
+        "3 cups vegetable broth (or water)",
+        "1  bay leaf",
+        "2 teaspoons olive oil",
+        "1  vine-ripened tomato (chopped)",
+        "½  large yellow onion (chopped)",
+        "1 teaspoon curry powder",
+        "¼ teaspoon ground cumin",
+        "¼ teaspoon salt",
+        "1 pinch red pepper flakes",
+        "1 teaspoon minced garlic",
+        "1 tablespoon white vinegar",
+        "4  eggs",
+        "Salt and pepper (to taste)",
+        "Plain Greek yogurt and chopped fresh cilantro (for topping)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:11.856+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Curried Quinoa Salad",
+      "url": "https://minimalistbaker.com/curried-quinoa-salad/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:13.340359+00:00",
+      "ingredients": [
+        "1 cup quinoa ((well rinsed and drained))",
+        "1 pinch sea salt",
+        "1 tsp curry powder",
+        "1 ¾ cups water",
+        "4 Tbsp green curry paste",
+        "3 Tbsp tahini",
+        "2 Tbsp lemon juice",
+        "1 Tbsp maple syrup",
+        "1 pinch each sea salt and black pepper",
+        "1-2 Tbsp olive oil ((optional // if avoiding oil, sub water))",
+        "Water  ((to thin))",
+        "1 large red bell pepper ((diced))",
+        "3 whole radishes  ((thinly sliced))",
+        "1 cup fresh chopped cilantro",
+        "1/2 cup pomegranate arils ((optional))",
+        "4 stalks green onion, thinly sliced ((optional))",
+        "2 Tbsp nut or seed of choice ((e.g. hemp seeds or roasted cashews // optional))",
+        "Fresh chopped cilantro ((optional))"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:13.145+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 107,
+      "name": "Curry Chicken Salad",
+      "url": "https://therealfooddietitians.com/curry-chicken-salad/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:14.33547+00:00",
+      "ingredients": [
+        "½ cup mayonnaise*",
+        "1–2 teaspoons curry powder (or to preferred taste)",
+        "1 tablespoon lime juice (½ medium lime)",
+        "Fine salt",
+        "2 cups cooled cooked chicken, diced",
+        "½ medium apple with peel, diced",
+        "1 celery rib, finely diced",
+        "2 tablespoons red onion, finely diced",
+        "¼ cup raisins",
+        "¼ cup roasted and salted cashews, roughly chopped",
+        "2–4 tablespoons chopped fresh cilantro"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:14.169+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 145,
+      "name": "Dan Dan Pappardelle",
+      "url": "https://www.bonappetit.com/recipe/dan-dan-pappardelle",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:17.693298+00:00",
+      "ingredients": [
+        "1 tsp. Sichuan peppercorns",
+        "2 Tbsp. Chinese sesame paste or tahini",
+        "1 Tbsp. black (Chinkiang) vinegar or unseasoned rice vinegar",
+        "2 tsp. sugar",
+        "3 Tbsp. homemade or store-bought chile crisp (such as Fly By Jing or Lao Gan Ma), divided",
+        "2 Tbsp. plus 1 tsp. soy sauce",
+        "1 Tbsp. vegetable oil",
+        "10 oz. ground pork",
+        "½ tsp. five-spice powder",
+        "4 garlic cloves, finely chopped",
+        "1 lb. pappardelle",
+        "Kosher salt",
+        "Crushed unsalted, dry-roasted peanuts and sliced scallions (for serving)",
+        "A spice mill or a mortar and pestle"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:17.54+00:00",
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 155,
+      "name": "Dill Lemon Turkey Meatballs with Orzo",
+      "url": "https://cooking.nytimes.com/recipes/1024124-lemon-dill-meatballs-with-orzo?smid=ck-recipe-iOS-share",
+      "category_id": 11,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:18.760059+00:00",
+      "ingredients": [
+        "1 1/2 cups loosely packed chopped dill (about 3 ounces), plus more for serving",
+        "1 cup full-fat Greek yogurt",
+        "1 large garlic clove, finely grated",
+        "1 lemon, zested and halved",
+        "1 pound ground turkey or chicken",
+        "1 teaspoon fennel seeds (optional)",
+        "Kosher salt (such as Diamond Crystal) and black pepper",
+        "2 tablespoons unsalted butter",
+        "1 cup orzo",
+        "3 anchovy fillets",
+        "4 cups chopped escarole, spinach, mustard greens or baby kale (about 3 ounces)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:18.571+00:00",
+      "categories": {
+        "id": 11,
+        "name": "Turkey"
+      }
+    },
+    {
+      "id": 32,
+      "name": "Discard English Muffins",
+      "url": "https://gatherednutrition.com/sourdough-discard-english-muffins/",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:20.480217+00:00",
+      "ingredients": [
+        "2/3 cup sourdough starter discard",
+        "1 cup whole milk, lukewarm",
+        "1 tbsp honey (if you like a sweeter English muffin, add 1-2 extra tablespoons)",
+        "1 + 1/2 cups bread flour (can sub all-purpose flour)",
+        "1/2 cup whole wheat flour",
+        "1/2 tsp sea salt",
+        "~ 1/4 cup cornmeal, for dusting"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:20.314+00:00",
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 63,
+      "name": "Double Lentil Soup",
+      "url": "https://plantbasedrdblog.com/2024/10/double-lentil-sweet-potato-soup/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:21.594992+00:00",
+      "ingredients": [
+        "1, 15 oz can of small brown lentils",
+        "1 tbsp avocado oil",
+        "1/2 tsp smoked paprika",
+        "1/2 tsp ground coriander",
+        "1/2 tsp garlic powder",
+        "1/4 cup parsley, minced",
+        "Zest of half a lemon",
+        "2 tbsp avocado oil",
+        "1 large leek, trimmed, cleaned and thinly sliced",
+        "1 jalapeno or serrano pepper, thinly sliced (optional)",
+        "Kosher salt",
+        "6 cloves garlic",
+        "1 tbsp tomato paste or 2 tbsp mild harissa paste",
+        "2 medium sweet potatoes (1.5lbs), peeled and cut into irregular 1 inch pieces",
+        "1 tsp ground coriander",
+        "1/2 tsp fennel seeds",
+        "1/4 tsp red pepper flakes (optional)",
+        "1 cup red lentils, rinsed",
+        "4 cups of vegetable broth",
+        "2 tsp fresh thyme leaves (about 10 stems)",
+        "1 bay leaf",
+        "2 cups lacinato kale, stems removed and shredded"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:21.441+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 151,
+      "name": "Egg Roll in a Bowl",
+      "url": "https://allthehealthythings.com/egg-roll-in-a-bowl/",
+      "category_id": 11,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:22.614849+00:00",
+      "ingredients": [
+        "1 teaspoon avocado or coconut oil",
+        "1 pound ground pork",
+        "¼ teaspoon salt (or to taste)",
+        "¼ teaspoon black pepper",
+        "1 ½ tbsp minced ginger",
+        "4 cloves garlic, minced",
+        "4 cups coleslaw mix (shredded green cabbage, purple cabbage, and carrots)",
+        "¼ cup green onion (plus more for garnish)",
+        "¼ cup coconut aminos",
+        "1 ½ tablespoons sesame oil",
+        "½ tablespoon rice vinegar",
+        "1 teaspoon red pepper flakes",
+        "½ cup mayonnaise",
+        "½ tablespoon rice vinegar",
+        "2-3 tablespoons sriracha (start with two and add another tablespoon for more heat)",
+        "Juice of one lime",
+        "1 tablespoon coconut aminos",
+        "1 teaspoon sesame oil"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:22.463+00:00",
+      "categories": {
+        "id": 11,
+        "name": "Turkey"
+      }
+    },
+    {
+      "id": 116,
+      "name": "Elote Chicken Pasta",
+      "url": "https://docs.google.com/document/d/1hgV22g6o6rqmFMg2l-ApBaKJqLhBIWIQOq_8OrRR1uw/edit?usp=sharing",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 48,
+      "name": "Ethiopian Lentils",
+      "url": "https://www.washingtonpost.com/food/2021/04/21/misir-wot-recipe-ethiopian-lentils/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 175,
+      "name": "Falafel Flat Bread",
+      "url": "https://docs.google.com/document/d/10EJVkSlwrel361ej0-k13uXTteNNg5rgXAtcCTmnFEY/edit?usp=sharing",
+      "category_id": 12,
+      "notes": "Trader Joes",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 206,
+      "name": "Fave soup",
+      "url": "",
+      "category_id": 3,
+      "notes": "Yeet",
+      "created_at": "2026-01-17T21:19:08.098353+00:00",
+      "updated_at": "2026-01-17T21:19:08.098353+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 201,
+      "name": "Fig Sidecar",
+      "url": "https://joinjules.com/",
+      "category_id": 16,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:43.883933+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:43.734+00:00",
+      "categories": {
+        "id": 16,
+        "name": "Cocktails"
+      }
+    },
+    {
+      "id": 132,
+      "name": "Fish Tacos",
+      "url": "https://www.gimmesomeoven.com/fish-tacos/#tasty-recipes-59652",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:27.658399+00:00",
+      "ingredients": [
+        "1/2 cup plain Greek yogurt (or mayo)",
+        "1 chipotle chile in adobo sauce",
+        "1 tablespoon lime juice",
+        "1/4 teaspoon fine sea salt",
+        "1 cup panko breadcrumbs",
+        "2 teaspoons chili powder*",
+        "1 teaspoon garlic powder",
+        "1 teaspoon ground cumin",
+        "1 teaspoon fine sea salt",
+        "1/2 teaspoon freshly-cracked black pepper",
+        "1 egg, whisked",
+        "1 1/2 pounds firm white fish, such as cod or halibut, cut into 2-inch pieces",
+        "12 corn or flour tortillas, warmed",
+        "2 fresh avocados, peeled, pitted and sliced",
+        "1 batch Cilantro Lime Slaw*",
+        "optional toppings: chopped fresh cilantro, sliced jalapeños, crumbled queso fresco, sliced radishes, sliced red onions, etc."
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:27.482+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 28,
+      "name": "Focaccia Muffins",
+      "url": "https://abrightmoment.com/salted-rosemary-sourdough-focaccia-muffins/#recipe-card",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:44.81489+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:44.656+00:00",
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 36,
+      "name": "Garlicky Tomato Soup with Smashed White Beans",
+      "url": "https://minimalistbaker.com/super-garlicky-tomato-soup-with-smashed-white-beans/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:29.780654+00:00",
+      "ingredients": [
+        "10 medium-large garlic cloves, peeled",
+        "3 Tbsp extra-virgin olive oil or olive oil",
+        "1 tsp red pepper flakes ((omit or reduce for less heat))",
+        "2 Tbsp tomato paste",
+        "2 (15-oz.) cans white beans, slightly drained",
+        "1 (28-oz.) can crushed tomatoes ((organic when possible))",
+        "1 cup vegetable broth ((or water))",
+        "1/2 tsp sea salt ((plus more to taste))",
+        "1-2 tsp maple syrup ((plus more to taste))",
+        "1 (14-oz.) can light coconut milk*, well shaken ((DIVIDED // use full-fat for richer flavor))",
+        "Vegan Parmesan Cheese"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:29.631+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 124,
+      "name": "Ginger Beef and Green Bean Stir Fry",
+      "url": "https://drive.google.com/file/d/1rawB-xXD6pW3H-WVpqWuYJZ6C0_ixDXb/view?usp=sharing",
+      "category_id": 8,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:45.950398+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:45.783+00:00",
+      "categories": {
+        "id": 8,
+        "name": "Steak/Beef"
+      }
+    },
+    {
+      "id": 108,
+      "name": "Gochujang Chicken with Butternut Squash",
+      "url": "https://cooking.nytimes.com/recipes/1020829-sheet-pan-gochujang-chicken-and-roasted-vegetables?smid=ck-recipe-iOS-share",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:32.315878+00:00",
+      "ingredients": [
+        "3 tablespoons gochujang",
+        "2 tablespoons soy sauce",
+        "1 (1-inch) piece fresh ginger, peeled and grated (about 1 tablespoon)",
+        "3 tablespoons neutral oil, like grapeseed or canola, plus more for drizzling",
+        "2 pounds squash, such as butternut, acorn or delicata, unpeeled, seeded and cut into 2-inch pieces (about 5 loose cups)",
+        "1 pound turnips, trimmed and cut into 2-inch pieces (about 3 1/2 loose cups)",
+        "10 scallions, ends trimmed, green and white parts separated, but not chopped",
+        "Kosher salt",
+        "2 1/2 to 3 pounds bone-in, skin-on chicken thighs, drumsticks or breasts, patted dry",
+        "1 bunch radishes (about 10 ounces), trimmed",
+        "2 tablespoons rice vinegar",
+        "1 tablespoon sesame oil (optional)",
+        "Steamed rice (optional)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:32.089+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 93,
+      "name": "Gochujang Crispy Potatoes",
+      "url": "https://lindseyeatsla.com/crispy-smashed-potatoes-with-gochujang-spicy-mayo/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:33.391667+00:00",
+      "ingredients": [
+        "24 ounce baby potatoes",
+        "1/4  cup extra-virgin olive oil",
+        "1 teaspoon gochugaru powder",
+        "1 tablespoon gochujang",
+        "1/3  cup mayo",
+        "1/2 teaspoon rice wine vinegar",
+        "2 tablespoons sriracha (optional)",
+        "1 teaspoon sugar",
+        "Kosher salt and freshly ground black pepper",
+        "​chopped parsley, lemon juice, grated parmesan (for serving, optional)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:33.216+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Greek dressing with turkey meatballs",
+      "url": "https://www.thepalatablelife.com/herby-chicken-meatball-bowl/#recipe",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:34.724568+00:00",
+      "ingredients": [
+        "1 15 oz can chickpeas",
+        "1 tbsp olive oil",
+        "1/2 tsp salt",
+        "1/2 tsp garlic powder",
+        "1/2 tsp onion powder",
+        "1/2 tsp herbs de province (or Italian seasoning)",
+        "2 tbsp parmesan cheese",
+        "1  large sweet potato",
+        "1 tbsp olive oil",
+        "1/2 tsp salt",
+        "1/2 tsp cinnamon",
+        "1/4 tsp cumin",
+        "1 lb ground chicken",
+        "1 cup ricotta cheese",
+        "1  egg",
+        "1/2 cup panko breadcrumbs",
+        "1  shallot (finely chopped)",
+        "2  green onions (finely chopped)",
+        "1/2 cup cilantro (finely chopped)",
+        "1/4 cup dill (finely chopped)",
+        "zest of a lemon",
+        "1/2 tsp salt",
+        "1/2 tsp pepper",
+        "2 tbsp olive oil",
+        "1 cup greek yogurt",
+        "1 cup fresh basil",
+        "1/2 cup fresh dill",
+        "juice of a lemon",
+        "1 tbsp olive oil",
+        "1 tbsp honey",
+        "1  jalapeño (seeds removed and washed)",
+        "2 cloves of garlic",
+        "salt and pepper (to taste)",
+        "4 cups kale"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:34.546+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 138,
+      "name": "Greek Oven Roasted White Fish",
+      "url": "https://thedefineddish.com/oven-baked-greek-inspired-halibut/",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:35.705269+00:00",
+      "ingredients": [
+        "4 [6-8 oz] halibut fillets",
+        "3/4 cup grape tomatoes",
+        "1   large shallot, halved and thinly sliced",
+        "¼ cup torn kalamata olives",
+        "½  lemon, thinly sliced",
+        "1/4 cup extra virgin olive oil",
+        "juice of ½ lemon",
+        "2  garlic cloves, minced",
+        "1 tbsp of fresh oregano leaves loosely chopped",
+        "1/2 tsp dijon mustard",
+        "1 tsp salt",
+        "½ tsp pepper",
+        "¼ cup crumbled feta cheese (*omit for Whole30/Paleo)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:35.47+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 59,
+      "name": "Green Curry Lentil Soup",
+      "url": "https://www.bonappetit.com/recipe/green-curry-lentil-soup",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:36.532752+00:00",
+      "ingredients": [
+        "2 Tbsp. virgin coconut oil",
+        "1 small onion, chopped",
+        "2 garlic cloves, finely chopped",
+        "1 1\" piece peeled ginger, finely chopped",
+        "1 tsp. Diamond Crystal or ½ tsp. Morton kosher salt, plus more",
+        "¼ cup Thai green curry paste",
+        "1 medium sweet potato, peeled, cut into ½\" cubes",
+        "¾ cup brown or green lentils",
+        "4 cups low-sodium chicken or vegetable broth",
+        "1 13.5-oz. can unsweetened coconut milk, shaken well",
+        "4 cups (loosely packed) baby spinach leaves",
+        "½ tsp. (or more) fish sauce",
+        "Small handful cilantro leaves with tender stems and lime wedges (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:36.391+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 54,
+      "name": "Green Curry with Chickpeas and Kale",
+      "url": "https://minimalistbaker.com/1-pot-green-curry-with-chickpeas-kale-and-sweet-potato/.",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:38.369948+00:00",
+      "ingredients": [
+        "1/4 cup water  ((or sub small amount of oil))",
+        "2/3 cup diced or thinly sliced shallot or onion",
+        "1 Tbsp minced fresh ginger",
+        "3 cloves garlic, minced",
+        "4-6 Tbsp green curry paste",
+        "2 medium sweet potatoes, peeled and cubed",
+        "2 Tbsp coconut aminos,  (DIVIDED, plus more to taste (or sub sea salt to taste))",
+        "1 tsp curry powder*  ((or store-bought))",
+        "1 14-oz can light coconut milk",
+        "1/2 cup water or vegetable broth  ((vegetable broth will add more flavor, so go easy with additional salt))",
+        "1 15-oz can chickpeas, rinsed and drained  ((~1 ½ cups drained chickpeas, as original recipe is written))",
+        "1 tsp maple syrup or coconut sugar ((optional // omit for less sugar))",
+        "3 cups chopped kale or other sturdy green ((such as collard greens))",
+        "Cilantro",
+        "Lemon or lime wedges",
+        "Roasted cashews, chopped"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:38.234+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 196,
+      "name": "Green Olive Bean Salad",
+      "url": "https://violetcooks.substack.com/p/turkey-green-olive-dense-bean-salad",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:46.65963+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:46.499+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 80,
+      "name": "Grilled Corn with Hot Honey Lime Dressing",
+      "url": "https://www.bonappetit.com/recipe/grilled-corn-salad-with-hot-honey-lime-dressing",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:45.671129+00:00",
+      "ingredients": [
+        "3 ears of corn, husked",
+        "2 Tbsp. unsalted butter, melted",
+        "1½ tsp. kosher salt, plus more",
+        "Freshly ground black pepper",
+        "3 Tbsp. fresh lime juice",
+        "2 Tbsp. honey",
+        "1½ tsp. Sriracha",
+        "1 tsp. granulated garlic or garlic powder",
+        "1½ avocados, cut into ¾\" pieces",
+        "1 serrano chile, thinly sliced",
+        "½ cup cilantro leaves with tender stems"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:45.503+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 27,
+      "name": "Grilled Corn, Peaches, Steak Dense Bean Salad",
+      "url": "https://violetcooks.substack.com/p/grilled-corn-steak-and-peach-dense",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:47.832346+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:47.667+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Grilled Veggie Kale Salad with Lemon Basil Vinaigrette",
+      "url": "https://docs.google.com/document/d/15Ph1nPheFHgnkVXbhjSeyi_VNJNvxLGuyfYmxq_xaEs/edit",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 57,
+      "name": "Gumbo",
+      "url": "https://www.gimmesomeoven.com/gumbo-recipe/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:48.36963+00:00",
+      "ingredients": [
+        "1 pound andouille sausage, sliced into coins",
+        "2/3 cup vegetable or canola oil",
+        "1 cup all-purpose flour",
+        "2 large bell peppers, cored and diced",
+        "2 large celery stalks, diced",
+        "1 small white onion, peeled and diced",
+        "5 cloves garlic, minced",
+        "6 cups chicken stock",
+        "1 (14 ounce) can fire-roasted tomatoes",
+        "2 cups shredded cooked chicken",
+        "1 cup fresh or frozen chopped okra",
+        "1 tablespoon Creole seasoning",
+        "1 teaspoon dried thyme",
+        "1/2 teaspoon cayenne",
+        "3 bay leaves",
+        "1 pound peeled and deveined raw large shrimp (optional)",
+        "fine sea salt and freshly-cracked black pepper",
+        "white or brown rice, for serving",
+        "toppings: thinly-sliced green onions and/or chopped fresh parsley"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:48.23+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 180,
+      "name": "Harissa Simmered Artichokes on Toast",
+      "url": "https://justinesnacks.com/harissa-simmered-artichokes-on-toast/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:49.842193+00:00",
+      "ingredients": [
+        "2  14 oz. cans of artichoke hearts (drained and rinsed)",
+        "1/3 cup mild harissa",
+        "1 &amp; 1/2 tbsp dark brown sugar",
+        "1 tbsp soy sauce",
+        "1/2 cup water",
+        "1/2 cup vegetable stock",
+        "3 tbsp olive oil",
+        "1/3 cup breadcrumbs",
+        "1 small handful of fresh parsley &amp; dill (roughly chopped)",
+        "1/4 cup of your hummus of choice",
+        "2 slices whole grain bread"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:49.702+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 182,
+      "name": "Harissa Sweet Potato",
+      "url": "https://zenaskitchen.com/harissa-sweet-potatoes/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:51.075187+00:00",
+      "ingredients": [
+        "4 large sweet potatoes",
+        "extra-virgin olive oil",
+        "2 tbsp harissa paste",
+        "2 tbsp maple syrup",
+        "1 lemon, zest and juice",
+        "200g natural yoghurt",
+        "4 tbsp tahini",
+        "small handful fresh coriander, finely chopped",
+        "small handful pomegranate seeds"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:50.93+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 88,
+      "name": "Harissa Sweet Potatoes",
+      "url": "https://cooking.nytimes.com/recipes/1023541-harissa-roasted-sweet-potatoes-and-red-onion?smid=ck-recipe-iOS-share",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:53.376218+00:00",
+      "ingredients": [
+        "3 medium sweet potatoes, washed and trimmed, (about 1 1/2 pounds)",
+        "3 medium red onions, peeled and trimmed (about 1 pound)",
+        "2 tablespoons extra-virgin olive oil",
+        "2 tablespoons harissa paste, plus more for serving",
+        "1 teaspoon ground cumin",
+        "Kosher salt and black pepper",
+        "1/2 lemon",
+        "3 ounces feta, crumbled (optional)",
+        "Handful of cilantro or mint leaves"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:53.18+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 146,
+      "name": "Hash with Veggies and Sausage",
+      "url": "",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 130,
+      "name": "Honey Cilantro Lime Shrimp",
+      "url": "https://www.lecremedelacrumb.com/honey-cilantro-lime-shrimp/",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:54.49574+00:00",
+      "ingredients": [
+        "1 ½ pounds large or jumbo shrimp (peeled, de-veined, and tails removed if desired)",
+        "6 tablespoons butter (melted)",
+        "2 tablespoons low sodium soy sauce",
+        "1 tablespoon fresh squeezed lime juice",
+        "4 tablespoons honey",
+        "3 teaspoons minced garlic",
+        "¼ cup chopped cilantro"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:54.35+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 137,
+      "name": "Honey Sriracha Salmon",
+      "url": "https://www.lecremedelacrumb.com/baked-honey-sriracha-lime-salmon/#wprm-recipe-container-19898",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:55.579424+00:00",
+      "ingredients": [
+        "1 large salmon  (or 4-6 individual (4-6 ounce) fillets)",
+        "salt and pepper to taste  ((for me this was about 1 teaspoon salt, ¼ teaspoon pepper))",
+        "2 tablespoons butter",
+        "⅓ cup honey",
+        "⅓ cup sriracha",
+        "2  limes ((one juiced, one for slicing))",
+        "2 tablespoons soy sauce ((I used low sodium))",
+        "1 teaspoon minced garlic",
+        "1 tablespoon freshly chopped cilantro"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:55.435+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 90,
+      "name": "Hot Honey Brussels Sprouts",
+      "url": "https://www.emilyeatsthings.com/hot-honey-brussels-sprouts/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:57.112466+00:00",
+      "ingredients": [
+        "1 pound Brussels sprouts, halved, stems and outer leaves removed",
+        "3 tablespoons olive oil",
+        "2 tablespoons honey",
+        "2 teaspoons apple cider vinegar",
+        "1 teaspoon crushed red pepper flakes — or less, depending on your spice tolerance. I have a medium spice tolerance and I found these moderately spicy. Adjust to your preference.",
+        "1/2 teaspoon kosher salt",
+        "Freshly ground black pepper",
+        "Shaved Parmesan cheese and chopped chives, for topping"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:56.961+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 114,
+      "name": "Indonesian Peanut Chicken",
+      "url": "https://www.tasteofhome.com/recipes/indonesian-peanut-chicken/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:58.250835+00:00",
+      "ingredients": [
+        "1-1/2 pounds boneless skinless chicken breasts, cut into 1-inch cubes",
+        "1/3 cup chopped onion",
+        "1/3 cup water",
+        "1/4 cup reduced-fat creamy peanut butter",
+        "3 tablespoons chili sauce",
+        "1/4 teaspoon salt",
+        "1/4 teaspoon cayenne pepper",
+        "1/4 teaspoon pepper",
+        "3 cups hot cooked brown rice",
+        "6 tablespoons chopped salted peanuts",
+        "6 tablespoons chopped sweet red pepper",
+        "Julienned green onions, optional"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:58.097+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 181,
+      "name": "Jacket Potato: Tahini Chickpea",
+      "url": "https://www.mob.co.uk/recipes/sweet-potatoes-with-tahini-butter-chickpeas",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:49:59.267004+00:00",
+      "ingredients": [
+        "40g Vegan Butter",
+        "3tbsp Tahini",
+        "0.5tbsp Soy Sauce",
+        "1tsp Maple Syrup",
+        "1tbsp Lime Juice",
+        "4 Sweet Potato",
+        "2x 400g Can Drained Cooked Chickpeas",
+        "150g Kale",
+        "3tbsp Sesame Seeds",
+        "Crispy Chilli Oil",
+        "2 Spring Onion"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:49:59.12+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 47,
+      "name": "Josh's Turkey Coconut Chili",
+      "url": "https://docs.google.com/document/d/14J8O0XzSzHUbdqpikGH2YlRxlg33CsTBOG2yqsBaUPA/edit?usp=sharing",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:49.827399+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:49.673+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Kale and brussels sprouts salad with sweet pot",
+      "url": "https://docs.google.com/document/d/1jb5ZoBJpdDCT_foJlrsxh7sPylzOJ9AdS8RI2eyKEz8/edit?usp=sharing",
+      "category_id": 1,
+      "notes": "TikTok",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Kale Couscous Salad",
+      "url": "https://www.ambitiouskitchen.com/kale-couscous-salad/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:06.042082+00:00",
+      "ingredients": [
+        "For the couscous:",
+        "1 cup pearl couscous",
+        "1 ½ cups water",
+        "½ teaspoon kosher salt",
+        "For the lemon vinaigrette:",
+        "⅓ cup fresh lemon juice",
+        "¼ cup extra-virgin olive oil",
+        "1 teaspoon dijon mustard",
+        "1  garlic clove, grated",
+        "½ teaspoon kosher salt",
+        "½ teaspoon red pepper flakes",
+        "1 teaspoon sugar or honey",
+        "Freshly ground black pepper",
+        "For the salad:",
+        "1  bunch of Tuscan kale, finely chopped",
+        "1  (15 ounce) can chickpeas, drained and rinsed",
+        "⅔ cup Castelvetrano olives, coarsely chopped",
+        "4 ounces feta, crumbled",
+        "½ cup finely chopped fresh parsley",
+        "½  heaping cup pickled red onion, plus more if you love them!!",
+        "Freshly ground salt and pepper, to taste"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:05.883+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Kale Quinoa Salad",
+      "url": "http://dailyburn.com/life/recipes/kale-quinoa-salad/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:51.861507+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:51.681+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 190,
+      "name": "Key Lime Pie Cookies",
+      "url": "https://www.bonappetit.com/recipe/key-lime-pie-thumbprint-cookies",
+      "category_id": 14,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:15.968857+00:00",
+      "ingredients": [
+        "9 graham cracker sheets (about 5 oz.; 1 sleeve)",
+        "¾ cup plus 1 Tbsp. (101 g) all-purpose flour",
+        "1¼ tsp. Diamond Crystal or ¾ tsp. Morton kosher salt",
+        "½ cup (packed; 100 g) light brown sugar",
+        "½ cup (1 stick) unsalted butter, room temperature",
+        "1 large egg",
+        "½ tsp. vanilla extract",
+        "¼ cup (50 g) granulated sugar",
+        "1 large egg yolk",
+        "⅓ cup sweetened condensed milk",
+        "4 tsp. finely grated lime zest, plus more for serving",
+        "2 Tbsp. plus 1½ tsp. fresh lime juice"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:15.813+00:00",
+      "categories": {
+        "id": 14,
+        "name": "Desserts"
+      }
+    },
+    {
+      "id": 167,
+      "name": "Kimchi Stir Fry",
+      "url": "https://healthynibblesandbits.com/kimchi-fried-rice/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:17.187329+00:00",
+      "ingredients": [
+        "1 1/2 tablespoons canola, peanut oil, or vegetable oil",
+        "1 cup diced yellow onions (about 1/2 large onion)",
+        "3 cloves garlic, minced",
+        "1 tablespoon minced ginger",
+        "1 cup kimchi, roughly chopped",
+        "4 1/2 cups day-old jasmine rice",
+        "2  carrots, shredded",
+        "2 tablespoons soy sauce (or use tamari if gluten free)",
+        "1 tablespoon gochujang (optional)",
+        "1 teaspoon sesame oil",
+        "2  scallions, sliced (separate the dark green parts from the light green and white parts)",
+        "black sesame seeds for topping (optional)",
+        "nori strips for topping (optional)",
+        "1 tablespoon olive oil, add more if necessary",
+        "4  large eggs"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:17.042+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 34,
+      "name": "King Cake",
+      "url": "",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 122,
+      "name": "Korean Steak Bowl",
+      "url": "https://www.gimmesomeoven.com/korean-steak-bowls-with-sesame-cucumber-slaw/",
+      "category_id": 8,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:18.116108+00:00",
+      "ingredients": [
+        "1 1/2 pounds flank steak, cut into 1-inch cubes",
+        "fine sea salt and freshly-cracked black pepper",
+        "1 tablespoon avocado oil (or any high-heat oil)",
+        "1-2 tablespoons low-sodium soy sauce",
+        "1 (14-ounce) bag coleslaw",
+        "1 English cucumber, sliced into half moons",
+        "1 cup chopped fresh cilantro",
+        "2/3 cup thinly-sliced green onions",
+        "2 tablespoons rice vinegar",
+        "1 tablespoon low-sodium soy sauce",
+        "1 tablespoon maple syrup",
+        "1 tablespoon toasted sesame oil",
+        "optional: 2 teaspoons toasted sesame seeds",
+        "1/3 cup plain Greek yogurt (or mayo)",
+        "2 tablespoons gochujang paste",
+        "1 1/2 cups white or brown rice"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:17.912+00:00",
+      "categories": {
+        "id": 8,
+        "name": "Steak/Beef"
+      }
+    },
+    {
+      "id": 38,
+      "name": "Leek Sweet Potato Soup",
+      "url": "https://www.lahbco.com/soups/sweet-potato-leek-soup",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:53.200951+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:53.053+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 112,
+      "name": "Lemon and Herb Roasted Chicken Thighs",
+      "url": "https://minimalistbaker.com/lemon-herb-roasted-chicken-thighs/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:20.725604+00:00",
+      "ingredients": [
+        "4 (6-8 oz. each) bone-in skin-on chicken thighs ((pasture-raised, organic when possible))",
+        "2 tsp dried Italian herbs ((or sub 1 tsp dried basil + 1 tsp dried oregano))",
+        "1 tsp sea salt",
+        "1 tsp red pepper flakes  ((optional))",
+        "1/2 tsp black pepper",
+        "1/2 tsp garlic powder",
+        "1 Tbsp olive oil or avocado oil",
+        "1 medium lemon, thinly sliced into rounds",
+        "3-4 Tbsp fresh hardy herbs ((thyme, rosemary, sage // removed from thick stems and torn a bit // optional))"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:20.423+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 44,
+      "name": "Lemony Lentil Soup",
+      "url": "https://www.gimmesomeoven.com/lemony-lentil-soup/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:21.588115+00:00",
+      "ingredients": [
+        "1 tablespoon olive oil",
+        "1 medium white onion, peeled and diced",
+        "2 medium carrots, diced",
+        "5 cloves garlic, peeled and minced",
+        "6 cups vegetable stock (or chicken stock)",
+        "1 1/2 cups red lentils, rinsed and picked over",
+        "2/3 cup whole-kernel corn",
+        "2 teaspoons ground cumin",
+        "1 teaspoon curry powder",
+        "(optional) pinch each of saffron and cayenne",
+        "zest and juice of 1 small lemon",
+        "fine sea salt and freshly-cracked black pepper"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:21.444+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 202,
+      "name": "Limoncello and Elderflower Spritz",
+      "url": "",
+      "category_id": 16,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 16,
+        "name": "Cocktails"
+      }
+    },
+    {
+      "id": 126,
+      "name": "Meat Stuffed Pita",
+      "url": "https://moribyan.com/arayes-meat-stuffed-pita/",
+      "category_id": 8,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 8,
+        "name": "Steak/Beef"
+      }
+    },
+    {
+      "id": 49,
+      "name": "Meatball Stew",
+      "url": "https://themodernproper.com/meatball-stew",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:23.533105+00:00",
+      "ingredients": [
+        "1 ½ pounds ground beef 80/20",
+        "¾ teaspoon garlic powder",
+        "¾ teaspoon onion powder",
+        "2 teaspoons sea salt",
+        "1 ½ teaspoons Italian seasoning",
+        "¼ teaspoon freshly cracked black pepper",
+        "1 large egg",
+        "½ cup bread crumbs",
+        "2 teaspoons Worcestershire sauce",
+        "¼ cup whole milk",
+        "3 tablespoons extra-virgin olive oil",
+        "1 small yellow onion, diced, about 1 cup",
+        "2 large carrots, large dice, about 1 cup",
+        "3 celery ribs, large dice, about 1 cup",
+        "3 garlic cloves, minced",
+        "2 tablespoons tomato paste",
+        "2 teaspoons minced fresh thyme",
+        "6 cups beef stock",
+        "2 teaspoons beef bouillon or better than bouillon",
+        "4 Small Yukon Gold potatoes, cut in 1½-inch pieces",
+        "1 cup fresh green beans, cut into 2-inch pieces",
+        "3 tablespoons cornstarch",
+        "¼ cup cold water",
+        "Flat leaf parsley, for serving"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:23.392+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 156,
+      "name": "Meatballs Standalone Panko",
+      "url": "https://pinchofyum.com/best-anytime-baked-chicken-meatballs",
+      "category_id": 11,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:24.634239+00:00",
+      "ingredients": [
+        "1 pound ground chicken or turkey",
+        "1 egg",
+        "1/2 cup panko breadcrumbs",
+        "1/2 cup grated Parmesan",
+        "2 tablespoons olive oil (optional – makes meatballs more moist and yummy)",
+        "1/2 teaspoon garlic powder",
+        "1/2 teaspoon onion powder",
+        "1/2 teaspoon salt",
+        "black pepper to taste",
+        "additional seasonings optional!"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:24.415+00:00",
+      "categories": {
+        "id": 11,
+        "name": "Turkey"
+      }
+    },
+    {
+      "id": 121,
+      "name": "Meatloaf with Kale Slaw and Mushrooms",
+      "url": "https://natashaskitchen.com/meatloaf-recipe/",
+      "category_id": 8,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:25.600536+00:00",
+      "ingredients": [
+        "2 lbs ground beef (85% or 80% lean*)",
+        "1  med onion ((1 cup), finely chopped)",
+        "1 tsp olive oil",
+        "2  large eggs",
+        "3  garlic cloves (minced)",
+        "2 Tbsp ketchup",
+        "3 Tbsp fresh parsley (finely chopped)",
+        "3/4 cup Panko breadcrumbs (or gluten-free bread crumbs)",
+        "1/3 cup milk",
+        "1 tsp salt (or to taste)",
+        "1 tsp Italian seasoning",
+        "1/2 tsp ground black pepper",
+        "3/4 cup ketchup",
+        "1 ½ tsp white vinegar",
+        "2 Tbsp brown sugar",
+        "1/2 tsp garlic powder",
+        "1/2 tsp onion powder"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:25.442+00:00",
+      "categories": {
+        "id": 8,
+        "name": "Steak/Beef"
+      }
+    },
+    {
+      "id": 162,
+      "name": "Mediterranean Bowl",
+      "url": "https://minimalistbaker.com/the-ultimate-mediterranean-bowl/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:26.842292+00:00",
+      "ingredients": [
+        "1 batch 30-Minute Kale Falafel or Classic Vegan Falafel",
+        "2 cups fresh chopped parsley",
+        "1/2 cup diced tomato",
+        "1/4 cup diced red onion",
+        "2 Tbsp lemon juice",
+        "1 pinch sea salt",
+        "1 Tbsp extra virgin (or regular) olive oil ((optional))",
+        "Tahini Sauce",
+        "Chili Garlic Sauce",
+        "Garlic Dill Sauce",
+        "Hummus (or store-bought)",
+        "Kalamata or green olives, pitted",
+        "Pita / Pita chips / Flatbread"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:26.658+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 105,
+      "name": "Mexican Shredded Chicken",
+      "url": "https://minimalistbaker.com/1-pan-mexican-shredded-chicken/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:28.164261+00:00",
+      "ingredients": [
+        "1/2 tsp sea salt, divided",
+        "1 tsp ground cumin, divided",
+        "1 tsp smoked paprika, divided",
+        "1 tsp chili powder (, divided (NOT cayenne or just ground chilies — see notes*))",
+        "1 Tbsp avocado oil  ((or other neutral oil, or sub water))",
+        "2 (~8 ounce) chicken breasts*, boneless skinless  ((and organic, pasture-raised when possible))",
+        "1 chipotle pepper in adobo sauce  ((omit or reduce for less heat))",
+        "1/4 cup vegetable or chicken broth",
+        "2 Tbsp lime juice",
+        "Fresh cilantro",
+        "White rice"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:28+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 98,
+      "name": "Miso Maple Harvest Bowl with Chicken",
+      "url": "https://www.lahbco.com/greens-n-things/misomapleharvestbowl",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:54.347479+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:54.185+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 171,
+      "name": "Miso Pasta",
+      "url": "https://junandtonic.com/blog/miso-mushroom-pasta?rq=Miso%20pasta",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:55.566581+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:55.409+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 46,
+      "name": "Miso Soup",
+      "url": "https://minimalistbaker.com/15-minute-miso-soup-with-greens-and-tofu/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:31.748875+00:00",
+      "ingredients": [
+        "4 cups vegetable broth ((use dashi for more traditional miso soup // see notes above))",
+        "1 sheet nori ((dried seaweed // optional // cut into large rectangles // 1 sheet yields 1/4 cup))",
+        "3-4 Tbsp white or yellow miso paste",
+        "1/2 cup chopped green chard or other sturdy green",
+        "1/2 cup chopped green onion",
+        "1/4 cup firm tofu ((cubed // use silken tofu for more traditional miso soup))"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:31.585+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Mixed Berry Kale Salad",
+      "url": "https://www.lahbco.com/greens-n-things/berryburratasalad",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:56.878367+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:56.74+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 86,
+      "name": "Moroccan Carrots",
+      "url": "https://minimalistbaker.com/moroccan-spiced-roasted-carrots/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:33.98152+00:00",
+      "ingredients": [
+        "1 lb carrots, greens removed, cut on a diagonal into 1-1 ½ inch pieces  ((1 medium bundle yields ~1 lb))",
+        "2-3 Tbsp avocado oil",
+        "1/4 tsp sea salt",
+        "1 tsp smoked paprika",
+        "1 tsp ground cumin",
+        "1/4 tsp ground ginger",
+        "1/8 tsp ground cinnamon",
+        "1/4 tsp ground turmeric",
+        "1/8 tsp ground cayenne ((optional))",
+        "Zesty Dill Yogurt Sauce",
+        "Za’atar"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:33.837+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 87,
+      "name": "Moroccan Quinoa Power Bowl",
+      "url": "https://letsdishrecipes.com/moroccan-quinoa-power-salad/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:35.641302+00:00",
+      "ingredients": [
+        "1 tablespoon olive oil",
+        "1 cup uncooked quinoa",
+        "1/2 cup shredded carrots (chopped)",
+        "2-3  green onions (chopped)",
+        "1  15 oz. can chickpeas, rinsed and drained",
+        "1 1/2 cups finely chopped kale",
+        "3/4 cup finely chopped broccoli",
+        "2 tablespoons chopped parsley",
+        "1/3 cup dried cranberries",
+        "1/3 cup golden raisins",
+        "1/3 cup toasted pumpkin seeds",
+        "1/4 cup olive oil",
+        "3 tablespoons lemon juice",
+        "1/4 teaspoon cumin",
+        "1 tablespoon honey",
+        "1/2 teaspoon salt",
+        "1/4 teaspoon pepper",
+        "1/4 teaspoon chili powder",
+        "2 cloves garlic (minced)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:35.475+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 92,
+      "name": "Mushroom Miso Rice",
+      "url": "https://www.provecho.bio/@groovyfoodiess/xl-crispy-rice-with-miso-mushrooms",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:37.185728+00:00",
+      "ingredients": [
+        "– 21/2 pounds assorted mushrooms, washed and torn into pieces",
+        "olive oil",
+        "Rice Vinegar",
+        "white sugar",
+        "Soy Sauce + 1 tsp",
+        "scallion, sliced",
+        "large yellow onion, sliced",
+        "of Chinese sausage, cubed",
+        "garlic, sliced",
+        "red pepper (optional)",
+        "short grain white rice",
+        "dry white wine",
+        "mushroom (or vegetable) broth",
+        "+ 2 tablespoons white miso"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:37.011+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 53,
+      "name": "One Pan Red Curry Thin Boi",
+      "url": "https://cookieandkate.com/thai-red-curry-recipe/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:38.179784+00:00",
+      "ingredients": [
+        "1 ¼ cups brown jasmine rice or long-grain brown rice, rinsed",
+        "1 tablespoon coconut oil or olive oil",
+        "1 small white onion, chopped (about 1 cup)",
+        "Pinch of salt, more to taste",
+        "1 tablespoon finely grated fresh ginger (about a 1-inch nub of ginger)",
+        "2 cloves garlic, pressed or minced",
+        "1 red bell pepper, sliced into thin 2-inch long strips",
+        "1 yellow, orange or green bell pepper, sliced into thin 2-inch long strips",
+        "3 carrots, peeled and sliced on the diagonal into ¼-inch thick rounds (about 1 cup)",
+        "2 tablespoons Thai red curry paste*",
+        "1 can (14 ounces) regular coconut milk**",
+        "&frac12; cup water",
+        "1 &frac12; cups packed thinly sliced kale (tough ribs removed first), preferably the Tuscan/lacinato/dinosaur variety",
+        "1 &frac12; teaspoons coconut sugar or turbinado (raw) sugar or brown sugar",
+        "1 tablespoon tamari or soy sauce***",
+        "2 teaspoons rice vinegar or fresh lime juice",
+        "Garnishes/sides: handful of chopped fresh basil or cilantro, optional red pepper flakes, optional sriracha or chili garlic sauce"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:37.982+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 52,
+      "name": "One Pot Red Curry Thick Boi",
+      "url": "https://minimalistbaker.com/easy-1-pot-massaman-curry/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:39.019218+00:00",
+      "ingredients": [
+        "1 batch Crispy Baked Peanut Tofu ((vegan-option))",
+        "1/2 lb. shrimp ((seafood option — wild caught when possible))",
+        "1 large  skinless chicken breast, cubed ((meat option — free-range, local, organic when possible))",
+        "2 Tbsp coconut or avocado oil  ((if avoiding oil, sub water and add more as needed))",
+        "3 medium shallots, thinly sliced  ((or sub 1 small onion))",
+        "1 tsp whole cumin seed ((or sub powder))",
+        "1 tsp whole coriander seed ((or sub powder))",
+        "5 Tbsp red curry paste ((we love Thai Kitchen brand))",
+        "1 ½ cups baby potatoes cut into bite-size pieces",
+        "2 large carrots, peeled and diced 1/4-inch thick",
+        "2 14-oz. cans light fat coconut milk",
+        "1-1 ½ cups water",
+        "1/4 tsp ground cinnamon",
+        "1 dash each cardamom and nutmeg ((if you don't have, omit))",
+        "2-3 Tbsp coconut aminos ((or sub tamari or soy sauce, but start with less as they're saltier))",
+        "1-2 Tbsp maple syrup or coconut sugar ((or sub stevia to taste))",
+        "2 Tbsp peanut butter  ((in place of traditional roasted peanuts — can sub roasted peanuts))",
+        "1-2 Tbsp lime juice ((or lemon))",
+        "Cauliflower Rice, Rice, or Quinoa",
+        "Lime wedges",
+        "Fresh cilantro",
+        "Steamed or curried greens",
+        "Roasted salted peanuts, chopped"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:38.854+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 135,
+      "name": "Orange Maple Glazed Salmon",
+      "url": "https://letsdishrecipes.com/orange-maple-glazed-salmon/",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:41.065889+00:00",
+      "ingredients": [
+        "6  6 oz. salmon fillets",
+        "3 tablespoons maple syrup",
+        "1 tablespoon orange zest",
+        "1 tablespoon orange juice",
+        "1 1/2 teaspoons Dijon mustard",
+        "1 clove garlic (minced)",
+        "1/2 teaspoon salt",
+        "1/2 teaspoon pepper"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:40.903+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 125,
+      "name": "Pad Kra Pao",
+      "url": "https://kwokspots.com/pad-kra-pao-thai-basil-beef/",
+      "category_id": 8,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:42.074828+00:00",
+      "ingredients": [
+        "600 g lean ground beef",
+        "2 tbsp oil",
+        "8 cloves garlic",
+        "2  shallots",
+        "2  birds eye chilies",
+        "1 tbsp regular soy sauce",
+        "½ tbsp dark soy sauce",
+        "1 tbsp oyster sauce",
+        "¾ tbsp fish sauce",
+        "¾ tbsp sugar",
+        "1 large handful Thai basil leaves",
+        "1 large egg"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:41.925+00:00",
+      "categories": {
+        "id": 8,
+        "name": "Steak/Beef"
+      }
+    },
+    {
+      "id": 110,
+      "name": "Pad See Yew (Thai Noodles with Chicken)",
+      "url": "",
+      "category_id": 7,
+      "notes": "TikTok",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 94,
+      "name": "Pan Fried Zucchini with Hot Honey",
+      "url": "https://healthyishfoods.com/pan-fried-zucchini-with-hot-honey-and-feta/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:42.806465+00:00",
+      "ingredients": [
+        "2 medium zucchini",
+        "2-3 tablespoons olive oil (for pan frying the zucchini )",
+        "1 tablespoon honey",
+        "1 tablespoon lemon juice (fresh squeezed )",
+        "¼ cup crumbled feta",
+        "¼ cup pistachios (crushed)",
+        "1-2 tablespoons dill (freshly chopped, remove stems)",
+        "few turns  cracked black pepper"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:42.644+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 161,
+      "name": "Pasta Salad with Butternut Squash and Eggplant",
+      "url": "https://www.lahbco.com/dinner/coconut-curry-orzo?rq=Orzo",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:57.960111+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:57.8+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 159,
+      "name": "Peanut Miso Chickpea \"Chicken\" Salad",
+      "url": "https://www.lahbco.com/dinner/peanutmisochickpeasalad",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:00:59.144335+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:00:58.993+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 118,
+      "name": "Pepperoncini Chicken Salad",
+      "url": "https://docs.google.com/document/d/1SNaqYfkI3MzlcCfGcNHWrrlhOsaCqJF5G02NqXZvre0/edit?usp=sharing",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 178,
+      "name": "Pesto Chickpea Salad",
+      "url": "https://www.lahbco.com/dinner/basilpestochickpeasalad",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:02.228513+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:02.062+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 97,
+      "name": "Pineapple Chicken Thighs with Turmeric Cauliflower",
+      "url": "https://docs.google.com/document/d/1vP9vpZ_U8BuTAlyIfNhCGrdldk1GnyKQvziyEuF4oHE/edit?usp=sharing",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:03.442441+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:03.19+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 100,
+      "name": "Pineapple Salsa Rice and Chicken Bowls",
+      "url": "",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 189,
+      "name": "Pistachio Cake",
+      "url": "https://bromabakery.com/persian-love-cake-cardamom-rose-almond-cake/",
+      "category_id": 14,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:49.592344+00:00",
+      "ingredients": [
+        "1 cup granulated sugar",
+        "1 tablespoon lemon zest",
+        "2 large eggs, room temperature",
+        "¾ cup vegetable (or canola) oil",
+        "2 tablespoons rose water",
+        "1 teaspoon vanilla extract",
+        "1 ½ cups all-purpose flour",
+        "½ cup Super Fine Almond Flour",
+        "2 teaspoons ground cardamom",
+        "1 teaspoon baking powder",
+        "3/4 teaspoon salt",
+        "1 1/2 cups powdered sugar",
+        "1 tablespoon rose water",
+        "1 1/2 tablespoons whole milk",
+        "1/4 cup chopped pistachios",
+        "3 tablespoons rose petals",
+        "2 tablespoons candied ginger (optional, I just felt like it added nice texture)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:49.402+00:00",
+      "categories": {
+        "id": 14,
+        "name": "Desserts"
+      }
+    },
+    {
+      "id": 199,
+      "name": "Pizza Bowls",
+      "url": "",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 43,
+      "name": "Preston's Chili",
+      "url": "",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 187,
+      "name": "Pumpkin Bread",
+      "url": "https://sallysbakingaddiction.com/pumpkin-chocolate-chip-bread/",
+      "category_id": 14,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:50.590474+00:00",
+      "ingredients": [
+        "1 and 3/4 cups (219g) all-purpose flour (spooned &amp; leveled)",
+        "1 teaspoon baking soda",
+        "2 teaspoons ground cinnamon",
+        "1/4 teaspoon ground nutmeg*",
+        "1/4 teaspoon ground cloves*",
+        "1/4 teaspoon ground ginger*",
+        "3/4 teaspoon salt",
+        "2 large eggs, at room temperature",
+        "1/2 cup (100g) granulated sugar",
+        "3/4 cup (150g) packed light or dark brown sugar",
+        "1 and 1/2 cups (340g) pumpkin puree (canned or fresh)",
+        "1/2 cup (120ml) vegetable oil, canola oil, or melted coconut oil",
+        "1/4 cup (60ml) orange juice*",
+        "2/3 cup (120g) semi-sweet chocolate chips*"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:50.425+00:00",
+      "categories": {
+        "id": 14,
+        "name": "Desserts"
+      }
+    },
+    {
+      "id": 186,
+      "name": "Pumpkin Muffins",
+      "url": "https://www.realfoodwithjessica.com/2016/09/07/paleo-pumpkin-muffins/",
+      "category_id": 14,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:51.825077+00:00",
+      "ingredients": [
+        "2 cups almond flour",
+        "1/4 cup coconut flour",
+        "1 teaspoon cinnamon",
+        "1 1/2 teaspoons pumpkin pie spice",
+        "1 teaspoon baking soda",
+        "1/2 teaspoon salt",
+        "1/4 cup melted coconut oil",
+        "1/2 cup maple syrup",
+        "2  eggs (room temperature)",
+        "3/4 cup canned pumpkin",
+        "1 teaspoon vanilla extract",
+        "1/2 cup dairy free mini chocolate chips (optional)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:51.654+00:00",
+      "categories": {
+        "id": 14,
+        "name": "Desserts"
+      }
+    },
+    {
+      "id": 164,
+      "name": "Quiche",
+      "url": "https://www.gimmesomeoven.com/dairy-free-vegetable-quiche-with-eggs/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:52.531057+00:00",
+      "ingredients": [
+        "1 recipe pie crust (you can use the dairy-free recipe below, or a store-bought crust, or go “crustless”)",
+        "1 Tbsp. olive oil",
+        "3 handfuls fresh baby spinach, roughly chopped if desired",
+        "1 small white or yellow onion, chopped",
+        "1 red bell pepper, diced",
+        "5-10 asparagus spears, ends trimmed then chopped into 1-inch pieces",
+        "6 eggs",
+        "3/4 cup unsweetened almond milk (or other non-dairy milk)",
+        "3 Tbsp. all-purpose flour",
+        "1/2 tsp. baking powder",
+        "1/2 tsp. salt",
+        "1/2 tsp. sweet paprika",
+        "1/2 tsp. dried thyme",
+        "1/4 tsp. chipotle powder",
+        "1/8 tsp. black pepper",
+        "1/2 cup vegan butter or shortening",
+        "1/2 tsp. salt",
+        "1 cup all-purpose flour",
+        "3-4 Tbsp. ice water"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:52.377+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 102,
+      "name": "Quinoa Bowls with Chicken and Sauteed Veggies",
+      "url": "",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 165,
+      "name": "Quinoa Patties",
+      "url": "https://www.skinnytaste.com/quinoa-and-spinach-patties/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:50:53.361155+00:00",
+      "ingredients": [
+        "1 cup uncooked quinoa",
+        "2 cups water",
+        "4  eggs (whisked)",
+        "1/3 cup Parmesan cheese*",
+        "3  large scallions (sliced thin)",
+        "3 cloves garlic (minced)",
+        "1/2 teaspoon kosher salt",
+        "1 cup steamed spinach (chopped (frozen is fine))",
+        "1 cup plain breadcrumbs (for GF, be sure to use GF breadcrumbs)",
+        "1 teaspoon olive oil"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:53.192+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 67,
+      "name": "Red Curry Wonton Soup",
+      "url": "https://brendanpang.com.au/recipes/red-curry-wonton-soup-02/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:05.48014+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:05.342+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 45,
+      "name": "Red Lemon Lentil Soup",
+      "url": "https://cooking.nytimes.com/recipes/1016062-red-lentil-soup-with-lemon",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:00.010322+00:00",
+      "ingredients": [
+        "3 tablespoons olive oil, plus more for drizzling",
+        "1 large onion, chopped",
+        "2 garlic cloves, minced",
+        "1 tablespoon tomato paste",
+        "1 teaspoon ground cumin",
+        "Salt and black pepper",
+        "Pinch of chili powder or ground cayenne, plus more to taste",
+        "1 quart chicken or vegetable broth",
+        "1 cup red lentils",
+        "1 large carrot, peeled and diced",
+        "Juice of ½ lemon, more to taste",
+        "3 tablespoons chopped fresh cilantro"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:50:59.849+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 41,
+      "name": "Red Lentil Cashew Tomato Soup",
+      "url": "https://plantyou.com/vegan-tomato-soup-recipe-with-red-lentils-cashews/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:01.572524+00:00",
+      "ingredients": [
+        "1  onion (chopped)",
+        "1  red bell pepper (chopped)",
+        "1 tsp garlic powder",
+        "1/2 tsp red pepper flakes",
+        "3/4 cup red lentils",
+        "1/2 cup cashews",
+        "2 1/4 cups vegetable broth",
+        "2 cups chopped tomatoes (canned or fresh )",
+        "1 handful fresh basil"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:01.383+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 207,
+      "name": "Red Lentil Thai Chili",
+      "url": "https://www.theppk.com/2010/12/red-lentil-thai-chili/",
+      "category_id": 3,
+      "notes": "Janet cooked this for us during Jocelyn's meal train 2026",
+      "created_at": "2026-01-25T00:24:43.461405+00:00",
+      "updated_at": "2026-01-25T00:24:45.904248+00:00",
+      "ingredients": [
+        "Olive oil ((1 teaspoon to 2 tablespoons, however much you feel like using))",
+        "1 pc large yellow onion (diced medium)",
+        "1 pc red bell pepper (seeded and diced medium)",
+        "3 cloves garlic (minced)",
+        "2 tablespoons chili powder",
+        "1 1/2 lbs sweet potatoes (cut into 3/4 inch chunks)",
+        "1 cup red lentils",
+        "1 teaspoon salt",
+        "4 cups vegetable broth",
+        "2 15 oz cans kidney beans (drained and rinsed)",
+        "2 tablespoons Thai red curry paste",
+        "1 15 oz can lowfat coconut milk",
+        "28 oz can diced tomatoes",
+        "1/2 cup fresh cilantro (plus extra for garnish)",
+        "Limes for garnish (optional)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-25T00:24:45.761+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 193,
+      "name": "Roasted Broccoli Miso Salad",
+      "url": "https://dishingouthealth.com/roasted-broccoli-salad/",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:02.663638+00:00",
+      "ingredients": [
+        "1 lb. broccoli florets (about 8 heaping cups)",
+        "6 oz. raw uncured bacon, diced",
+        "2 medium  shallots, thinly sliced crosswise into rings",
+        "2 Tbsp. extra-virgin olive oil",
+        "Salt and black pepper to taste",
+        "1/3 cup Panko breadcrumbs",
+        "1/4 cup freshly grated Pecorino Romano or Parmigiano Reggiano cheese",
+        "2 Tbsp. mayonnaise  ((I use avocado oil mayo, such as Chosen Foods brand))",
+        "1 Tbsp. fresh lemon juice",
+        "2 tsp. white miso paste",
+        "1/2 tsp. anchovy paste ((or 1 tsp. finely chopped capers))",
+        "1/4 tsp. Worcestershire sauce  ((or 1/2 tsp. tamari))",
+        "1 small garlic clove, grated or minced",
+        "3 Tbsp. extra-virgin olive oil",
+        "Cracked black pepper to taste"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:02.501+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 81,
+      "name": "Roasted Za'atar Veggies",
+      "url": "",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 204,
+      "name": "Rosemary Salt",
+      "url": "https://docs.google.com/document/d/1zwdKu4Geg0hD_NKWcy9G4k9IlTDUOjdJWwr-ZIN4Igc/edit?usp=sharing",
+      "category_id": 17,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 17,
+        "name": "Random"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Salmon spicy rice salad",
+      "url": "https://kalejunkie.com/crispy-rice-salmon-cucumber-salad-with-creamy-soy-dressing/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:04.45382+00:00",
+      "ingredients": [
+        "2 Cups Cooked Rice (cooled - I use jasmine rice, but any rice should work well)",
+        "2 Teaspoons Soy Sauce",
+        "1 Tablespoon Sesame Oil",
+        "1/4 Cup Dried Onion (Minced)",
+        "1/4 Cup Dried Garlic (Minced)",
+        "1 Tablespoon  Smoked Paprika",
+        "1/2 Teaspoons Sea Salt",
+        "1.5 Tablespoons Crushed Red Pepper Flakes",
+        "1/2 Teaspoons Chili Powder",
+        "3/4 cup Olive Oil",
+        "8 Ounces Salmon",
+        "1/2 Teaspoon Sea Salt",
+        "1/2 Teaspoon Ground Black Pepper",
+        "1/2 Teaspoon Garlic Powder",
+        "5  Persian Cucumbers (thinly sliced - you can also substitute one large English cucumber)",
+        "1 Cup Edamame (shelled)",
+        "1 Bunch Green Onions (thinly sliced - this is approximately 3/4 cup)",
+        "2  Avocados (chopped)",
+        "1/4 Cup Olive Oil",
+        "1/4 Cup Toasted Sesame Oil",
+        "3 Tablespoons Soy Sauce or Coconut Aminos",
+        "3 Tablespoons Rice Vinegar",
+        "2 Tablespoons Honey",
+        "1 1/2 Teaspoons Ground Ginger",
+        "1/2 Teaspoon Kosher Salt"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:04.292+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 144,
+      "name": "Sausage and Bell Pepper Skillet",
+      "url": "https://thedefineddish.com/sausage-and-bell-pepper-skillet/",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:05.445885+00:00",
+      "ingredients": [
+        "2 tbsp extra virgin olive oil",
+        "1 lb Italian Sausage, cut into 2 inch pieces",
+        "2  bell peppers, seeded and sliced thin ((I use one red and one green. But any are fine))",
+        "1/2  yellow onion, sliced thin",
+        "kosher salt,  (to taste)",
+        "black pepper,  (to taste)",
+        "1 cup store bought marinara",
+        "2 cups baby arugula,  (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:05.262+00:00",
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Sauteed Kale Salad with Ricotta",
+      "url": "https://justinesnacks.com/sauteed-kale-salad-with-ricotta-salata/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:06.373785+00:00",
+      "ingredients": [
+        "1  15 oz. can of chickpeas (drained and rinsed)",
+        "1/3 cup roasted red peppers",
+        "2 tbsp sun dried tomatoes",
+        "1/2 tsp Diamond Crystal kosher salt (use half if using Morton&#39;s)",
+        "1/2  lemon (for juicing)",
+        "2 tbsp balsamic vinegar",
+        "2 tbsp honey",
+        "2 tbsp olive oil",
+        "5  shallots (sliced and quartered)",
+        "4  garlic cloves (finely grated with a microplane)",
+        "1 tbsp calabrian chili paste (or 1 tsp red pepper flakes)",
+        "3 cups kale (stems removed, chopped)",
+        "4 cups dandelion greens (chopped, can be subbed for swiss chard or spinach)",
+        "Kosher salt and fresh cracked black pepper as needed",
+        "2 slices focaccia (toasted)",
+        "2 oz. ricotta salata (cut into thin slices)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:06.216+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 56,
+      "name": "Shakshuka",
+      "url": "",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Shaved Brussel Sprouts Salad",
+      "url": "https://www.twopeasandtheirpod.com/shaved-brussels-sprouts-salad/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:07.576724+00:00",
+      "ingredients": [
+        "1/3 cup olive oil",
+        "1 tablespoon fresh lemon juice",
+        "2 tablespoons apple cider vinegar",
+        "1 tablespoon pure maple syrup",
+        "2 teaspoons Dijon mustard",
+        "1 clove garlic (minced)",
+        "Kosher salt and black pepper (to taste)",
+        "1 lb Brussels sprouts (ends trimmed)",
+        "1  large Honeycrisp apple (chopped (or 2 small apples))",
+        "1/2 cup dried cranberries",
+        "1/2 cup sunflower seeds",
+        "1/3 cup shredded or shaved Parmesan cheese",
+        "Kosher salt and black pepper (to taste)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:07.422+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 101,
+      "name": "Sheet Pan Chicken Meatballs and Charred Broccoli",
+      "url": "https://www.bonappetit.com/recipe/sheet-pan-chicken-meatballs-and-charred-broccoli/amp",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:08.603718+00:00",
+      "ingredients": [
+        "⅔ cup ketchup",
+        "¼ cup Worcestershire sauce",
+        "2 Tbsp. rice cooking wine or water",
+        "2 Tbsp. honey",
+        "4 tsp. soy sauce",
+        "1 ½\" piece ginger, peeled, finely grated",
+        "½ tsp. freshly ground black pepper",
+        "2 heads of broccoli (about 1½ lb.)",
+        "2 Tbsp. vegetable oil, divided",
+        "2½ tsp. kosher salt, divided",
+        "Crushed red pepper flakes (optional)",
+        "1 lb. ground chicken",
+        "1 large egg, beaten to blend",
+        "4 scallions, thinly sliced",
+        "2 garlic cloves, finely grated",
+        "1 2\" piece ginger, peeled, finely grated",
+        "⅓ cup panko (Japanese breadcrumbs)",
+        "1 Tbsp. toasted sesame oil",
+        "¼ tsp. freshly ground black pepper",
+        "Cooked rice and sesame seeds (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:08.448+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 142,
+      "name": "Sheet Pan Gnocchi with Sausage",
+      "url": "https://docs.google.com/document/d/1v7PGzStyL9Se_uEPdnOE0OpttMWDeHgxyTdlWJjItbg/edit?usp=sharing",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:07.778095+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:07.633+00:00",
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 194,
+      "name": "Sheet Pan Harissa Meatballs",
+      "url": "https://munchinwithmaddie.blog/sheet-pan-harissa-chicken-meatballs-with-cauliflower-and-chickpeas/",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:11.176611+00:00",
+      "ingredients": [
+        "1 lb ground chicken ((93% lean))",
+        "1  large egg",
+        "2 tbsp coconut flour",
+        "2 tbsp harissa paste (*)",
+        "2  garlic cloves (minced)",
+        "¼ cup finely diced red onion",
+        "1 tbsp fresh chopped dill ((or about 1 tsp dried dill))",
+        "1 tsp dried parsley ((or about 1 tbsp fresh parsley))",
+        "1 tsp kosher salt",
+        "¼ tsp black pepper",
+        "1 can chickpeas ((15oz), drained &amp; rinsed)",
+        "12 oz cauliflower (cut into very small florets (see photos for reference))",
+        "1  medium sweet potato ((12oz), cut into 1/2&quot; cubes)",
+        "¾  medium red onion (cut into large chunks**)",
+        "2 tbsp olive oil (or avocado oil)",
+        "1 tsp smoked paprika",
+        "1 tsp garlic powder",
+        "1 tsp kosher salt",
+        "½ tsp cumin",
+        "¼ tsp black pepper",
+        "9 tbsp full-fat plain greek yogurt or skyr ((½ cup + 1 tbsp))",
+        "2 tbsp harissa paste (*)",
+        "1 tbsp maple syrup",
+        "juice from ½ small lemon",
+        "½ tsp kosher salt",
+        "¼ tsp garlic powder",
+        "pitted and chopped medjool dates",
+        "fresh dill"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:11.008+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 128,
+      "name": "Sheet Pan Tilapia",
+      "url": "https://docs.google.com/document/d/1XzuQtMVLqrKv7MPlGCPNVyjHKxi1J5w3_NnDYDGSppE/edit?usp=sharing",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:08.892333+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:08.721+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 113,
+      "name": "Skillet Chicken and Pearl Couscous With Moroccan Spices",
+      "url": "https://cooking.nytimes.com/recipes/1020967-skillet-chicken-and-pearl-couscous-with-moroccan-spices?smid=ck-recipe-iOS-share",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:13.227229+00:00",
+      "ingredients": [
+        "2 1/2 pounds bone-in, skin-on chicken thighs (about 6 thighs)",
+        "1 teaspoon fresh lime zest plus 1/4 cup juice (from 2 limes)",
+        "3 tablespoons olive oil",
+        "3 large garlic cloves, roughly chopped",
+        "1 1/2 teaspoons ground cumin",
+        "Kosher salt and black pepper",
+        "2 tablespoons grapeseed or canola oil",
+        "1 large leek, trimmed, rinsed of grit then thinly sliced into rings (about 1 1/2 cups), or 1 medium yellow onion, chopped",
+        "1 tablespoon harissa paste, tomato paste or chile-garlic sauce",
+        "1 teaspoon ground turmeric",
+        "1/2 teaspoon ground cinnamon",
+        "1 1/4 cups pearl couscous or orzo",
+        "1 1/2 cups chicken stock or vegetable stock",
+        "1/2 cup roughly chopped mixed tender herbs such as parsley, cilantro and mint (optional)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:13.054+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 109,
+      "name": "Skillet Chicken with Turmeric and Orange",
+      "url": "",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 74,
+      "name": "Slow Cooker BBQ Pulled Pork",
+      "url": "https://drive.google.com/file/d/18Pst8Y9SBLrL0kFmT5IeUtIc9D8gFJyu/view?usp=sharing",
+      "category_id": 4,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:09.912056+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:09.764+00:00",
+      "categories": {
+        "id": 4,
+        "name": "Crock Pot"
+      }
+    },
+    {
+      "id": 76,
+      "name": "Slow Cooker Beer Braised Brisket",
+      "url": "https://drive.google.com/file/d/1J8FF5st2j3Z3achlLKQrMI_VBKHNLLy8/view?usp=sharing",
+      "category_id": 4,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:10.71141+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:10.563+00:00",
+      "categories": {
+        "id": 4,
+        "name": "Crock Pot"
+      }
+    },
+    {
+      "id": 95,
+      "name": "Slow Cooker Greek Chicken and Potatoes",
+      "url": "https://www.cookingclassy.com/slow-cooker-greek-lemon-chicken-and-potatoes/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:16.294574+00:00",
+      "ingredients": [
+        "2 lbs yellow potatoes,  (cut into large chunks (about 2-inches))",
+        "1/2 medium yellow onion, (cut into chunks)",
+        "5 cloves garlic, (minced)",
+        "2 1/2 tsp dried oregano",
+        "1  tsp dried basil",
+        "1 tsp dried rosemary,  (crushed)",
+        "Salt and freshly ground black pepper",
+        "3  lbs. bone-in, skin-on chicken thighs, (trimmed of excess skin)",
+        "1 1/2 Tbsp olive oil",
+        "1/2 cup chicken broth",
+        "3 1/2 Tbsp fresh lemon juice",
+        "2 tsp lemon zest,  (divided)",
+        "3 Tbsp fresh parsley"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:16.13+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 75,
+      "name": "Slow Cooker Indian Spiced Chicken with Tomato and Cream",
+      "url": "https://drive.google.com/file/d/1CdWd3AglkTfPcwQ18_G12VNnal5RYyC5/view?usp=sharing",
+      "category_id": 4,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:12.107169+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:11.896+00:00",
+      "categories": {
+        "id": 4,
+        "name": "Crock Pot"
+      }
+    },
+    {
+      "id": 72,
+      "name": "Slow Cooker Jambalaya",
+      "url": "https://www.lecremedelacrumb.com/slow-cooker-jambalaya/",
+      "category_id": 4,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:18.516269+00:00",
+      "ingredients": [
+        "1 package andouille sausage",
+        "½ pound uncooked shrimp  ((peeled and de-veined))",
+        "1  large boneless skinless chicken breast ( pounded to even thickness)",
+        "3  bell peppers  ((one each of green, red, and yellow or orange), diced)",
+        "1  white or yellow onion (diced)",
+        "2-3  jalapeños  ((see note), seeds and stems removed)",
+        "1 ½ cups uncooked white rice",
+        "2 cups  low sodium chicken broth",
+        "1  30-ounce can crushed tomatoes",
+        "1 tablespoon minced garlic",
+        "3 tablespoons store-bought or homemade cajun seasoning",
+        "½ teaspoon each salt and pepper (or to taste)",
+        "cilantro or parsley, for topping (optional)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:18.256+00:00",
+      "categories": {
+        "id": 4,
+        "name": "Crock Pot"
+      }
+    },
+    {
+      "id": 70,
+      "name": "Slow Cooker Sweet Potato",
+      "url": "https://therealfooddietitians.com/slow-cooker-sweet-potato-chicken-curry/",
+      "category_id": 4,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:19.663716+00:00",
+      "ingredients": [
+        "2 tsp. Organic Valley Ghee",
+        "½ medium yellow onion, diced",
+        "3 garlic cloves, minced",
+        "1½ lbs. uncooked chicken breast, cubed",
+        "1 medium-large sweet potato, cubed",
+        "1 red pepper, sliced or diced",
+        "2 cups green beans, trimmed",
+        "3/4 cup organic low-sodium chicken broth",
+        "3 Tbsp. Simply Organic curry powder",
+        "1 tsp. Simply Organic ground cumin",
+        "1 tsp. Simply Organic ground turmeric",
+        "Pinch of Simply Organic cayenne (optional)",
+        "½ tsp. salt, more to taste",
+        "1 (14 oz-can) full-fat coconut milk",
+        "Cashews, cilantro &amp; cauliflower rice for serving"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:19.507+00:00",
+      "categories": {
+        "id": 4,
+        "name": "Crock Pot"
+      }
+    },
+    {
+      "id": 39,
+      "name": "Smoky White Bean Shakshuka",
+      "url": "https://www.budgetbytes.com/smoky-white-bean-shakshuka/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:20.747693+00:00",
+      "ingredients": [
+        "2 Tbsp olive oil ($0.32)",
+        "4 cloves garlic ($0.32)",
+        "1  yellow onion ($0.16)",
+        "1 28oz. can whole peeled tomatoes ($1.69)",
+        "1/2 Tbsp smoked paprika ($0.15)",
+        "1 tsp ground cumin ($0.10)",
+        "1/2 tsp dried oregano ($0.05)",
+        "1/8 tsp crushed red pepper ($0.02)",
+        "Freshly cracked black pepper ($0.05)",
+        "1/4 tsp salt, or to taste ($0.02)",
+        "1 15oz. can cannellini beans ($1.19)",
+        "4  large eggs ($1.10)",
+        "1 handful  fresh parsley, chopped ($0.20)",
+        "2 oz. feta, crumbled ($1.12)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:20.55+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 29,
+      "name": "Sour Dough Sandwich",
+      "url": "",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 198,
+      "name": "Sourdough Honey Cornbread",
+      "url": "https://gatherednutrition.com/sourdough-honey-cornbread/",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:21.741423+00:00",
+      "ingredients": [
+        "1/2 cup sourdough starter (discard or active will work)",
+        "1 tbsp apple cider vinegar",
+        "1 + 1/4 cup whole milk",
+        "1/2 cup honey",
+        "1/4 cup unsweetened apple sauce (or sub greek yogurt)",
+        "12 tbsp butter, melted",
+        "1 + 1/2 cups cornmeal",
+        "1 + 1/2 cups bread flour (can sub all purpose flour)",
+        "1 tso baking powder",
+        "1/2 tsp baking soda",
+        "1/2 tsp sea salt"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:21.555+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 84,
+      "name": "Southwest Sweet Potato Dip",
+      "url": "https://minimalistbaker.com/southwest-sweet-potato-black-bean-dip/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:27.433543+00:00",
+      "ingredients": [
+        "2 medium organic sweet potatoes (~260 g), cubed, skin on (or peeled if desired)",
+        "2 Tbsp olive oil or avocado oil",
+        "1/4 tsp sea salt",
+        "1/2 tsp ground cumin",
+        "1/2 tsp chili powder",
+        "1 ripe avocado",
+        "3 Tbsp lime juice",
+        "1/4 tsp sea salt",
+        "1 Tbsp maple syrup ((optional))",
+        "2 Tbsp minced jalapeño ((optional // omit for less heat))",
+        "Water to thin",
+        "1 15-ounce can black beans, rinsed and drained",
+        "1/4 tsp sea salt",
+        "3/4 tsp ground cumin",
+        "1/2 tsp chili powder",
+        "1/4 cup finely chopped cilantro",
+        "1/4 cup red onion, finely diced",
+        "1 cup whole corn kernels",
+        "Plantain or Corn Chips",
+        "Fresh cilantro",
+        "Lime wedges",
+        "Diced red onion"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:27.288+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 82,
+      "name": "Spicy Cucumber Salad",
+      "url": "",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 148,
+      "name": "Spicy Maple Tahini Sheet Pan",
+      "url": "https://gatherednutrition.com/sheet-pan-roasted-fall-veggies-with-tahini-sauce/",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:28.889739+00:00",
+      "ingredients": [
+        "2-3 sweet potatoes, cubed (option to peel)",
+        "1 lb of brussels sprouts, sliced in half",
+        "2 bell peppers, sliced into strips",
+        "1/3 of a red onion, thinly sliced",
+        "3 tbsp olive or avocado oil",
+        "1/2 tsp garlic powder",
+        "1 tsp Italian seasonings",
+        "Salt and pepper, to taste",
+        "1/3 cup + 3 tbsp tahini",
+        "1/3 cup water, plus more as needed",
+        "2 tbsp olive oil",
+        "2 tbsp apple cider vinegar",
+        "4 tsp of maple syrup",
+        "2 cloves of garlic, peeled",
+        "Salt and pepper, to taste",
+        "Sriracha, to taste, depending how spicy you like it"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:28.722+00:00",
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 185,
+      "name": "Spicy Peanut Udon Noodles",
+      "url": "https://nutrient-matters.com/recipe/coconut-curry-peanut-udon-noodles/",
+      "category_id": 13,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:30.842474+00:00",
+      "ingredients": [
+        "2  Chicken breasts",
+        "1 tsp Baking soda",
+        "1 tsp Soy sauce",
+        "1 tsp Rice vinegar",
+        "Salt",
+        "White pepper",
+        "3 tbsp Avocado oil",
+        "1  Broccoli crown",
+        "1  Red bell pepper",
+        "1/2  Red onion",
+        "Salt",
+        "1 tsp grated Ginger",
+        "6  Garlic cloves",
+        "1 tsp Gochugaru red pepper powder/flakes",
+        "2 tsp Curry powder",
+        "4 tbsp Peanut butter",
+        "1 can Coconut milk",
+        "1  Chicken boullion cube",
+        "1.5 tbsp Soy sauce",
+        "1 tbsp Rice vinegar",
+        "2 tbsp Oyster sauce",
+        "2 tbsp Gochujang hot sauce",
+        "1 cup Water",
+        "4 pc Udon noodles",
+        "Crushed peanuts",
+        "Fresh cilantro"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:30.7+00:00",
+      "categories": {
+        "id": 13,
+        "name": "Noodles"
+      }
+    },
+    {
+      "id": 149,
+      "name": "Spicy Sausage Pumpkin Pasta",
+      "url": "",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 141,
+      "name": "Spicy Tuna Pasta",
+      "url": "https://www.foodandwine.com/spicy-tuna-pantry-pasta-11816115",
+      "category_id": 9,
+      "notes": "Samin",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:31.82973+00:00",
+      "ingredients": [
+        "Extra-virgin olive oil",
+        "1 onion, cut into 3/8-inch chunks",
+        "Kosher salt",
+        "4 garlic cloves, thinly sliced",
+        "2 anchovy fillets, roughly chopped",
+        "Calabrian chile paste, to taste",
+        "1 tablespoon tomato paste",
+        "1 pound uncooked spaghetti, bucatini, linguine, or penne",
+        "1 (14-ounce) can cherry tomatoes",
+        "1/4 cup finely grated Parmigiano-Reggiano cheese, plus more for serving",
+        "2 (5- or 6-ounce) cans or jars olive oil–packed Spanish or Italian tuna, undrained",
+        "1 lemon",
+        "Finely chopped fresh flat-leaf parsley, for garnish"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:31.669+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 115,
+      "name": "Spicy Wontons in Sauce",
+      "url": "https://pinchofyum.com/chicken-wontons-in-spicy-chili-sauce",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:34.668676+00:00",
+      "ingredients": [
+        "3 tablespoons sesame oil, divided",
+        "8 ounces shiitake mushrooms, sliced",
+        "1 clove garlic, grated",
+        "one 12-ounce bag frozen wontons (I like the mini chicken cilantro ones from Trader Joe&#8217;s or Costco)",
+        "1-2 cups chicken broth (depending on how soupy you like it)",
+        "1/2 cup teriyaki sauce",
+        "1-2 tablespoons chili crisp",
+        "green onions, sliced",
+        "sesame seeds"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:34.521+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Steak Chimichurri Dense Bean Salad",
+      "url": "https://docs.google.com/document/d/19cMmtWPdGlmrtUFwQCAlnqCygYml_5k59TIcJypo0YA/edit?usp=sharing",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Strawberry Kale Salad (Sweetgreen)",
+      "url": "https://www.lahbco.com/greens-n-things/berryburratasalad",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:13.903489+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:13.738+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 85,
+      "name": "Summer Squash Lemon Thyme",
+      "url": "https://www.sprinklesandsprouts.com/roasted-summer-squash-with-thyme-and-charred-lemon/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:37.978448+00:00",
+      "ingredients": [
+        "1 lb summer squash",
+        "1 tbsp extra virgin olive oil",
+        "1 tsp salt",
+        "1/2 tsp ground black pepper",
+        "1 tsp fresh lemon thyme leaves ((or normal thyme))",
+        "1  lemon",
+        "fresh parsley - for garnish"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:37.838+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 169,
+      "name": "Sun-Dried Tomato Shakshuka",
+      "url": "https://docs.google.com/document/d/e/2PACX-1vRU4uTwSl3YPcKX_LPJYvrexLM9_DmNCswmfhh_NFGXhjsCGVcuHGbGQHDho7hLuLdyQy7dkXJkTp05/pub",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:15.148475+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:14.967+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 136,
+      "name": "Sushi Bowl",
+      "url": "https://www.budgetbytes.com/sushi-bowls-sriracha-mayo/",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:40.05846+00:00",
+      "ingredients": [
+        "2 cups short grain white rice ($1.36)",
+        "2 cups water ($0.00)",
+        "2 Tbsp rice vinegar ($0.27)",
+        "2 Tbsp sugar ($0.02)",
+        "1 tsp salt ($0.05)",
+        "8 oz imitation crab ($2.99)",
+        "1  carrot ($0.19)",
+        "1  cucumber ($0.59)",
+        "1  avocado ($1.50)",
+        "1 pack nori snack  ($1.15)",
+        "1 Tbsp sesame seeds ($0.18)",
+        "4 Tbsp mayonnaise ($0.30)",
+        "2 Tbsp sriracha ($0.22)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:39.885+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 33,
+      "name": "Swedish Cardamom Buns",
+      "url": "https://docs.google.com/document/d/17AlJBrw6PQv5GMZ5yxW4RdwyyRPTsWXWUMaiyx-pgqA/edit?usp=sharing",
+      "category_id": 2,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:16.405443+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:16.196+00:00",
+      "categories": {
+        "id": 2,
+        "name": "Bread"
+      }
+    },
+    {
+      "id": 134,
+      "name": "Sweet Cilantro Lime Salmon",
+      "url": "https://letsdishrecipes.com/sweet-cilantro-lime-salmon",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:42.923238+00:00",
+      "ingredients": [
+        "1.5-2 pounds salmon",
+        "Salt and pepper (to taste)",
+        "1/3 cup olive oil",
+        "2 tablespoons lime juice",
+        "3 tablespoons brown sugar",
+        "2 cloves garlic (minced)",
+        "1/2 teaspoon red pepper flakes",
+        "Chopped fresh cilantro (for garnish)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:42.753+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 163,
+      "name": "Sweet Pot Buddha Bowl",
+      "url": "https://minimalistbaker.com/sweet-potato-chickpea-buddha-bowl/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:43.884808+00:00",
+      "ingredients": [
+        "2 Tbsp olive, melted coconut, or avocado oil",
+        "1/2 medium red onion ((sliced in wedges))",
+        "2 small sweet potatoes ((halved))",
+        "1 bundle broccolini ((large stems removed // chopped))",
+        "2 big handfuls kale ((larger stems removed))",
+        "1/4 tsp each salt + pepper",
+        "1 (15-ounce) can chickpeas ((drained, rinsed + patted dry))",
+        "1 tsp cumin",
+        "3/4 tsp chili powder",
+        "3/4 tsp garlic powder",
+        "1/4 tsp each salt + pepper",
+        "1/2 tsp tsp oregano ((optional))",
+        "1/4 tsp turmeric ((optional))",
+        "1/4 cup tahini",
+        "1 Tbsp maple syrup",
+        "1/2 medium lemon ((juiced))",
+        "2-4 Tbsp hot water  ((to thin))"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:43.697+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 89,
+      "name": "Sweet Potatoes with Tahini Butter Chickpeas",
+      "url": "https://www.bunchbunchbunch.com/recipes/sweet-potatoes-with-tahini-butter-chickpeas",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:17.867644+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:17.674+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 26,
+      "name": "Sweetgreen Elote Bowl",
+      "url": "https://www.lahbco.com/greens-n-things/elotesweetgreenbowl",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:18.819379+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:18.653+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 51,
+      "name": "Tagine",
+      "url": "https://rainbowplantlife.com/vegan-tagine-with-chickpeas/#ingredients",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:47.46718+00:00",
+      "ingredients": [
+        "2 tablespoons extra virgin olive oil, (plus more for drizzling)",
+        "1  large yellow onion, (diced)",
+        "1  medium red bell pepper, (chopped)",
+        "6  garlic cloves, (finely chopped)",
+        "1  cinnamon stick ((optional) (see Note 1))",
+        "2 cups (480 mL) vegetable broth",
+        "3 cups peeled and finely diced butternut squash ((400g) (see Note 2))",
+        "2  (15-ounce/425g) cans chickpeas, drained and rinsed",
+        "2  bay leaves",
+        "1 teaspoon kosher salt, (more to taste)",
+        "1  (14.5-ounce/410g) can crushed tomatoes",
+        "3 to 6  large Medjool dates, (chopped (see Note 3))",
+        "1  medium lemon, (zested + 1 tablespoon juice)",
+        "1  big handful of flat-leaf parsley (or cilantro) leaves and tender stems,  (chopped)",
+        "1 tablespoon ras el hanout ((see Note 4))",
+        "1 teaspoon ground coriander",
+        "½ teaspoon ground cinnamon",
+        "½ teaspoon ground cumin",
+        "¼ teaspoon ground ginger",
+        "¼ teaspoon ground turmeric",
+        "¼ to ½ teaspoon cayenne pepper ((optional, ½ tsp for some good heat))",
+        "A generous crack of black pepper",
+        "A pinch of ground cloves",
+        "5 ounces (140g) plain vegan yogurt",
+        "2 teaspoons freshly squeezed lemon juice, (more to taste depending on your yogurt brand)",
+        "½ teaspoon ground coriander",
+        "Salt to taste"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:47.259+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 129,
+      "name": "Tequila Lime Shrimp",
+      "url": "https://jz-eats.com/drunken-tequila-lime-shrimp/",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:48.336373+00:00",
+      "ingredients": [
+        "1 lb jumbo shrimp, (peeled and deveined)",
+        "2 tbsp tequila, (or Mezcal)",
+        "1 tbsp olive oil",
+        "1/2 tsp kosher salt",
+        "1/4 tsp black pepper",
+        "1 tsp paprika",
+        "1 tsp cumin",
+        "1/2 tsp brown sugar",
+        "1/4 tsp chili powder",
+        "2  large garlic cloves, (minced)",
+        "1  lime, (juice and zest)",
+        "1  jalapeño, (seeds removed and diced)",
+        "1/2 cup fresh cilantro, (roughly chopped)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:48.178+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 96,
+      "name": "Teriyaki Chicken with Noodle Nest",
+      "url": "https://thehappyfoodie.co.uk/recipes/nadiya-hussains-teriyaki-chicken-noodles/",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:20.195758+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:19.985+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Teriyaki Crispy Chicken Rice Salad",
+      "url": "https://kalejunkie.com/teriyaki-chicken-crispy-rice-salad/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:50.376049+00:00",
+      "ingredients": [
+        "2 Cups Cooked Rice (cooled - I use jasmine rice, but any rice should work well)",
+        "1 Tablespoon Sesame Oil",
+        "2 Tablespoons Teriyaki Sauce or Marinade",
+        "1  Rotisserie Chicken",
+        "1/4 Cup Teriyaki Sauce or Marinade",
+        "5  Persian Cucumbers (thinly sliced - you can also substitute one large English cucumber)",
+        "1/2 Cup Red Cabbage (finely sliced)",
+        "1/2 Cup Cilantro (chopped)",
+        "1/2 Cup Salted Peanuts (chopped)",
+        "1  Red Bell Pepper (diced small)",
+        "1 Bunch Green Onions (finely chopped)",
+        "1/4 Cup Olive Oil",
+        "3 Tablespoons Toasted Sesame Oil",
+        "3 Tablespoons Soy Sauce or Coconut Aminos",
+        "3 Tablespoons Rice Vinegar",
+        "2 Tablespoons Maple Syrup",
+        "2 Tablespoons Cashew Butter",
+        "2 Cloves Garlic (mashed)",
+        "1 Tablespoon Fresh Ginger (minced)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:50.224+00:00",
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 42,
+      "name": "Thai Chicken Soup",
+      "url": "https://minimalistbaker.com/cozy-thai-inspired-chicken-noodle-soup/",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:51.418383+00:00",
+      "ingredients": [
+        "2 (~6 ounce each) chicken breasts  ((organic, pasture raised when possible // see vegan option in notes))",
+        "2 Tbsp coconut aminos or tamari  ((or soy sauce if not gluten-free))",
+        "2 Tbsp avocado or coconut oil",
+        "1/2 cup thinly sliced shallot  ((mince if you prefer a finer texture))",
+        "2 Tbsp minced fresh ginger",
+        "3 cloves garlic, minced",
+        "4 Tbsp green curry paste  ((we like Thai Kitchen brand for store bought))",
+        "2 14-oz cans light coconut milk",
+        "4 cups chicken broth  ((or bone broth))",
+        "1 sprig lemongrass, trimmed and split in half",
+        "1/2 tsp sea salt, plus more to taste",
+        "1-2 tsp maple syrup",
+        "1 fresh Thai chili, sliced at an angle  ((optional // omit for less heat))",
+        "1 box thin rice noodles  ((we prefer Thai Kitchen brand) or white rice (or sub green peas for grain-free))",
+        "Fresh cilantro or mint  ((optional))",
+        "Lime wedges ((optional))"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:51.252+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 99,
+      "name": "Thai Chicken Thighs Coconut Rice",
+      "url": "https://www.bonappetit.com/recipe/thai-roast-chicken-thighs-with-coconut-rice",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:53.531851+00:00",
+      "ingredients": [
+        "Zest and juice of 1 lime",
+        "1 1\" piece ginger, peeled, finely grated, plus 3 peeled slices",
+        "2 garlic cloves, finely chopped",
+        "⅓ cup coconut palm sugar or (packed) light brown sugar",
+        "¼ cup fish sauce",
+        "1 13.5-oz. can unsweetened coconut milk, divided",
+        "2 Tbsp. extra-virgin olive oil, plus more for brushing",
+        "2 tsp. freshly ground black pepper, plus more",
+        "2 lb. skin-on, bone-in chicken thighs (4–6)",
+        "½ medium head of green cabbage, stem trimmed, sliced into 1\"-thick wedges",
+        "½ tsp. Diamond Crystal or ¼ tsp. Morton kosher salt, plus more",
+        "1 cup white jasmine rice, rinsed until water runs clear",
+        "Cilantro leaves with tender stems and lime wedges (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:53.277+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 60,
+      "name": "Thai-Inspired Chicken Meatball Soup",
+      "url": "https://cooking.nytimes.com/recipes/1020631-thai-inspired-chicken-meatball-soup?smid=ck-recipe-iOS-share",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:54.468044+00:00",
+      "ingredients": [
+        "1 (4-inch) piece fresh ginger, peeled",
+        "6 garlic cloves, peeled",
+        "1 jalapeño",
+        "2 pounds ground chicken",
+        "1 large bunch cilantro, leaves and stems finely chopped, a few whole leaves reserved for serving",
+        "3 tablespoons fish sauce",
+        "Kosher salt",
+        "2 tablespoons vegetable or coconut oil, plus more as needed",
+        "2 cups chicken broth",
+        "1 (14-ounce) can full-fat coconut milk",
+        "1/2 teaspoon granulated sugar",
+        "5 ounces baby spinach",
+        "1 tablespoon lime juice, plus lime wedges for serving",
+        "Steamed white or brown rice, for serving"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:54.324+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 203,
+      "name": "The Lone Rangers",
+      "url": "",
+      "category_id": 16,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 16,
+        "name": "Cocktails"
+      }
+    },
+    {
+      "id": 205,
+      "name": "Tomato Dressing",
+      "url": "",
+      "category_id": 17,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": "Missing URL",
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 17,
+        "name": "Random"
+      }
+    },
+    {
+      "id": 133,
+      "name": "Tuna Cakes",
+      "url": "https://thedefineddish.com/whole30-tuna-cakes-with-smoked-paprika-aioli/#disqus_thread",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:21.380379+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:21.213+00:00",
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 139,
+      "name": "Tuna Melt",
+      "url": "https://docs.google.com/document/d/18pmGUK8dTl77codCuAVdirqzrDqNfJAALD0Y_BJv_BY/edit?usp=sharing",
+      "category_id": 9,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 9,
+        "name": "Seafood"
+      }
+    },
+    {
+      "id": 153,
+      "name": "Turkey Burgers",
+      "url": "https://www.bonappetit.com/recipe/turkey-spinach-sliders",
+      "category_id": 11,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:51:59.614385+00:00",
+      "ingredients": [
+        "1/2 bunch flat-leaf spinach, thick stems removed, leaves chopped (about 4 cups)",
+        "4 scallions, thinly sliced",
+        "1 garlic clove, finely chopped",
+        "1 pound ground turkey",
+        "3/4 teaspoon ground cumin",
+        "Kosher salt, freshly ground pepper",
+        "3 tablespoons olive oil",
+        "12 slider buns or small dinner rolls, split, lightly toasted (for serving)",
+        "Mayonnaise, sliced red onion, and pickle slices (for serving)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:51:59.445+00:00",
+      "categories": {
+        "id": 11,
+        "name": "Turkey"
+      }
+    },
+    {
+      "id": 154,
+      "name": "Turkey Meatballs",
+      "url": "https://www.culinaryhill.com/turkey-meatballs/",
+      "category_id": 11,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:00.526199+00:00",
+      "ingredients": [
+        "2 pounds ground turkey (93% lean)",
+        "1 cup bread crumbs",
+        "2/3 cup minced onion",
+        "1/2 cup minced fresh parsley",
+        "2  eggs",
+        "3 cloves garlic (minced)",
+        "2 teaspoons Worcestershire sauce",
+        "1/2 teaspoon dried basil",
+        "1/2 teaspoon dried oregano",
+        "1 teaspoon salt",
+        "1/2 teaspoon freshly ground black pepper",
+        "1/4 cup olive oil ((for frying))"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:00.366+00:00",
+      "categories": {
+        "id": 11,
+        "name": "Turkey"
+      }
+    },
+    {
+      "id": 78,
+      "name": "Turmeric Rice",
+      "url": "https://www.fooddolls.com/coconut-turmeric-rice/",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:01.769869+00:00",
+      "ingredients": [
+        "2 cups uncooked jasmine rice (basmati works well too)",
+        "1 tablespoon coconut oil",
+        "1  jalapeño (diced, seeded for less spice)",
+        "½ teaspoon ground black pepper (to taste)",
+        "1 teaspoon ground turmeric",
+        "1  small diced shallot",
+        "1 teaspoon salt (to taste)",
+        "13.5 ounces canned light coconut milk",
+        "2 cup water",
+        "2 cups arugula",
+        "2 teaspoons lime zest",
+        "1/3 cup loosely packed chopped cilantro"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:01.594+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 170,
+      "name": "Tuscan Chickpea",
+      "url": "https://carolefood.com/recipe/tuscan-chickpeas",
+      "category_id": 12,
+      "notes": "TikTok",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:02.676406+00:00",
+      "ingredients": [
+        "1 onion, finely sliced",
+        "200g cherry tomatoes, halved",
+        "3 garlic cloves, finely chopped",
+        "45g sundried tomatoes, finely chopped",
+        "1 tbsp tomato paste",
+        "1 400g can chickpeas, drained",
+        "200ml stock",
+        "1 tsp cornflour + 1 tsp water",
+        "50g spinach",
+        "25g parmesan, grated",
+        "50g cream cheese",
+        "1/2 lemon, juiced",
+        "Oil, salt"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:02.525+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 37,
+      "name": "Vegan Chili Pearl Barley",
+      "url": "https://docs.google.com/document/d/1xd9iykVgXTC1WaZLAa6k3pPbBeH_MFXmuHVpTgPaj3Y/edit?usp=sharing",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:23.578806+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:23.413+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 160,
+      "name": "Veggie Black Bean Burritos",
+      "url": "https://somethingnutritiousblog.com/black-bean-and-veggie-burritos/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:04.929598+00:00",
+      "ingredients": [
+        "4-5 large wraps",
+        "1 can of black beans, rinsed (15 oz)",
+        "1/2 cup shredded cheese of choice, like cheddar or mozzarella",
+        "1 red bell pepper, chopped",
+        "1 zucchini, chopped",
+        "1/3 cup red onion, diced (about 1/3 of a large onion)",
+        "2 tbsp olive oil",
+        "1 tsp chili powder",
+        "1 tsp cumin",
+        "1/2 tsp garlic powder",
+        "1/4 tsp salt",
+        "1/4 tsp black pepper",
+        "¼ tsp smoked paprika",
+        "1 tbsp hot sauce (optional)",
+        "Avocado",
+        "Salsa",
+        "Sour cream"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:04.768+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 79,
+      "name": "Veggie Galette",
+      "url": "https://www.lahbco.com/snacks/summergalette?rq=Galette",
+      "category_id": 6,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:24.854316+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:24.693+00:00",
+      "categories": {
+        "id": 6,
+        "name": "Sides"
+      }
+    },
+    {
+      "id": 157,
+      "name": "Veggie Shepherd's Pie",
+      "url": "https://pinchofyum.com/vegetarian-shepherds-pie",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:06.779494+00:00",
+      "ingredients": [
+        "2 tablespoons olive oil",
+        "3 shallots, minced (or some onions and garlic)",
+        "16 ounces fresh mushrooms, sliced",
+        "6 carrots, peeled and chopped (about 2 cups)",
+        "1 sprig of fresh rosemary",
+        "1 sprig of fresh thyme",
+        "1 dried bay leaf",
+        "2 tablespoons tomato paste",
+        "2 tablespoons flour",
+        "1/2 cup red wine",
+        "1-2 cups veggie broth",
+        "1 teaspoon salt (more or less to taste)",
+        "2 cups frozen peas",
+        "6 Yukon gold potatoes (about 2 pounds)",
+        "1/2 cup full fat Greek yogurt",
+        "1/4 cup butter or olive oil",
+        "salt to taste"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:06.614+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    },
+    {
+      "id": 117,
+      "name": "Vietnamese Chicken Salad",
+      "url": "https://www.177milkstreet.com/recipes/vietnamese-chicken-salad-goi-ga",
+      "category_id": 7,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:26.070837+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:25.793+00:00",
+      "categories": {
+        "id": 7,
+        "name": "Chicken"
+      }
+    },
+    {
+      "id": 191,
+      "name": "Warm Fall Pearl Couscous Salad",
+      "url": "https://britacooks.com/warm-fall-pearl-couscous-salad/",
+      "category_id": 15,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:09.906689+00:00",
+      "ingredients": [
+        "8 oz pearl couscous",
+        "½  butternut squash",
+        "2 cups Brussel sprouts (chopped)",
+        "1  head cauliflower (chopped)",
+        "4-6 oz Feta",
+        "Handful of arugula/spinach",
+        "Chopped herbs (Highly recommend dill here, chives, parsley, basil)",
+        "1/4 cup Pumpkin seeds",
+        "Olive oil",
+        "salt &amp; pepper",
+        "1  lemon",
+        "3-4 tbsp red wine vinegar",
+        "1 tbsp whole grain mustard",
+        "1 tbsp maple syrup",
+        "Pinch of salt",
+        "5 tbsp olive oil"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:09.674+00:00",
+      "categories": {
+        "id": 15,
+        "name": "To Try"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Warm kale and Brussels sprouts with strawberries",
+      "url": "https://docs.google.com/document/d/1sJX587p2glA0WSl3J0em_QVGPMQttlw6C735falMpqs/edit?usp=sharing",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Warm Kale Salad-raisins + bread crumbs",
+      "url": "https://docs.google.com/document/d/1_Q9YJKndIrwGiKW5StKv4OvCzbZ5ujjauY4R81r7c30/edit?usp=sharing",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 58,
+      "name": "West African Stew",
+      "url": "https://docs.google.com/document/d/1WYtww_0ml-Gs3eJYAR_mS4AmK5sDutia5TYHU5bh4tc/edit?usp=sharing",
+      "category_id": 3,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:29.106963+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:28.893+00:00",
+      "categories": {
+        "id": 3,
+        "name": "Soups Stews & Curries"
+      }
+    },
+    {
+      "id": 71,
+      "name": "White Bean Chicken Chili",
+      "url": "https://hungry-blonde.com/slow-cooker-white-bean-chicken-chili/",
+      "category_id": 4,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T22:01:30.92405+00:00",
+      "ingredients": [],
+      "ingredients_status": "failed",
+      "ingredients_error": "No recipe ingredients found.",
+      "ingredients_updated_at": "2026-01-24T22:01:30.736+00:00",
+      "categories": {
+        "id": 4,
+        "name": "Crock Pot"
+      }
+    },
+    {
+      "id": 143,
+      "name": "White Bean Sausage Skillet",
+      "url": "https://themodernproper.com/white-bean-sausage-skillet",
+      "category_id": 10,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:16.354765+00:00",
+      "ingredients": [
+        "2 tablespoon extra-virgin olive oil",
+        "12 to 14 ounces smoked or Italian sausage, sliced ¼-inch thick",
+        "3 garlic cloves, minced",
+        "2 (15-ounce) cans white beans, such as great northern, butter beans, or cannellini, drained and rinsed",
+        "1½ cups chicken stock",
+        "½ teaspoon kosher salt",
+        "¼ teaspoon freshly cracked black pepper",
+        "1 teaspoon minced fresh thyme leaves",
+        "½ bunch curly kale, stemmed, and torn into bite-size pieces (about 3 cups packed)",
+        "1 tablespoon fresh lemon juice, (from 1 lemon)",
+        "½ cup freshly grated Parmesan cheese, plus extra for serving",
+        "Red pepper fakes, for serving (optional)",
+        "Crusty bread, for serving (optional)"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:16.137+00:00",
+      "categories": {
+        "id": 10,
+        "name": "Sausage"
+      }
+    },
+    {
+      "id": 7,
+      "name": "White Cabbage Salad",
+      "url": "https://www.theeleganteconomist.com/2019/08/20/salatet-malfouf-lebanese-white-cabbage-salad/",
+      "category_id": 1,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-17T21:07:00.660984+00:00",
+      "ingredients": [],
+      "ingredients_status": "pending",
+      "ingredients_error": null,
+      "ingredients_updated_at": null,
+      "categories": {
+        "id": 1,
+        "name": "Salads"
+      }
+    },
+    {
+      "id": 166,
+      "name": "Zucchini Fritters",
+      "url": "https://minimalistbaker.com/easy-zucchini-fritters/",
+      "category_id": 12,
+      "notes": "",
+      "created_at": "2026-01-17T21:07:00.660984+00:00",
+      "updated_at": "2026-01-24T21:52:18.146297+00:00",
+      "ingredients": [
+        "2 cups cooked and cooled quinoa",
+        "2 cups shredded zucchini  ((~2 small zucchinis as recipe is written))",
+        "2 Tbsp avocado or coconut oil, plus more for cooking",
+        "1/2 cup finely diced onion",
+        "4 cloves garlic, minced",
+        "1 healthy pinch each sea salt and black pepper",
+        "2 cups chopped greens  ((we prefer spinach))",
+        "1/3 cup chickpea flour",
+        "1/4 cup water",
+        "1/4 tsp sea salt, plus more to taste",
+        "1/4 cup fresh dill",
+        "1/2 cup gluten-free flour blend  ((plus more as needed))",
+        "Sauce",
+        "Fresh dill",
+        "Lemon wedges"
+      ],
+      "ingredients_status": "success",
+      "ingredients_error": null,
+      "ingredients_updated_at": "2026-01-24T21:52:17.993+00:00",
+      "categories": {
+        "id": 12,
+        "name": "Vegetarian"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Salads",
+      "sort_order": 1,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 2,
+      "name": "Bread",
+      "sort_order": 2,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 3,
+      "name": "Soups Stews & Curries",
+      "sort_order": 3,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 4,
+      "name": "Crock Pot",
+      "sort_order": 4,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 5,
+      "name": "Apps",
+      "sort_order": 5,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 6,
+      "name": "Sides",
+      "sort_order": 6,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 7,
+      "name": "Chicken",
+      "sort_order": 7,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 8,
+      "name": "Steak/Beef",
+      "sort_order": 8,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 9,
+      "name": "Seafood",
+      "sort_order": 9,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 10,
+      "name": "Sausage",
+      "sort_order": 10,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 11,
+      "name": "Turkey",
+      "sort_order": 11,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 12,
+      "name": "Vegetarian",
+      "sort_order": 12,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 13,
+      "name": "Noodles",
+      "sort_order": 13,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 14,
+      "name": "Desserts",
+      "sort_order": 14,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 15,
+      "name": "To Try",
+      "sort_order": 15,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 16,
+      "name": "Cocktails",
+      "sort_order": 16,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    },
+    {
+      "id": 17,
+      "name": "Random",
+      "sort_order": 17,
+      "created_at": "2026-01-17T21:07:00.660984+00:00"
+    }
+  ]
+}

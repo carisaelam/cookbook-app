@@ -3,6 +3,10 @@ defineProps({
   isBackfilling: {
     type: Boolean,
     default: false
+  },
+  isDemoMode: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -11,6 +15,9 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
 
 <template>
   <header class="app-header">
+    <div v-if="isDemoMode" class="demo-banner">
+      Demo mode: local data only
+    </div>
     <div class="container header-content">
       <h1 class="app-title">C & J Cookbook</h1>
       <div class="header-actions">
@@ -57,10 +64,19 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
 .app-header {
   background-color: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 1rem 0;
+  padding: 0.75rem 0 1rem;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.demo-banner {
+  background: var(--primary-light);
+  color: #065f46;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-bottom: 1px solid rgba(5, 150, 105, 0.2);
 }
 
 .header-content {
