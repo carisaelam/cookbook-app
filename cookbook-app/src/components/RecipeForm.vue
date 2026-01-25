@@ -7,6 +7,10 @@ const props = defineProps({
     type: Boolean,
     required: true
   },
+  isSaving: {
+    type: Boolean,
+    default: false
+  },
   recipe: {
     type: Object,
     default: null
@@ -83,6 +87,7 @@ function handleSubmit() {
           class="input"
           placeholder="e.g., Chicken Teriyaki"
           required
+          :disabled="isSaving"
         />
       </div>
 
@@ -94,13 +99,19 @@ function handleSubmit() {
           type="url"
           class="input"
           placeholder="https://..."
+          :disabled="isSaving"
         />
         <p class="form-hint">Link to the recipe page (optional)</p>
       </div>
 
       <div class="form-group">
         <label for="category" class="form-label">Category</label>
-        <select id="category" v-model="form.category_id" class="input select">
+        <select
+          id="category"
+          v-model="form.category_id"
+          class="input select"
+          :disabled="isSaving"
+        >
           <option :value="null">Select a category...</option>
           <option v-for="cat in categories" :key="cat.id" :value="cat.id">
             {{ cat.name }}
@@ -116,6 +127,7 @@ function handleSubmit() {
           class="input textarea"
           placeholder="Any notes about this recipe..."
           rows="3"
+          :disabled="isSaving"
         ></textarea>
       </div>
 
@@ -123,8 +135,9 @@ function handleSubmit() {
         <button type="button" class="btn btn-secondary" @click="$emit('close')">
           Cancel
         </button>
-        <button type="submit" class="btn btn-primary" :disabled="!isValid">
-          {{ isEditing ? 'Save Changes' : 'Add Recipe' }}
+        <button type="submit" class="btn btn-primary" :disabled="!isValid || isSaving">
+          <span v-if="isSaving" class="spinner" aria-hidden="true"></span>
+          {{ isSaving ? 'Saving...' : (isEditing ? 'Save Changes' : 'Add Recipe') }}
         </button>
       </div>
     </form>
@@ -150,5 +163,20 @@ function handleSubmit() {
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.spinner {
+  width: 0.85rem;
+  height: 0.85rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

@@ -51,6 +51,7 @@ const showImportModal = ref(false)
 const isBackfilling = ref(false)
 const selectedStatus = ref('all')
 const isDemoMode = !isSupabaseConfigured
+const isSavingRecipe = ref(false)
 
 function getIngredientsStatus(recipe) {
   if (recipe.ingredients_status) return recipe.ingredients_status
@@ -87,18 +88,23 @@ function handleDeleteClick(recipe) {
 }
 
 async function handleSaveRecipe(recipeData) {
-  let savedRecipe = null
-  if (recipeData.id) {
-    savedRecipe = await updateRecipe(recipeData.id, recipeData)
-  } else {
-    savedRecipe = await addRecipe(recipeData)
-  }
+  isSavingRecipe.value = true
+  try {
+    let savedRecipe = null
+    if (recipeData.id) {
+      savedRecipe = await updateRecipe(recipeData.id, recipeData)
+    } else {
+      savedRecipe = await addRecipe(recipeData)
+    }
 
-  if (savedRecipe?.url) {
-    await extractIngredientsForRecipe(savedRecipe)
+    if (savedRecipe?.url) {
+      await extractIngredientsForRecipe(savedRecipe)
+    }
+    showRecipeForm.value = false
+    editingRecipe.value = null
+  } finally {
+    isSavingRecipe.value = false
   }
-  showRecipeForm.value = false
-  editingRecipe.value = null
 }
 
 async function handleConfirmDelete() {
@@ -235,6 +241,7 @@ onMounted(async () => {
       :is-open="showRecipeForm"
       :recipe="editingRecipe"
       :categories="categories"
+      :is-saving="isSavingRecipe"
       @save="handleSaveRecipe"
       @close="showRecipeForm = false"
     />
