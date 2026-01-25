@@ -23,7 +23,27 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
       Demo mode: local data only
     </div>
     <div class="container header-content">
-      <h1 class="app-title">C & J Cookbook</h1>
+      <div class="title-block">
+        <div class="title-row">
+          <span class="title-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+              <path d="M7 8a5 5 0 0 1 10 0v5a5 5 0 0 1-10 0z"/>
+              <path d="M6 10H4a2 2 0 0 0-2 2v1a2 2 0 0 0 2 2h2"/>
+              <path d="M18 10h2a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-2"/>
+              <path d="M9 3h6"/>
+            </svg>
+          </span>
+          <div>
+            <h1 class="app-title">C & J Cookbook</h1>
+            <p class="app-subtitle text-muted">Collect, cook, and cherish every favorite.</p>
+          </div>
+        </div>
+        <div class="title-icons" aria-hidden="true">
+          <span>🍓</span>
+          <span>🥐</span>
+          <span>🍳</span>
+        </div>
+      </div>
       <div class="header-actions">
         <button class="btn btn-secondary" @click="$emit('toggle-theme')">
           <svg v-if="theme === 'dark'" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -83,12 +103,17 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
 
 <style scoped>
 .app-header {
-  background-color: var(--surface);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(209, 250, 229, 0.35));
   border-bottom: 1px solid var(--border);
-  padding: 0.75rem 0 1rem;
+  padding: 1rem 0 1.25rem;
   position: sticky;
   top: 0;
   z-index: 100;
+  backdrop-filter: blur(6px);
+}
+
+:global([data-theme='dark']) .app-header {
+  background: linear-gradient(135deg, rgba(17, 24, 39, 0.98), rgba(5, 150, 105, 0.2));
 }
 
 .demo-banner {
@@ -107,10 +132,57 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
   gap: 1rem;
 }
 
+.title-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--primary-light);
+  color: var(--primary);
+  box-shadow: var(--shadow);
+}
+
+.title-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
 .app-title {
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 700;
   color: var(--text);
+}
+
+.app-subtitle {
+  margin-top: 0.15rem;
+  font-size: 0.85rem;
+}
+
+.title-icons {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.title-icons span {
+  font-size: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.25rem 0.5rem;
+  box-shadow: var(--shadow);
 }
 
 .header-actions {
@@ -125,10 +197,6 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
     align-items: flex-start;
   }
 
-  .app-title {
-    flex: 1 1 100%;
-  }
-
   .header-actions {
     width: 100%;
   }
@@ -138,6 +206,14 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
   .header-content {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .title-row {
+    align-items: flex-start;
+  }
+
+  .title-icons {
+    flex-wrap: wrap;
   }
 
   .header-actions {

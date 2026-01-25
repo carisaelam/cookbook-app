@@ -217,7 +217,7 @@ onMounted(async () => {
     <main class="main-content">
       <div class="container">
         <!-- Filters -->
-        <div class="filters-section">
+        <div class="filters-section card">
           <RecipeSearch v-model="searchQuery" />
 
           <div class="filter-info text-muted text-sm">
@@ -292,6 +292,8 @@ onMounted(async () => {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: radial-gradient(circle at top, rgba(209, 250, 229, 0.4), transparent 55%),
+    radial-gradient(circle at 20% 20%, rgba(251, 191, 36, 0.12), transparent 45%);
 }
 
 .main-content {
@@ -306,6 +308,10 @@ onMounted(async () => {
   gap: 1rem;
   margin: 1.5rem 0 1rem;
   flex-wrap: wrap;
+  border: 1px solid rgba(5, 150, 105, 0.12);
+  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
 }
 
 .filter-info {
@@ -320,6 +326,11 @@ onMounted(async () => {
 
 .status-filter .input {
   min-width: 160px;
+}
+
+:global([data-theme='dark']) .filters-section {
+  background: rgba(17, 24, 39, 0.9);
+  border-color: rgba(52, 211, 153, 0.15);
 }
 
 @media (max-width: 640px) {
