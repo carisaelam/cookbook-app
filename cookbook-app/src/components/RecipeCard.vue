@@ -316,6 +316,15 @@ function saveIngredients() {
 
 .ingredients-edit-btn {
   align-self: flex-start;
+  padding: 0.35rem 0.75rem;
+  min-height: 2rem;
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.ingredients-edit-btn:hover {
+  background-color: var(--primary-hover);
+  color: #fff;
 }
 
 .ingredients-editor {
