@@ -136,7 +136,6 @@ function handleSubmit() {
           Cancel
         </button>
         <button type="submit" class="btn btn-primary" :disabled="!isValid || isSaving">
-          <span v-if="isSaving" class="spinner" aria-hidden="true"></span>
           {{ isSaving ? 'Saving...' : (isEditing ? 'Save Changes' : 'Add Recipe') }}
         </button>
       </div>
@@ -163,20 +162,5 @@ function handleSubmit() {
 .btn:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-.spinner {
-  width: 0.85rem;
-  height: 0.85rem;
-  border: 2px solid rgba(255, 255, 255, 0.4);
-  border-top-color: #fff;
-  border-radius: 50%;
-  animation: spin 0.8s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
 }
 </style>
