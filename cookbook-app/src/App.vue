@@ -247,6 +247,15 @@ onMounted(async () => {
           @select="selectedCategoryId = $event"
         />
 
+        <div class="chatbot-embed">
+          <iframe
+            src="https://app.scroll.ai/e/cn_01kgdg599qe7vbnqvk2phaavna/embedded-expert"
+            style="height: 640px; width: 100%; border: 0;"
+            loading="lazy"
+            title="Scroll AI Chat"
+          ></iframe>
+        </div>
+
         <!-- Recipe List -->
         <RecipeList
           :recipes-by-category="filteredRecipesByCategory"
@@ -320,6 +329,10 @@ onMounted(async () => {
 
 .status-filter .input {
   min-width: 160px;
+}
+
+.chatbot-embed {
+  margin: 1.5rem 0 2rem;
 }
 
 @media (max-width: 640px) {
