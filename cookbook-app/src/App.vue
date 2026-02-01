@@ -247,13 +247,16 @@ onMounted(async () => {
           @select="selectedCategoryId = $event"
         />
 
-        <div class="chatbot-embed">
-          <iframe
-            src="https://app.scroll.ai/e/cn_01kgdg599qe7vbnqvk2phaavna/embedded-expert"
-            style="height: 640px; width: 100%; border: 0;"
-            loading="lazy"
-            title="Scroll AI Chat"
-          ></iframe>
+        <div class="chefbot-cta">
+          <a
+            class="button chefbot-button"
+            href="https://app.scroll.ai/webchat/FgFJ7S5n0P"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="chefbot-icon" aria-hidden="true">🍳</span>
+            <span>Ask Chefbot</span>
+          </a>
         </div>
 
         <!-- Recipe List -->
@@ -331,8 +334,40 @@ onMounted(async () => {
   min-width: 160px;
 }
 
-.chatbot-embed {
-  margin: 1.5rem 0 2rem;
+.chefbot-cta {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chefbot-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.chefbot-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.chefbot-button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+
+.chefbot-icon {
+  font-size: 1.1rem;
+  line-height: 1;
 }
 
 @media (max-width: 640px) {
