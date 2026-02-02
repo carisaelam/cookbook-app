@@ -14,7 +14,14 @@ defineProps({
   }
 })
 
-defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-backup', 'toggle-theme'])
+defineEmits([
+  'add-recipe',
+  'import-recipes',
+  'backfill-ingredients',
+  'export-backup',
+  'toggle-theme',
+  'reset-filters'
+])
 </script>
 
 <template>
@@ -23,7 +30,11 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
       Demo mode: local data only
     </div>
     <div class="container header-content">
-      <h1 class="app-title">C & J Cookbook</h1>
+      <h1 class="app-title">
+        <button class="app-title-button" type="button" @click="$emit('reset-filters')">
+          C & J Cookbook
+        </button>
+      </h1>
       <div class="header-actions">
         <button class="btn btn-secondary" @click="$emit('toggle-theme')">
           <svg v-if="theme === 'dark'" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -111,6 +122,26 @@ defineEmits(['add-recipe', 'import-recipes', 'backfill-ingredients', 'export-bac
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--text);
+}
+
+.app-title-button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.app-title-button:hover {
+  text-decoration: underline;
+}
+
+.app-title-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
 .header-actions {

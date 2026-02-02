@@ -46,4 +46,12 @@ describe('AppHeader', () => {
     const backfillButton = findButtonByText(wrapper, 'Backfilling...')
     expect(backfillButton.attributes('disabled')).toBeDefined()
   })
+
+  it('emits reset-filters when the title is clicked', async () => {
+    const wrapper = mount(AppHeader)
+
+    await findButtonByText(wrapper, 'C & J Cookbook').trigger('click')
+
+    expect(wrapper.emitted('reset-filters')).toHaveLength(1)
+  })
 })
