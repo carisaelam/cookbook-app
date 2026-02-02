@@ -42,26 +42,23 @@ defineEmits(['select'])
 }
 
 .filter-btn {
-  padding: 0.375rem 0.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.85rem;
+  font-weight: 600;
   background-color: var(--surface);
-  color: var(--text-muted);
+  color: var(--text);
   border: 1px solid var(--border);
-  border-radius: 9999px;
   cursor: pointer;
-  transition: all 0.15s ease;
   white-space: nowrap;
 }
 
 .filter-btn:hover {
-  border-color: var(--border-dark);
-  color: var(--text);
+  background-color: var(--primary-light);
 }
 
 .filter-btn.active {
-  background-color: var(--primary);
-  border-color: var(--primary);
-  color: white;
+  background-color: var(--primary-light);
+  border-color: var(--border-dark);
+  color: var(--text);
 }
 </style>

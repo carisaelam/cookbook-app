@@ -87,11 +87,6 @@ function saveIngredients() {
         class="recipe-name recipe-link"
       >
         {{ recipe.name }}
-        <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/>
-          <line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
       </a>
       <span v-else class="recipe-name">{{ recipe.name }}</span>
 
@@ -108,8 +103,8 @@ function saveIngredients() {
 
       <div class="ingredients-block">
         <div class="ingredients-status text-sm">
-          <span class="status-pill" :class="`status-${getIngredientsStatus(recipe)}`">
-            {{ getStatusLabel(getIngredientsStatus(recipe)) }}
+          <span class="status-text">
+            Status: {{ getStatusLabel(getIngredientsStatus(recipe)) }}
           </span>
           <span v-if="formatUpdatedAt(recipe.ingredients_updated_at)" class="text-muted text-xs">
             Updated {{ formatUpdatedAt(recipe.ingredients_updated_at) }}
@@ -141,7 +136,7 @@ function saveIngredients() {
         </div>
 
         <button
-          class="btn btn-ghost btn-sm ingredients-edit-btn"
+          class="btn btn-secondary btn-sm ingredients-edit-btn"
           type="button"
           @click="toggleIngredientsEditor"
         >
@@ -164,28 +159,17 @@ function saveIngredients() {
 
     <div class="recipe-actions">
       <button
-        class="btn btn-ghost btn-sm"
+        class="btn btn-secondary btn-sm"
         :disabled="!recipe.url || getIngredientsStatus(recipe) === 'pending'"
         @click="$emit('import-ingredients', recipe)"
-        aria-label="Import ingredients"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 3v12"/>
-          <path d="M8 11l4 4 4-4"/>
-          <path d="M4 21h16"/>
-        </svg>
+        Import Ingredients
       </button>
-      <button class="btn btn-ghost btn-sm" @click="emit('edit', recipe)" aria-label="Edit recipe">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-        </svg>
+      <button class="btn btn-secondary btn-sm" @click="emit('edit', recipe)">
+        Edit
       </button>
-      <button class="btn btn-ghost btn-sm" @click="emit('delete', recipe)" aria-label="Delete recipe">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="3 6 5 6 21 6"/>
-          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-        </svg>
+      <button class="btn btn-danger btn-sm" @click="emit('delete', recipe)">
+        Delete
       </button>
     </div>
   </div>
@@ -197,11 +181,6 @@ function saveIngredients() {
   justify-content: space-between;
   align-items: flex-start;
   gap: 1rem;
-  transition: box-shadow 0.15s ease;
-}
-
-.recipe-card:hover {
-  box-shadow: var(--shadow-lg);
 }
 
 .recipe-content {
@@ -218,22 +197,10 @@ function saveIngredients() {
 
 .recipe-link {
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.375rem;
 }
 
 .recipe-link:hover {
-  color: var(--primary);
-}
-
-.external-icon {
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-
-.recipe-link:hover .external-icon {
-  opacity: 1;
+  text-decoration: underline;
 }
 
 .recipe-meta {
@@ -253,34 +220,8 @@ function saveIngredients() {
   gap: 0.5rem;
 }
 
-.status-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  padding: 0.15rem 0.5rem;
-  border-radius: 999px;
+.status-text {
   font-weight: 600;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  color: var(--text);
-}
-
-.status-success {
-  border-color: rgba(34, 197, 94, 0.4);
-  background: rgba(34, 197, 94, 0.08);
-  color: #15803d;
-}
-
-.status-pending {
-  border-color: rgba(234, 179, 8, 0.4);
-  background: rgba(234, 179, 8, 0.12);
-  color: #a16207;
-}
-
-.status-failed {
-  border-color: rgba(239, 68, 68, 0.4);
-  background: rgba(239, 68, 68, 0.08);
-  color: #b91c1c;
 }
 
 .ingredients-list {
@@ -305,7 +246,7 @@ function saveIngredients() {
 }
 
 .ingredients-toggle:hover {
-  color: var(--primary);
+  text-decoration: underline;
 }
 
 .ingredients-panel {
@@ -316,15 +257,8 @@ function saveIngredients() {
 
 .ingredients-edit-btn {
   align-self: flex-start;
-  padding: 0.35rem 0.75rem;
+  padding: 0.25rem 0.6rem;
   min-height: 2rem;
-  background-color: var(--primary);
-  color: #fff;
-}
-
-.ingredients-edit-btn:hover {
-  background-color: var(--primary-hover);
-  color: #fff;
 }
 
 .ingredients-editor {
@@ -343,27 +277,19 @@ function saveIngredients() {
 
 .recipe-notes {
   margin-top: 0.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+  white-space: pre-wrap;
 }
 
 .recipe-actions {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.5rem;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.15s ease;
-}
-
-.recipe-card:hover .recipe-actions {
-  opacity: 1;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 768px) {
   .recipe-actions {
-    opacity: 1;
+    width: 100%;
   }
 }
 </style>

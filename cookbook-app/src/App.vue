@@ -256,13 +256,12 @@ onMounted(async () => {
 
         <div class="chefbot-cta">
           <a
-            class="button chefbot-button"
+            class="chefbot-link"
             href="https://app.scroll.ai/webchat/FgFJ7S5n0P"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span class="chefbot-icon" aria-hidden="true">🍳</span>
-            <span>Ask Chefbot</span>
+            Ask Chefbot
           </a>
         </div>
 
@@ -320,10 +319,10 @@ onMounted(async () => {
 
 .filters-section {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
-  margin: 1.5rem 0 1rem;
+  margin: 1rem 0;
   flex-wrap: wrap;
 }
 
@@ -342,39 +341,14 @@ onMounted(async () => {
 }
 
 .chefbot-cta {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.chefbot-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  text-decoration: none;
+.chefbot-link {
+  color: var(--text);
+  text-decoration: underline;
   font-weight: 600;
-  letter-spacing: 0.01em;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.chefbot-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
-}
-
-.chefbot-button:active {
-  transform: translateY(0);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
-}
-
-.chefbot-icon {
-  font-size: 1.1rem;
-  line-height: 1;
 }
 
 @media (max-width: 640px) {

@@ -19,17 +19,11 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
   <div class="recipe-list">
     <!-- Loading state -->
     <div v-if="loading" class="loading-state">
-      <div class="spinner"></div>
       <p class="text-muted">Loading recipes...</p>
     </div>
 
     <!-- Empty state -->
     <div v-else-if="recipesByCategory.length === 0" class="empty-state">
-      <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
-        <path d="M2 17l10 5 10-5"/>
-        <path d="M2 12l10 5 10-5"/>
-      </svg>
       <h3>No recipes found</h3>
       <p class="text-muted">Try adjusting your search or add a new recipe.</p>
     </div>
@@ -60,69 +54,44 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 
 <style scoped>
 .recipe-list {
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .loading-state,
 .empty-state {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.empty-state svg {
-  color: var(--text-light);
-  margin-bottom: 1rem;
-}
-
-.empty-state h3 {
-  margin-bottom: 0.5rem;
-  color: var(--text);
-}
-
-.spinner {
-  width: 32px;
-  height: 32px;
-  border: 3px solid var(--border);
-  border-top-color: var(--primary);
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-  margin-bottom: 1rem;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  padding: 2rem 0;
+  text-align: left;
 }
 
 .category-groups {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .category-section {
-  animation: slideUp 0.3s ease;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
 }
 
 .category-title {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border-dark);
   display: inline-block;
 }
 
 .recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 @media (max-width: 640px) {
