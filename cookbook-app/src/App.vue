@@ -186,6 +186,12 @@ function handleExportBackup() {
   URL.revokeObjectURL(url)
 }
 
+function handleResetFilters() {
+  searchQuery.value = ''
+  selectedCategoryId.value = null
+  selectedStatus.value = 'all'
+}
+
 // Initialize
 onMounted(async () => {
   const savedTheme = localStorage.getItem('theme')
@@ -209,6 +215,7 @@ onMounted(async () => {
       @backfill-ingredients="handleBackfillIngredients"
       @export-backup="handleExportBackup"
       @toggle-theme="toggleTheme"
+      @reset-filters="handleResetFilters"
       :is-demo-mode="isDemoMode"
       :is-backfilling="isBackfilling"
       :theme="theme"
