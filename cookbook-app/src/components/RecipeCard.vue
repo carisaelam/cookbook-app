@@ -119,14 +119,13 @@ function saveIngredients() {
           {{ recipe.ingredients_error }}
         </p>
         <button
-          class="ingredients-toggle text-sm"
+          class="btn btn-primary btn-sm ingredients-toggle"
           type="button"
           :aria-expanded="isIngredientsOpen"
           :aria-controls="`ingredients-panel-${recipe.id}`"
           @click="isIngredientsOpen = !isIngredientsOpen"
         >
-          <span class="ingredients-toggle-label">Ingredients</span>
-          <span class="text-muted text-xs">{{ isIngredientsOpen ? 'Hide' : 'Show' }}</span>
+          {{ isIngredientsOpen ? 'Hide ingredients' : 'Show ingredients' }}
         </button>
         <div v-if="isIngredientsOpen" :id="`ingredients-panel-${recipe.id}`" class="ingredients-panel">
           <ul
@@ -294,18 +293,7 @@ function saveIngredients() {
 }
 
 .ingredients-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0;
-  background: none;
-  border: none;
-  color: var(--text);
-  cursor: pointer;
-}
-
-.ingredients-toggle:hover {
-  color: var(--primary);
+  align-self: flex-start;
 }
 
 .ingredients-panel {
@@ -316,15 +304,6 @@ function saveIngredients() {
 
 .ingredients-edit-btn {
   align-self: flex-start;
-  padding: 0.35rem 0.75rem;
-  min-height: 2rem;
-  background-color: var(--primary);
-  color: #fff;
-}
-
-.ingredients-edit-btn:hover {
-  background-color: var(--primary-hover);
-  color: #fff;
 }
 
 .ingredients-editor {
