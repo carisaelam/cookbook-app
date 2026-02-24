@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import { firebase, isFirebaseConfigured } from '../lib/firebase'
 import { demoCategories, getNextCategoryId } from '../lib/demoData'
 import { loadSeedData } from '../lib/demoSeed'
 
@@ -13,7 +13,7 @@ export function useCategories() {
     error.value = null
 
     // Demo mode: use local data
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       const seed = await loadSeedData()
       if (seed && Array.isArray(seed.categories)) {
         categories.value = seed.categories
@@ -25,13 +25,7 @@ export function useCategories() {
     }
 
     try {
-      const { data, error: fetchError } = await supabase
-        .from('categories')
-        .select('*')
-        .order('sort_order', { ascending: true })
-
-      if (fetchError) throw fetchError
-      categories.value = data || []
+      categories.value = await firebase.fetchCategories()
     } catch (e) {
       error.value = e.message
       console.error('Error fetching categories:', e)
@@ -44,7 +38,7 @@ export function useCategories() {
     error.value = null
 
     // Demo mode
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       const newCategory = {
         id: getNextCategoryId(),
         name,
@@ -55,13 +49,7 @@ export function useCategories() {
     }
 
     try {
-      const { data, error: insertError } = await supabase
-        .from('categories')
-        .insert([{ name, sort_order: sortOrder }])
-        .select()
-        .single()
-
-      if (insertError) throw insertError
+      const data = await firebase.addCategory({ name, sort_order: sortOrder })
       categories.value.push(data)
       return data
     } catch (e) {
@@ -75,7 +63,7 @@ export function useCategories() {
     error.value = null
 
     // Demo mode
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       const index = categories.value.findIndex(c => c.id === id)
       if (index !== -1) {
         categories.value[index] = { ...categories.value[index], name }
@@ -85,14 +73,7 @@ export function useCategories() {
     }
 
     try {
-      const { data, error: updateError } = await supabase
-        .from('categories')
-        .update({ name })
-        .eq('id', id)
-        .select()
-        .single()
-
-      if (updateError) throw updateError
+      const data = await firebase.updateCategory(id, { name })
 
       const index = categories.value.findIndex(c => c.id === id)
       if (index !== -1) {
@@ -110,18 +91,13 @@ export function useCategories() {
     error.value = null
 
     // Demo mode
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       categories.value = categories.value.filter(c => c.id !== id)
       return true
     }
 
     try {
-      const { error: deleteError } = await supabase
-        .from('categories')
-        .delete()
-        .eq('id', id)
-
-      if (deleteError) throw deleteError
+      await firebase.deleteCategory(id)
 
       categories.value = categories.value.filter(c => c.id !== id)
       return true

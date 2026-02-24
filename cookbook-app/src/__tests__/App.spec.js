@@ -42,8 +42,8 @@ async function mountApp({ recipesByCategoryOverride } = {}) {
     }
   ]
 
-  vi.doMock('../lib/supabase', () => ({
-    isSupabaseConfigured: false
+  vi.doMock('../lib/firebase', () => ({
+    isFirebaseConfigured: false
   }))
   vi.doMock('../composables/useCategories', () => ({
     useCategories: () => ({
