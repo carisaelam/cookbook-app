@@ -1,4 +1,4 @@
-// Demo data for when Supabase is not configured
+// Demo data for when Firebase is not configured
 // This allows testing the app without a database connection
 
 export const demoCategories = [

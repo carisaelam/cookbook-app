@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { supabase, isSupabaseConfigured } from '../lib/supabase'
+import { firebase, isFirebaseConfigured } from '../lib/firebase'
 import { demoRecipes, demoCategories, getNextRecipeId } from '../lib/demoData'
 import { loadSeedData } from '../lib/demoSeed'
 
@@ -38,7 +38,7 @@ export function useRecipes() {
     error.value = null
 
     // Demo mode: use local data
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       const seed = await loadSeedData()
       if (seed && Array.isArray(seed.recipes)) {
         recipes.value = seed.recipes.map(normalizeRecipe)
@@ -50,18 +50,7 @@ export function useRecipes() {
     }
 
     try {
-      const { data, error: fetchError } = await supabase
-        .from('recipes')
-        .select(`
-          *,
-          categories (
-            id,
-            name
-          )
-        `)
-        .order('name', { ascending: true })
-
-      if (fetchError) throw fetchError
+      const data = await firebase.fetchRecipes()
       recipes.value = (data || []).map(normalizeRecipe)
     } catch (e) {
       error.value = e.message
@@ -75,7 +64,7 @@ export function useRecipes() {
     error.value = null
 
     // Demo mode
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       const category = demoCategories.find(c => c.id === recipe.category_id)
       const newRecipe = normalizeRecipe({
         id: getNextRecipeId(),
@@ -90,24 +79,12 @@ export function useRecipes() {
     }
 
     try {
-      const { data, error: insertError } = await supabase
-        .from('recipes')
-        .insert([{
-          name: recipe.name,
-          url: recipe.url || '',
-          category_id: recipe.category_id,
-          notes: recipe.notes || ''
-        }])
-        .select(`
-          *,
-          categories (
-            id,
-            name
-          )
-        `)
-        .single()
-
-      if (insertError) throw insertError
+      const data = await firebase.addRecipe({
+        name: recipe.name,
+        url: recipe.url || '',
+        category_id: recipe.category_id,
+        notes: recipe.notes || ''
+      })
       const normalized = normalizeRecipe(data)
       recipes.value.push(normalized)
       return normalized
@@ -122,7 +99,7 @@ export function useRecipes() {
     error.value = null
 
     // Demo mode
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       const category = demoCategories.find(c => c.id === updates.category_id)
       return updateLocalRecipe(id, {
         name: updates.name,
@@ -134,25 +111,12 @@ export function useRecipes() {
     }
 
     try {
-      const { data, error: updateError } = await supabase
-        .from('recipes')
-        .update({
-          name: updates.name,
-          url: updates.url || '',
-          category_id: updates.category_id,
-          notes: updates.notes || ''
-        })
-        .eq('id', id)
-        .select(`
-          *,
-          categories (
-            id,
-            name
-          )
-        `)
-        .single()
-
-      if (updateError) throw updateError
+      const data = await firebase.updateRecipe(id, {
+        name: updates.name,
+        url: updates.url || '',
+        category_id: updates.category_id,
+        notes: updates.notes || ''
+      })
       return updateLocalRecipe(id, data)
     } catch (e) {
       error.value = e.message
@@ -165,18 +129,13 @@ export function useRecipes() {
     error.value = null
 
     // Demo mode
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       recipes.value = recipes.value.filter(r => r.id !== id)
       return true
     }
 
     try {
-      const { error: deleteError } = await supabase
-        .from('recipes')
-        .delete()
-        .eq('id', id)
-
-      if (deleteError) throw deleteError
+      await firebase.deleteRecipe(id)
 
       recipes.value = recipes.value.filter(r => r.id !== id)
       return true
@@ -196,7 +155,7 @@ export function useRecipes() {
         const categoryId = await getCategoryId(recipe.category)
 
         // Demo mode
-        if (!isSupabaseConfigured) {
+        if (!isFirebaseConfigured) {
           const category = demoCategories.find(c => c.id === categoryId)
           const newRecipe = normalizeRecipe({
             id: getNextRecipeId(),
@@ -211,21 +170,13 @@ export function useRecipes() {
           continue
         }
 
-        const { error: insertError } = await supabase
-          .from('recipes')
-          .insert([{
-            name: recipe.name,
-            url: recipe.url || '',
-            category_id: categoryId,
-            notes: recipe.notes || ''
-          }])
-
-        if (insertError) {
-          results.failed++
-          console.error('Error importing recipe:', recipe.name, insertError)
-        } else {
-          results.success++
-        }
+        await firebase.addRecipe({
+          name: recipe.name,
+          url: recipe.url || '',
+          category_id: categoryId,
+          notes: recipe.notes || ''
+        })
+        results.success++
       } catch (e) {
         results.failed++
         console.error('Error importing recipe:', recipe.name, e)
@@ -233,7 +184,7 @@ export function useRecipes() {
     }
 
     // Refresh recipes list after import
-    if (isSupabaseConfigured) {
+    if (isFirebaseConfigured) {
       await fetchRecipes()
     }
 
@@ -254,46 +205,27 @@ export function useRecipes() {
       ingredients_error: null
     })
 
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       return updateLocalRecipe(recipe.id, {
         ingredients_status: 'failed',
-        ingredients_error: 'Supabase not configured.',
+        ingredients_error: 'Firebase not configured.',
         ingredients_updated_at: new Date().toISOString()
       })
     }
 
     try {
-      const { data, error: invokeError } = await supabase.functions.invoke('extract-ingredients', {
-        body: { url: recipe.url }
-      })
-
-      if (invokeError) {
-        throw invokeError
-      }
+      const data = await firebase.invokeExtractIngredients(recipe.url)
 
       const ingredients = Array.isArray(data?.ingredients) ? data.ingredients : []
       const status = ingredients.length ? 'success' : 'failed'
       const ingredientsError = status === 'success' ? null : (data?.error || 'No ingredients found.')
 
-      const { data: updated, error: updateError } = await supabase
-        .from('recipes')
-        .update({
-          ingredients,
-          ingredients_status: status,
-          ingredients_error: ingredientsError,
-          ingredients_updated_at: new Date().toISOString()
-        })
-        .eq('id', recipe.id)
-        .select(`
-          *,
-          categories (
-            id,
-            name
-          )
-        `)
-        .single()
-
-      if (updateError) throw updateError
+      const updated = await firebase.updateRecipe(recipe.id, {
+        ingredients,
+        ingredients_status: status,
+        ingredients_error: ingredientsError,
+        ingredients_updated_at: new Date().toISOString()
+      })
 
       return updateLocalRecipe(recipe.id, updated)
     } catch (e) {
@@ -311,7 +243,7 @@ export function useRecipes() {
       ? ingredients.map(item => String(item).trim()).filter(Boolean)
       : []
 
-    if (!isSupabaseConfigured) {
+    if (!isFirebaseConfigured) {
       return updateLocalRecipe(recipe.id, {
         ingredients: normalized,
         ingredients_status: normalized.length ? 'success' : 'failed',
@@ -328,25 +260,12 @@ export function useRecipes() {
         ingredients_updated_at: new Date().toISOString()
       })
 
-      const { data: updated, error: updateError } = await supabase
-        .from('recipes')
-        .update({
-          ingredients: normalized,
-          ingredients_status: normalized.length ? 'success' : 'failed',
-          ingredients_error: normalized.length ? null : 'No ingredients provided.',
-          ingredients_updated_at: new Date().toISOString()
-        })
-        .eq('id', recipe.id)
-        .select(`
-          *,
-          categories (
-            id,
-            name
-          )
-        `)
-        .single()
-
-      if (updateError) throw updateError
+      const updated = await firebase.updateRecipe(recipe.id, {
+        ingredients: normalized,
+        ingredients_status: normalized.length ? 'success' : 'failed',
+        ingredients_error: normalized.length ? null : 'No ingredients provided.',
+        ingredients_updated_at: new Date().toISOString()
+      })
       return updateLocalRecipe(recipe.id, updated)
     } catch (e) {
       const message = e?.message || 'Failed to save ingredients.'

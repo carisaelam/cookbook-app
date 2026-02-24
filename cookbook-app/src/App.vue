@@ -3,7 +3,7 @@ import { ref, onMounted, computed } from 'vue'
 import { useCategories } from './composables/useCategories'
 import { useRecipes } from './composables/useRecipes'
 import { useSearch } from './composables/useSearch'
-import { isSupabaseConfigured } from './lib/supabase'
+import { isFirebaseConfigured } from './lib/firebase'
 
 import AppHeader from './components/AppHeader.vue'
 import RecipeSearch from './components/RecipeSearch.vue'
@@ -50,7 +50,7 @@ const deletingRecipe = ref(null)
 const showImportModal = ref(false)
 const isBackfilling = ref(false)
 const selectedStatus = ref('all')
-const isDemoMode = !isSupabaseConfigured
+const isDemoMode = !isFirebaseConfigured
 const isSavingRecipe = ref(false)
 const theme = ref('light')
 const isDarkMode = computed(() => theme.value === 'dark')
