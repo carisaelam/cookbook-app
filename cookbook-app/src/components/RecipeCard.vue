@@ -195,7 +195,7 @@ function saveIngredients() {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.35rem;
   transition: box-shadow 0.15s ease;
 }
 
@@ -212,7 +212,7 @@ function saveIngredients() {
   font-weight: 600;
   color: var(--text);
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.55rem;
 }
 
 .recipe-link {
@@ -236,20 +236,20 @@ function saveIngredients() {
 }
 
 .recipe-meta {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.55rem;
 }
 
 .ingredients-block {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.55rem;
 }
 
 .ingredients-status {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 .status-pill {
@@ -299,7 +299,7 @@ function saveIngredients() {
 .ingredients-panel {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.55rem;
 }
 
 .ingredients-edit-btn {
@@ -309,7 +309,7 @@ function saveIngredients() {
 .ingredients-editor {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 .recipe-domain {
@@ -321,7 +321,7 @@ function saveIngredients() {
 }
 
 .recipe-notes {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -330,7 +330,7 @@ function saveIngredients() {
 
 .recipe-actions {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.55rem;
   align-items: center;
   opacity: 0;
   transition: opacity 0.15s ease;

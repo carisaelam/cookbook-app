@@ -96,7 +96,7 @@ defineEmits([
 .app-header {
   background-color: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 0.75rem 0 1rem;
+  padding: 1.1rem 0 1.35rem;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -115,7 +115,7 @@ defineEmits([
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.35rem;
 }
 
 .app-title {
@@ -146,7 +146,7 @@ defineEmits([
 
 .header-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.7rem;
   flex-wrap: wrap;
 }
 
