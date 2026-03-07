@@ -1,9 +1,10 @@
 <script setup>
-import { ref, onMounted, computed } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useCategories } from './composables/useCategories'
 import { useRecipes } from './composables/useRecipes'
 import { useSearch } from './composables/useSearch'
-import { isSupabaseConfigured } from './lib/supabase'
+import { useAuth } from './composables/useAuth'
+import { isFirebaseConfigured } from './lib/firebase'
 
 import AppHeader from './components/AppHeader.vue'
 import RecipeSearch from './components/RecipeSearch.vue'
@@ -41,6 +42,14 @@ const {
   filteredCount,
   totalRecipes
 } = useSearch(recipes, categories)
+const {
+  user,
+  isEditor,
+  loading: authLoading,
+  initAuth,
+  signIn,
+  signOut
+} = useAuth()
 
 // UI State
 const showRecipeForm = ref(false)
@@ -50,10 +59,11 @@ const deletingRecipe = ref(null)
 const showImportModal = ref(false)
 const isBackfilling = ref(false)
 const selectedStatus = ref('all')
-const isDemoMode = !isSupabaseConfigured
 const isSavingRecipe = ref(false)
 const theme = ref('light')
 const isDarkMode = computed(() => theme.value === 'dark')
+const canEdit = computed(() => isEditor.value)
+let stopAuthSubscription = () => {}
 
 function applyTheme(value) {
   theme.value = value
@@ -85,32 +95,31 @@ const filteredRecipesByCategory = computed(() => {
 
 // Handlers
 function handleAddRecipe() {
+  if (!canEdit.value) return
   editingRecipe.value = null
   showRecipeForm.value = true
 }
 
 function handleEditRecipe(recipe) {
+  if (!canEdit.value) return
   editingRecipe.value = recipe
   showRecipeForm.value = true
 }
 
 function handleDeleteClick(recipe) {
+  if (!canEdit.value) return
   deletingRecipe.value = recipe
   showDeleteConfirm.value = true
 }
 
 async function handleSaveRecipe(recipeData) {
+  if (!canEdit.value) return
   isSavingRecipe.value = true
   try {
-    let savedRecipe = null
     if (recipeData.id) {
-      savedRecipe = await updateRecipe(recipeData.id, recipeData)
+      await updateRecipe(recipeData.id, recipeData)
     } else {
-      savedRecipe = await addRecipe(recipeData)
-    }
-
-    if (savedRecipe?.url) {
-      await extractIngredientsForRecipe(savedRecipe)
+      await addRecipe(recipeData)
     }
     showRecipeForm.value = false
     editingRecipe.value = null
@@ -120,6 +129,7 @@ async function handleSaveRecipe(recipeData) {
 }
 
 async function handleConfirmDelete() {
+  if (!canEdit.value) return
   if (deletingRecipe.value) {
     await deleteRecipe(deletingRecipe.value.id)
   }
@@ -128,6 +138,7 @@ async function handleConfirmDelete() {
 }
 
 async function handleImport(parseResult) {
+  if (!canEdit.value) return
   // Create categories that don't exist
   const categoryMap = {}
   for (const catName of parseResult.categories) {
@@ -153,19 +164,31 @@ async function handleImport(parseResult) {
 }
 
 async function handleImportIngredients(recipe) {
+  if (!canEdit.value) return
   if (!recipe?.url) return
   await extractIngredientsForRecipe(recipe)
 }
 
 async function handleSaveIngredients(payload) {
+  if (!canEdit.value) return
   if (!payload?.recipe) return
   await saveIngredientsForRecipe(payload.recipe, payload.ingredients)
 }
 
 async function handleBackfillIngredients() {
+  if (!canEdit.value) return
   isBackfilling.value = true
   await backfillIngredients()
   isBackfilling.value = false
+}
+
+async function handleAuthAction() {
+  if (!isFirebaseConfigured) return
+  if (user.value) {
+    await signOut()
+    return
+  }
+  await signIn()
 }
 
 function handleExportBackup() {
@@ -188,6 +211,8 @@ function handleExportBackup() {
 
 // Initialize
 onMounted(async () => {
+  stopAuthSubscription = initAuth()
+
   const savedTheme = localStorage.getItem('theme')
   if (savedTheme === 'light' || savedTheme === 'dark') {
     applyTheme(savedTheme)
@@ -199,6 +224,10 @@ onMounted(async () => {
 
   await Promise.all([fetchCategories(), fetchRecipes()])
 })
+
+onUnmounted(() => {
+  stopAuthSubscription()
+})
 </script>
 
 <template>
@@ -209,7 +238,11 @@ onMounted(async () => {
       @backfill-ingredients="handleBackfillIngredients"
       @export-backup="handleExportBackup"
       @toggle-theme="toggleTheme"
-      :is-demo-mode="isDemoMode"
+      @auth-action="handleAuthAction"
+      :can-edit="canEdit"
+      :is-firebase-configured="isFirebaseConfigured"
+      :is-auth-loading="authLoading"
+      :user-email="user?.email || ''"
       :is-backfilling="isBackfilling"
       :theme="theme"
     />
@@ -263,6 +296,7 @@ onMounted(async () => {
         <RecipeList
           :recipes-by-category="filteredRecipesByCategory"
           :loading="recipesLoading || categoriesLoading"
+          :can-edit="canEdit"
           @edit="handleEditRecipe"
           @delete="handleDeleteClick"
           @import-ingredients="handleImportIngredients"
@@ -277,6 +311,7 @@ onMounted(async () => {
       :recipe="editingRecipe"
       :categories="categories"
       :is-saving="isSavingRecipe"
+      :can-edit="canEdit"
       @save="handleSaveRecipe"
       @close="showRecipeForm = false"
     />

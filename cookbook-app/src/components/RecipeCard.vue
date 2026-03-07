@@ -5,6 +5,10 @@ const props = defineProps({
   recipe: {
     type: Object,
     required: true
+  },
+  canEdit: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -53,6 +57,7 @@ function hasIngredients(recipe) {
 }
 
 function toggleIngredientsEditor() {
+  if (!props.canEdit) return
   if (!isEditingIngredients.value) {
     manualIngredients.value = hasIngredients(props.recipe)
       ? props.recipe.ingredients.join('\n')
@@ -63,6 +68,7 @@ function toggleIngredientsEditor() {
 }
 
 function saveIngredients() {
+  if (!props.canEdit) return
   const items = manualIngredients.value
     .split('\n')
     .map(line => line.trim())
@@ -141,6 +147,7 @@ function saveIngredients() {
         </div>
 
         <button
+          v-if="canEdit"
           class="btn btn-ghost btn-sm ingredients-edit-btn"
           type="button"
           @click="toggleIngredientsEditor"
@@ -164,6 +171,7 @@ function saveIngredients() {
 
     <div class="recipe-actions">
       <button
+        v-if="canEdit"
         class="btn btn-ghost btn-sm"
         :disabled="!recipe.url || getIngredientsStatus(recipe) === 'pending'"
         @click="$emit('import-ingredients', recipe)"
@@ -175,13 +183,13 @@ function saveIngredients() {
           <path d="M4 21h16"/>
         </svg>
       </button>
-      <button class="btn btn-ghost btn-sm" @click="emit('edit', recipe)" aria-label="Edit recipe">
+      <button v-if="canEdit" class="btn btn-ghost btn-sm" @click="emit('edit', recipe)" aria-label="Edit recipe">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
           <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
         </svg>
       </button>
-      <button class="btn btn-ghost btn-sm" @click="emit('delete', recipe)" aria-label="Delete recipe">
+      <button v-if="canEdit" class="btn btn-ghost btn-sm" @click="emit('delete', recipe)" aria-label="Delete recipe">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="3 6 5 6 21 6"/>
           <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>

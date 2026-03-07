@@ -11,7 +11,8 @@ describe('RecipeForm', () => {
 
   const baseProps = {
     isOpen: true,
-    categories
+    categories,
+    canEdit: true
   }
 
   const modalStub = {
