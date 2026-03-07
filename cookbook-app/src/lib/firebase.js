@@ -6,6 +6,7 @@ import {
   signOut,
   onAuthStateChanged
 } from 'firebase/auth'
+import { getFunctions, httpsCallable } from 'firebase/functions'
 import { getFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -32,6 +33,7 @@ const app = isFirebaseConfigured ? initializeApp(firebaseConfig) : null
 
 export const auth = app ? getAuth(app) : null
 export const db = app ? getFirestore(app) : null
+export const functions = app ? getFunctions(app, 'us-east1') : null
 export const googleProvider = auth ? new GoogleAuthProvider() : null
 
 export async function signInWithGoogle() {
@@ -52,4 +54,17 @@ export function subscribeToAuthState(callback) {
   }
 
   return onAuthStateChanged(auth, callback)
+}
+
+export async function extractIngredientsFromUrl(url) {
+  if (!functions) {
+    return {
+      ingredients: [],
+      error: 'Firebase Functions is not configured.'
+    }
+  }
+
+  const callable = httpsCallable(functions, 'extractIngredients')
+  const result = await callable({ url })
+  return result.data || { ingredients: [], error: 'No extraction result.' }
 }

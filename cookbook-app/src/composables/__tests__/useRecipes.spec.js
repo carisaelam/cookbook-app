@@ -4,7 +4,8 @@ async function setupUseRecipes({ seedData }) {
   vi.resetModules()
   vi.doMock('../../lib/firebase', () => ({
     isFirebaseConfigured: false,
-    db: null
+    db: null,
+    extractIngredientsFromUrl: vi.fn()
   }))
   vi.doMock('../../lib/demoSeed', () => ({
     loadSeedData: vi.fn().mockResolvedValue(seedData)

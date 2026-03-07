@@ -48,6 +48,23 @@ The script upserts:
 - all categories into `categories/{id}`
 - all recipes into `recipes/{id}`
 
+## 6) Enable automatic ingredient extraction (Option 2)
+Ingredient extraction runs through a Firebase Cloud Function named `extractIngredients`.
+
+Prereqs:
+- Billing-enabled Firebase project (required for Cloud Functions deployments).
+- In `functions/`, install dependencies:
+  - `cd functions && npm install`
+
+Deploy:
+- `firebase deploy --only functions`
+
+How it works:
+- On recipe save, the app calls `extractIngredients` with the recipe URL.
+- The function fetches the recipe page and tries JSON-LD `recipeIngredient` first.
+- Fallback parsing checks common ingredient selectors from page HTML.
+- Existing successful ingredients are preserved if extraction fails.
+
 ## Collections used
 - `categories`
 - `recipes`

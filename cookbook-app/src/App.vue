@@ -116,10 +116,15 @@ async function handleSaveRecipe(recipeData) {
   if (!canEdit.value) return
   isSavingRecipe.value = true
   try {
+    let savedRecipe = null
     if (recipeData.id) {
-      await updateRecipe(recipeData.id, recipeData)
+      savedRecipe = await updateRecipe(recipeData.id, recipeData)
     } else {
-      await addRecipe(recipeData)
+      savedRecipe = await addRecipe(recipeData)
+    }
+
+    if (savedRecipe?.url) {
+      await extractIngredientsForRecipe(savedRecipe)
     }
     showRecipeForm.value = false
     editingRecipe.value = null
