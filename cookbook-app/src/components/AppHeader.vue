@@ -32,7 +32,8 @@ defineEmits([
   'backfill-ingredients',
   'export-backup',
   'toggle-theme',
-  'auth-action'
+  'auth-action',
+  'reset-filters'
 ])
 </script>
 
