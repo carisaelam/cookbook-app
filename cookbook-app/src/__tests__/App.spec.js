@@ -162,6 +162,7 @@ describe('App', () => {
     await flushPromises()
 
     expect(mocks.addRecipe).toHaveBeenCalled()
+    expect(mocks.extractIngredientsForRecipe).toHaveBeenCalledWith({ id: '10', url: 'https://example.com' })
 
     const createObjectURL = vi.fn(() => 'blob:mock')
     const revokeObjectURL = vi.fn()
