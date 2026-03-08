@@ -11,6 +11,10 @@ const props = defineProps({
     type: Boolean,
     default: false
   },
+  canEdit: {
+    type: Boolean,
+    default: false
+  },
   recipe: {
     type: Object,
     default: null
@@ -58,7 +62,7 @@ const isValid = computed(() => {
 })
 
 function handleSubmit() {
-  if (!isValid.value) return
+  if (!props.canEdit || !isValid.value) return
 
   const recipeData = {
     name: form.value.name.trim(),
@@ -135,7 +139,7 @@ function handleSubmit() {
         <button type="button" class="btn btn-secondary" @click="$emit('close')">
           Cancel
         </button>
-        <button type="submit" class="btn btn-primary" :disabled="!isValid || isSaving">
+        <button type="submit" class="btn btn-primary" :disabled="!canEdit || !isValid || isSaving">
           <span v-if="isSaving" class="spinner" aria-hidden="true"></span>
           {{ isSaving ? 'Saving...' : (isEditing ? 'Save Changes' : 'Add Recipe') }}
         </button>

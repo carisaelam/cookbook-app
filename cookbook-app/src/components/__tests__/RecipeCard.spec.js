@@ -32,7 +32,8 @@ describe('RecipeCard', () => {
     }
     const wrapper = mount(RecipeCard, {
       props: {
-        recipe
+        recipe,
+        canEdit: true
       }
     })
 
@@ -49,7 +50,8 @@ describe('RecipeCard', () => {
   it('disables ingredient import when pending', () => {
     const wrapper = mount(RecipeCard, {
       props: {
-        recipe: baseRecipe
+        recipe: baseRecipe,
+        canEdit: true
       }
     })
 

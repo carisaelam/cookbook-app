@@ -1,5 +1,15 @@
 import { ref } from 'vue'
-import { firebase, isFirebaseConfigured } from '../lib/firebase'
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  updateDoc
+} from 'firebase/firestore'
+import { db, isFirebaseConfigured } from '../lib/firebase'
 import { demoCategories, getNextCategoryId } from '../lib/demoData'
 import { loadSeedData } from '../lib/demoSeed'
 
@@ -12,8 +22,7 @@ export function useCategories() {
     loading.value = true
     error.value = null
 
-    // Demo mode: use local data
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       const seed = await loadSeedData()
       if (seed && Array.isArray(seed.categories)) {
         categories.value = seed.categories
@@ -25,7 +34,11 @@ export function useCategories() {
     }
 
     try {
-      categories.value = await firebase.fetchCategories()
+      const snapshot = await getDocs(query(collection(db, 'categories'), orderBy('sort_order', 'asc')))
+      categories.value = snapshot.docs.map(categoryDoc => ({
+        id: categoryDoc.id,
+        ...categoryDoc.data()
+      }))
     } catch (e) {
       error.value = e.message
       console.error('Error fetching categories:', e)
@@ -37,8 +50,7 @@ export function useCategories() {
   async function addCategory(name, sortOrder = 0) {
     error.value = null
 
-    // Demo mode
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       const newCategory = {
         id: getNextCategoryId(),
         name,
@@ -49,9 +61,17 @@ export function useCategories() {
     }
 
     try {
-      const data = await firebase.addCategory({ name, sort_order: sortOrder })
-      categories.value.push(data)
-      return data
+      const docRef = await addDoc(collection(db, 'categories'), {
+        name,
+        sort_order: sortOrder,
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      })
+
+      const created = { id: docRef.id, name, sort_order: sortOrder }
+      categories.value.push(created)
+      categories.value = [...categories.value].sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0))
+      return created
     } catch (e) {
       error.value = e.message
       console.error('Error adding category:', e)
@@ -62,8 +82,7 @@ export function useCategories() {
   async function updateCategory(id, name) {
     error.value = null
 
-    // Demo mode
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       const index = categories.value.findIndex(c => c.id === id)
       if (index !== -1) {
         categories.value[index] = { ...categories.value[index], name }
@@ -73,13 +92,16 @@ export function useCategories() {
     }
 
     try {
-      const data = await firebase.updateCategory(id, { name })
+      await updateDoc(doc(db, 'categories', String(id)), {
+        name,
+        updated_at: new Date().toISOString()
+      })
 
       const index = categories.value.findIndex(c => c.id === id)
       if (index !== -1) {
-        categories.value[index] = data
+        categories.value[index] = { ...categories.value[index], name }
       }
-      return data
+      return categories.value[index] || null
     } catch (e) {
       error.value = e.message
       console.error('Error updating category:', e)
@@ -90,15 +112,13 @@ export function useCategories() {
   async function deleteCategory(id) {
     error.value = null
 
-    // Demo mode
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       categories.value = categories.value.filter(c => c.id !== id)
       return true
     }
 
     try {
-      await firebase.deleteCategory(id)
-
+      await deleteDoc(doc(db, 'categories', String(id)))
       categories.value = categories.value.filter(c => c.id !== id)
       return true
     } catch (e) {
@@ -109,13 +129,11 @@ export function useCategories() {
   }
 
   async function getOrCreateCategory(name) {
-    // Check if category already exists
     const existing = categories.value.find(
       c => c.name.toLowerCase() === name.toLowerCase()
     )
     if (existing) return existing
 
-    // Create new category
     return await addCategory(name, categories.value.length)
   }
 

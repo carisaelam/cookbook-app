@@ -1,7 +1,24 @@
 import { ref } from 'vue'
-import { firebase, isFirebaseConfigured } from '../lib/firebase'
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  orderBy,
+  query,
+  updateDoc
+} from 'firebase/firestore'
+import { db, isFirebaseConfigured } from '../lib/firebase'
 import { demoRecipes, demoCategories, getNextRecipeId } from '../lib/demoData'
 import { loadSeedData } from '../lib/demoSeed'
+
+function toIsoString(value) {
+  if (!value) return null
+  if (typeof value === 'string') return value
+  if (value?.toDate) return value.toDate().toISOString()
+  return null
+}
 
 export function useRecipes() {
   const recipes = ref([])
@@ -18,7 +35,8 @@ export function useRecipes() {
       ...recipe,
       ingredients,
       ingredients_status: status,
-      ingredients_error: ingredientsError
+      ingredients_error: ingredientsError,
+      ingredients_updated_at: toIsoString(recipe.ingredients_updated_at) || recipe.ingredients_updated_at || null
     }
   }
 
@@ -37,8 +55,7 @@ export function useRecipes() {
     loading.value = true
     error.value = null
 
-    // Demo mode: use local data
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       const seed = await loadSeedData()
       if (seed && Array.isArray(seed.recipes)) {
         recipes.value = seed.recipes.map(normalizeRecipe)
@@ -50,8 +67,26 @@ export function useRecipes() {
     }
 
     try {
-      const data = await firebase.fetchRecipes()
-      recipes.value = (data || []).map(normalizeRecipe)
+      const categorySnapshot = await getDocs(collection(db, 'categories'))
+      const categoryById = {}
+      for (const categoryDoc of categorySnapshot.docs) {
+        categoryById[categoryDoc.id] = categoryDoc.data()
+      }
+
+      const snapshot = await getDocs(query(collection(db, 'recipes'), orderBy('name', 'asc')))
+      recipes.value = snapshot.docs.map(recipeDoc => {
+        const data = recipeDoc.data()
+        const categoryId = data.category_id || null
+        const category = categoryId && categoryById[categoryId]
+          ? { id: categoryId, name: categoryById[categoryId].name }
+          : null
+
+        return normalizeRecipe({
+          id: recipeDoc.id,
+          ...data,
+          categories: category
+        })
+      })
     } catch (e) {
       error.value = e.message
       console.error('Error fetching recipes:', e)
@@ -63,8 +98,7 @@ export function useRecipes() {
   async function addRecipe(recipe) {
     error.value = null
 
-    // Demo mode
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       const category = demoCategories.find(c => c.id === recipe.category_id)
       const newRecipe = normalizeRecipe({
         id: getNextRecipeId(),
@@ -79,15 +113,24 @@ export function useRecipes() {
     }
 
     try {
-      const data = await firebase.addRecipe({
+      const payload = {
         name: recipe.name,
         url: recipe.url || '',
-        category_id: recipe.category_id,
-        notes: recipe.notes || ''
-      })
-      const normalized = normalizeRecipe(data)
-      recipes.value.push(normalized)
-      return normalized
+        category_id: recipe.category_id || null,
+        notes: recipe.notes || '',
+        ingredients: [],
+        ingredients_status: recipe.url ? 'pending' : 'failed',
+        ingredients_error: recipe.url ? null : 'Missing URL',
+        ingredients_updated_at: new Date().toISOString(),
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      }
+
+      const docRef = await addDoc(collection(db, 'recipes'), payload)
+      const created = normalizeRecipe({ id: docRef.id, ...payload })
+      recipes.value.push(created)
+      recipes.value = [...recipes.value].sort((a, b) => a.name.localeCompare(b.name))
+      return created
     } catch (e) {
       error.value = e.message
       console.error('Error adding recipe:', e)
@@ -98,8 +141,7 @@ export function useRecipes() {
   async function updateRecipe(id, updates) {
     error.value = null
 
-    // Demo mode
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       const category = demoCategories.find(c => c.id === updates.category_id)
       return updateLocalRecipe(id, {
         name: updates.name,
@@ -111,13 +153,15 @@ export function useRecipes() {
     }
 
     try {
-      const data = await firebase.updateRecipe(id, {
+      const payload = {
         name: updates.name,
         url: updates.url || '',
-        category_id: updates.category_id,
-        notes: updates.notes || ''
-      })
-      return updateLocalRecipe(id, data)
+        category_id: updates.category_id || null,
+        notes: updates.notes || '',
+        updated_at: new Date().toISOString()
+      }
+      await updateDoc(doc(db, 'recipes', String(id)), payload)
+      return updateLocalRecipe(id, payload)
     } catch (e) {
       error.value = e.message
       console.error('Error updating recipe:', e)
@@ -128,15 +172,13 @@ export function useRecipes() {
   async function deleteRecipe(id) {
     error.value = null
 
-    // Demo mode
-    if (!isFirebaseConfigured) {
+    if (!isFirebaseConfigured || !db) {
       recipes.value = recipes.value.filter(r => r.id !== id)
       return true
     }
 
     try {
-      await firebase.deleteRecipe(id)
-
+      await deleteDoc(doc(db, 'recipes', String(id)))
       recipes.value = recipes.value.filter(r => r.id !== id)
       return true
     } catch (e) {
@@ -153,39 +195,22 @@ export function useRecipes() {
     for (const recipe of recipesArray) {
       try {
         const categoryId = await getCategoryId(recipe.category)
-
-        // Demo mode
-        if (!isFirebaseConfigured) {
-          const category = demoCategories.find(c => c.id === categoryId)
-          const newRecipe = normalizeRecipe({
-            id: getNextRecipeId(),
-            name: recipe.name,
-            url: recipe.url || '',
-            category_id: categoryId,
-            notes: recipe.notes || '',
-            categories: category ? { id: category.id, name: category.name } : null
-          })
-          recipes.value.push(newRecipe)
-          results.success++
-          continue
-        }
-
-        await firebase.addRecipe({
+        const created = await addRecipe({
           name: recipe.name,
           url: recipe.url || '',
           category_id: categoryId,
           notes: recipe.notes || ''
         })
-        results.success++
+
+        if (created) {
+          results.success++
+        } else {
+          results.failed++
+        }
       } catch (e) {
         results.failed++
         console.error('Error importing recipe:', recipe.name, e)
       }
-    }
-
-    // Refresh recipes list after import
-    if (isFirebaseConfigured) {
-      await fetchRecipes()
     }
 
     return results
@@ -200,34 +225,19 @@ export function useRecipes() {
       })
     }
 
-    updateLocalRecipe(recipe.id, {
-      ingredients_status: 'pending',
-      ingredients_error: null
-    })
+    const updates = {
+      ingredients_status: 'failed',
+      ingredients_error: 'Automatic extraction is currently unavailable.',
+      ingredients_updated_at: new Date().toISOString()
+    }
 
-    if (!isFirebaseConfigured) {
-      return updateLocalRecipe(recipe.id, {
-        ingredients_status: 'failed',
-        ingredients_error: 'Firebase not configured.',
-        ingredients_updated_at: new Date().toISOString()
-      })
+    if (!isFirebaseConfigured || !db) {
+      return updateLocalRecipe(recipe.id, updates)
     }
 
     try {
-      const data = await firebase.invokeExtractIngredients(recipe.url)
-
-      const ingredients = Array.isArray(data?.ingredients) ? data.ingredients : []
-      const status = ingredients.length ? 'success' : 'failed'
-      const ingredientsError = status === 'success' ? null : (data?.error || 'No ingredients found.')
-
-      const updated = await firebase.updateRecipe(recipe.id, {
-        ingredients,
-        ingredients_status: status,
-        ingredients_error: ingredientsError,
-        ingredients_updated_at: new Date().toISOString()
-      })
-
-      return updateLocalRecipe(recipe.id, updated)
+      await updateDoc(doc(db, 'recipes', String(recipe.id)), updates)
+      return updateLocalRecipe(recipe.id, updates)
     } catch (e) {
       const message = e?.message || 'Ingredient extraction failed.'
       return updateLocalRecipe(recipe.id, {
@@ -243,30 +253,22 @@ export function useRecipes() {
       ? ingredients.map(item => String(item).trim()).filter(Boolean)
       : []
 
-    if (!isFirebaseConfigured) {
-      return updateLocalRecipe(recipe.id, {
-        ingredients: normalized,
-        ingredients_status: normalized.length ? 'success' : 'failed',
-        ingredients_error: normalized.length ? null : 'No ingredients provided.',
-        ingredients_updated_at: new Date().toISOString()
-      })
+    const updates = {
+      ingredients: normalized,
+      ingredients_status: normalized.length ? 'success' : 'failed',
+      ingredients_error: normalized.length ? null : 'No ingredients provided.',
+      ingredients_updated_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    }
+
+    if (!isFirebaseConfigured || !db) {
+      return updateLocalRecipe(recipe.id, updates)
     }
 
     try {
-      updateLocalRecipe(recipe.id, {
-        ingredients: normalized,
-        ingredients_status: normalized.length ? 'success' : 'failed',
-        ingredients_error: normalized.length ? null : 'No ingredients provided.',
-        ingredients_updated_at: new Date().toISOString()
-      })
-
-      const updated = await firebase.updateRecipe(recipe.id, {
-        ingredients: normalized,
-        ingredients_status: normalized.length ? 'success' : 'failed',
-        ingredients_error: normalized.length ? null : 'No ingredients provided.',
-        ingredients_updated_at: new Date().toISOString()
-      })
-      return updateLocalRecipe(recipe.id, updated)
+      updateLocalRecipe(recipe.id, updates)
+      await updateDoc(doc(db, 'recipes', String(recipe.id)), updates)
+      return updateLocalRecipe(recipe.id, updates)
     } catch (e) {
       const message = e?.message || 'Failed to save ingredients.'
       return updateLocalRecipe(recipe.id, {

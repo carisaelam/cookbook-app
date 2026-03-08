@@ -9,6 +9,10 @@ defineProps({
   loading: {
     type: Boolean,
     default: false
+  },
+  canEdit: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -47,6 +51,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
             v-for="recipe in group.recipes"
             :key="recipe.id"
             :recipe="recipe"
+            :can-edit="canEdit"
             @edit="$emit('edit', $event)"
             @delete="$emit('delete', $event)"
             @import-ingredients="$emit('import-ingredients', $event)"

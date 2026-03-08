@@ -7,29 +7,33 @@ function findButtonByText(wrapper, text) {
 }
 
 describe('AppHeader', () => {
-  it('shows the demo banner when demo mode is enabled', () => {
+  it('shows read-only banner when firebase is configured and user cannot edit', () => {
     const wrapper = mount(AppHeader, {
       props: {
-        isDemoMode: true
+        isFirebaseConfigured: true,
+        canEdit: false
       }
     })
 
     expect(wrapper.find('.demo-banner').exists()).toBe(true)
   })
 
-  it('emits actions when buttons are clicked', async () => {
+  it('emits actions when editor buttons are clicked', async () => {
     const wrapper = mount(AppHeader, {
       props: {
         isBackfilling: false,
-        isDemoMode: false
+        canEdit: true,
+        isFirebaseConfigured: true
       }
     })
 
+    await findButtonByText(wrapper, 'Sign In').trigger('click')
     await findButtonByText(wrapper, 'Import').trigger('click')
     await findButtonByText(wrapper, 'Export Backup').trigger('click')
     await findButtonByText(wrapper, 'Backfill Ingredients').trigger('click')
     await findButtonByText(wrapper, 'Add Recipe').trigger('click')
 
+    expect(wrapper.emitted('auth-action')).toHaveLength(1)
     expect(wrapper.emitted('import-recipes')).toHaveLength(1)
     expect(wrapper.emitted('export-backup')).toHaveLength(1)
     expect(wrapper.emitted('backfill-ingredients')).toHaveLength(1)
@@ -39,7 +43,8 @@ describe('AppHeader', () => {
   it('disables the backfill button when backfilling', () => {
     const wrapper = mount(AppHeader, {
       props: {
-        isBackfilling: true
+        isBackfilling: true,
+        canEdit: true
       }
     })
 

@@ -4,9 +4,21 @@ defineProps({
     type: Boolean,
     default: false
   },
-  isDemoMode: {
+  canEdit: {
     type: Boolean,
     default: false
+  },
+  isFirebaseConfigured: {
+    type: Boolean,
+    default: false
+  },
+  isAuthLoading: {
+    type: Boolean,
+    default: false
+  },
+  userEmail: {
+    type: String,
+    default: ''
   },
   theme: {
     type: String,
@@ -20,14 +32,15 @@ defineEmits([
   'backfill-ingredients',
   'export-backup',
   'toggle-theme',
+  'auth-action',
   'reset-filters'
 ])
 </script>
 
 <template>
   <header class="app-header">
-    <div v-if="isDemoMode" class="demo-banner">
-      Demo mode: local data only
+    <div v-if="isFirebaseConfigured && !canEdit" class="demo-banner">
+      Read-only mode. Sign in with an approved editor account to add or edit recipes.
     </div>
     <div class="container header-content">
       <h1 class="app-title">
@@ -36,6 +49,9 @@ defineEmits([
         </button>
       </h1>
       <div class="header-actions">
+        <button v-if="isFirebaseConfigured" class="btn btn-secondary" :disabled="isAuthLoading" @click="$emit('auth-action')">
+          {{ isAuthLoading ? 'Loading...' : (userEmail ? 'Sign Out' : 'Sign In') }}
+        </button>
         <button class="btn btn-secondary" @click="$emit('toggle-theme')">
           <svg v-if="theme === 'dark'" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="12" cy="12" r="5"/>
@@ -53,7 +69,7 @@ defineEmits([
           </svg>
           {{ theme === 'dark' ? 'Light Mode' : 'Dark Mode' }}
         </button>
-        <button class="btn btn-secondary" @click="$emit('import-recipes')">
+        <button v-if="canEdit" class="btn btn-secondary" @click="$emit('import-recipes')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
             <polyline points="17 8 12 3 7 8"/>
@@ -70,6 +86,7 @@ defineEmits([
           Export Backup
         </button>
         <button
+          v-if="canEdit"
           class="btn btn-secondary"
           :disabled="isBackfilling"
           @click="$emit('backfill-ingredients')"
@@ -80,7 +97,7 @@ defineEmits([
           </svg>
           {{ isBackfilling ? 'Backfilling...' : 'Backfill Ingredients' }}
         </button>
-        <button class="btn btn-primary" @click="$emit('add-recipe')">
+        <button v-if="canEdit" class="btn btn-primary" @click="$emit('add-recipe')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <line x1="12" y1="5" x2="12" y2="19"/>
             <line x1="5" y1="12" x2="19" y2="12"/>
