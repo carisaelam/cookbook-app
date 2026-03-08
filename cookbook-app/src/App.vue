@@ -209,6 +209,12 @@ function handleExportBackup() {
   URL.revokeObjectURL(url)
 }
 
+function handleResetFilters() {
+  searchQuery.value = ''
+  selectedCategoryId.value = null
+  selectedStatus.value = 'all'
+}
+
 // Initialize
 onMounted(async () => {
   stopAuthSubscription = initAuth()
@@ -343,15 +349,15 @@ onUnmounted(() => {
 
 .main-content {
   flex: 1;
-  padding-bottom: 2rem;
+  padding: 1.1rem 0 2.75rem;
 }
 
 .filters-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
-  margin: 1.5rem 0 1rem;
+  gap: 1.35rem;
+  margin: 1.9rem 0 1.35rem;
   flex-wrap: wrap;
 }
 
@@ -370,8 +376,8 @@ onUnmounted(() => {
 }
 
 .chefbot-cta {
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 3.25rem;
+  margin-bottom: 1.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -409,6 +415,7 @@ onUnmounted(() => {
   .filters-section {
     flex-direction: column;
     align-items: stretch;
+    margin-top: 1.35rem;
   }
 
   .filter-info {

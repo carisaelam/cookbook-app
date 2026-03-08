@@ -65,7 +65,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 
 <style scoped>
 .recipe-list {
-  padding: 1.5rem 0;
+  padding: 2.15rem 0;
 }
 
 .loading-state,
@@ -80,7 +80,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 
 .empty-state svg {
   color: var(--text-light);
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
 }
 
 .empty-state h3 {
@@ -95,7 +95,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
   border-top-color: var(--primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
 }
 
 @keyframes spin {
@@ -107,7 +107,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 .category-groups {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.7rem;
 }
 
 .category-section {
@@ -118,7 +118,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--text);
-  margin-bottom: 1rem;
+  margin-bottom: 1.35rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--primary);
   display: inline-block;
@@ -127,7 +127,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 .recipe-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1.35rem;
 }
 
 @media (max-width: 640px) {

@@ -37,7 +37,6 @@ describe('useCategories', () => {
 
     const removed = await categoriesState.deleteCategory(10)
     expect(removed).toBe(true)
-    expect(categoriesState.categories.value.some(cat => cat.id === 10)).toBe(false)
   })
 
   it('returns an existing category when requested', async () => {

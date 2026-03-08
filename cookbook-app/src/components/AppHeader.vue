@@ -42,7 +42,11 @@ defineEmits([
       Read-only mode. Sign in with an approved editor account to add or edit recipes.
     </div>
     <div class="container header-content">
-      <h1 class="app-title">C & J Cookbook</h1>
+      <h1 class="app-title">
+        <button class="app-title-button" type="button" @click="$emit('reset-filters')">
+          C & J Cookbook
+        </button>
+      </h1>
       <div class="header-actions">
         <button v-if="isFirebaseConfigured" class="btn btn-secondary" :disabled="isAuthLoading" @click="$emit('auth-action')">
           {{ isAuthLoading ? 'Loading...' : (userEmail ? 'Sign Out' : 'Sign In') }}
@@ -108,7 +112,7 @@ defineEmits([
 .app-header {
   background-color: var(--surface);
   border-bottom: 1px solid var(--border);
-  padding: 0.75rem 0 1rem;
+  padding: 1.1rem 0 1.35rem;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -127,7 +131,7 @@ defineEmits([
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.35rem;
 }
 
 .app-title {
@@ -136,9 +140,29 @@ defineEmits([
   color: var(--text);
 }
 
+.app-title-button {
+  appearance: none;
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.app-title-button:hover {
+  text-decoration: underline;
+}
+
+.app-title-button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
 .header-actions {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.7rem;
   flex-wrap: wrap;
 }
 

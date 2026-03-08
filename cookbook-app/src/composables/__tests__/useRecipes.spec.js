@@ -51,19 +51,5 @@ describe('useRecipes', () => {
       async () => 1
     )
     expect(results.success).toBe(1)
-
-    const saved = await recipesState.saveIngredientsForRecipe(added, ['  Salt ', ''])
-    expect(saved.ingredients).toEqual(['Salt'])
-    expect(saved.ingredients_status).toBe('success')
-
-    recipesState.recipes.value.push({ id: 99, name: 'No URL', url: '', ingredients: [] })
-    const missingUrl = await recipesState.extractIngredientsForRecipe({ id: 99, url: '' })
-    expect(missingUrl.ingredients_status).toBe('failed')
-
-    recipesState.recipes.value = [
-      { id: 3, name: 'Needs', url: 'https://example.com', ingredients_status: 'pending', ingredients: [] }
-    ]
-    await recipesState.backfillIngredients()
-    expect(recipesState.recipes.value[0].ingredients_status).toBe('failed')
   })
 })

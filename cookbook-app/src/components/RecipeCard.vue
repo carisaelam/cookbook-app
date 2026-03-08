@@ -125,14 +125,13 @@ function saveIngredients() {
           {{ recipe.ingredients_error }}
         </p>
         <button
-          class="ingredients-toggle text-sm"
+          class="btn btn-primary btn-sm ingredients-toggle"
           type="button"
           :aria-expanded="isIngredientsOpen"
           :aria-controls="`ingredients-panel-${recipe.id}`"
           @click="isIngredientsOpen = !isIngredientsOpen"
         >
-          <span class="ingredients-toggle-label">Ingredients</span>
-          <span class="text-muted text-xs">{{ isIngredientsOpen ? 'Hide' : 'Show' }}</span>
+          {{ isIngredientsOpen ? 'Hide ingredients' : 'Show ingredients' }}
         </button>
         <div v-if="isIngredientsOpen" :id="`ingredients-panel-${recipe.id}`" class="ingredients-panel">
           <ul
@@ -204,7 +203,7 @@ function saveIngredients() {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 1rem;
+  gap: 1.35rem;
   transition: box-shadow 0.15s ease;
 }
 
@@ -221,7 +220,7 @@ function saveIngredients() {
   font-weight: 600;
   color: var(--text);
   display: block;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.55rem;
 }
 
 .recipe-link {
@@ -245,20 +244,20 @@ function saveIngredients() {
 }
 
 .recipe-meta {
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.55rem;
 }
 
 .ingredients-block {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.55rem;
 }
 
 .ingredients-status {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 .status-pill {
@@ -302,43 +301,23 @@ function saveIngredients() {
 }
 
 .ingredients-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0;
-  background: none;
-  border: none;
-  color: var(--text);
-  cursor: pointer;
-}
-
-.ingredients-toggle:hover {
-  color: var(--primary);
+  align-self: flex-start;
 }
 
 .ingredients-panel {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0.55rem;
 }
 
 .ingredients-edit-btn {
   align-self: flex-start;
-  padding: 0.35rem 0.75rem;
-  min-height: 2rem;
-  background-color: var(--primary);
-  color: #fff;
-}
-
-.ingredients-edit-btn:hover {
-  background-color: var(--primary-hover);
-  color: #fff;
 }
 
 .ingredients-editor {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.55rem;
 }
 
 .recipe-domain {
@@ -350,7 +329,7 @@ function saveIngredients() {
 }
 
 .recipe-notes {
-  margin-top: 0.5rem;
+  margin-top: 0.8rem;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -359,7 +338,7 @@ function saveIngredients() {
 
 .recipe-actions {
   display: flex;
-  gap: 0.25rem;
+  gap: 0.55rem;
   align-items: center;
   opacity: 0;
   transition: opacity 0.15s ease;
