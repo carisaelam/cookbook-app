@@ -9,7 +9,7 @@ import {
   query,
   updateDoc
 } from 'firebase/firestore'
-import { db, isFirebaseConfigured } from '../lib/firebase'
+import { db, isFirebaseConfigured, extractIngredientsFromUrl } from '../lib/firebase'
 import { demoRecipes, demoCategories, getNextRecipeId } from '../lib/demoData'
 import { loadSeedData } from '../lib/demoSeed'
 
@@ -225,24 +225,43 @@ export function useRecipes() {
       })
     }
 
-    const updates = {
-      ingredients_status: 'failed',
-      ingredients_error: 'Automatic extraction is currently unavailable.',
-      ingredients_updated_at: new Date().toISOString()
-    }
-
     if (!isFirebaseConfigured || !db) {
-      return updateLocalRecipe(recipe.id, updates)
+      return updateLocalRecipe(recipe.id, {
+        ingredients_status: 'failed',
+        ingredients_error: 'Firebase is not configured.',
+        ingredients_updated_at: new Date().toISOString()
+      })
     }
 
     try {
+      updateLocalRecipe(recipe.id, {
+        ingredients_status: 'pending',
+        ingredients_error: null
+      })
+
+      const extraction = await extractIngredientsFromUrl(recipe.url)
+      const extracted = Array.isArray(extraction?.ingredients) ? extraction.ingredients : []
+      const normalized = extracted
+        .map(item => String(item).trim())
+        .filter(Boolean)
+      const hasExisting = Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0
+      const hasExtracted = normalized.length > 0
+
+      const updates = {
+        ingredients: hasExtracted ? normalized : (hasExisting ? recipe.ingredients : []),
+        ingredients_status: hasExtracted ? 'success' : (hasExisting ? 'success' : 'failed'),
+        ingredients_error: hasExtracted ? null : (hasExisting ? null : (extraction?.error || 'No ingredients found.')),
+        ingredients_updated_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
+      }
+
       await updateDoc(doc(db, 'recipes', String(recipe.id)), updates)
       return updateLocalRecipe(recipe.id, updates)
     } catch (e) {
       const message = e?.message || 'Ingredient extraction failed.'
       return updateLocalRecipe(recipe.id, {
-        ingredients_status: 'failed',
-        ingredients_error: message,
+        ingredients_status: Array.isArray(recipe.ingredients) && recipe.ingredients.length ? 'success' : 'failed',
+        ingredients_error: Array.isArray(recipe.ingredients) && recipe.ingredients.length ? null : message,
         ingredients_updated_at: new Date().toISOString()
       })
     }

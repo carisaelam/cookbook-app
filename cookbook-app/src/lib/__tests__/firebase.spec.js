@@ -20,6 +20,10 @@ async function loadFirebaseModule({ env, initializeAppImpl }) {
   vi.doMock('firebase/firestore', () => ({
     getFirestore: vi.fn(() => ({ db: true }))
   }))
+  vi.doMock('firebase/functions', () => ({
+    getFunctions: vi.fn(() => ({ functions: true })),
+    httpsCallable: vi.fn(() => vi.fn().mockResolvedValue({ data: {} }))
+  }))
 
   return await import('../firebase.js')
 }
