@@ -48,19 +48,20 @@ The script upserts:
 - all categories into `categories/{id}`
 - all recipes into `recipes/{id}`
 
-## 6) Enable automatic ingredient extraction (Option 2)
-Ingredient extraction runs through a Firebase Cloud Function named `extractIngredients`.
+## 6) Enable automatic ingredient extraction on Netlify
+Ingredient extraction runs through a Netlify Function at:
+- `/.netlify/functions/extract-ingredients`
 
-Prereqs:
-- Billing-enabled Firebase project (required for Cloud Functions deployments).
-- In `functions/`, install dependencies:
-  - `cd functions && npm install`
+No Firebase Blaze upgrade is required for this path.
 
-Deploy:
-- `firebase deploy --only functions`
+Deploy notes:
+- Keep the function in `netlify/functions/extract-ingredients.js`.
+- Netlify deploy will bundle this function automatically.
+- If you need a custom extractor endpoint, set:
+  - `VITE_EXTRACT_INGREDIENTS_ENDPOINT=https://your-endpoint`
 
 How it works:
-- On recipe save, the app calls `extractIngredients` with the recipe URL.
+- On recipe save, the app posts `{ url }` to the extractor endpoint.
 - The function fetches the recipe page and tries JSON-LD `recipeIngredient` first.
 - Fallback parsing checks common ingredient selectors from page HTML.
 - Existing successful ingredients are preserved if extraction fails.
