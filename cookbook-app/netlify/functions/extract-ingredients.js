@@ -101,6 +101,90 @@ function extractIngredientsFromHtml(html) {
   return normalizeIngredientLines(fallback)
 }
 
+function extractIngredientsFromText(rawText) {
+  const lines = String(rawText || '')
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean)
+
+  if (!lines.length) return []
+
+  const headingPattern = /^#{1,6}\s+|^[A-Z][A-Za-z0-9\s]{2,30}:?$/
+  let inIngredients = false
+  const collected = []
+
+  for (const line of lines) {
+    const lower = line.toLowerCase()
+
+    if (!inIngredients) {
+      if (lower === 'ingredients' || lower === 'ingredient' || lower.startsWith('ingredients:')) {
+        inIngredients = true
+      }
+      continue
+    }
+
+    if (lower.includes('instructions') || lower.includes('directions') || lower.includes('method')) {
+      break
+    }
+
+    if (headingPattern.test(line) && collected.length > 0) {
+      break
+    }
+
+    const cleaned = line
+      .replace(/^[-*•]\s+/, '')
+      .replace(/^\d+[.)]\s+/, '')
+      .trim()
+
+    if (cleaned) {
+      collected.push(cleaned)
+    }
+  }
+
+  return normalizeIngredientLines(collected)
+}
+
+async function fetchWithFallback(url, requestId) {
+  const primary = await fetch(url, {
+    redirect: 'follow',
+    headers: {
+      'user-agent': 'Mozilla/5.0 (compatible; CookbookBot/1.0; +https://github.com/carisaelam/cookbook-app)',
+      'accept-language': 'en-US,en;q=0.9',
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      referer: 'https://www.google.com/'
+    }
+  })
+
+  if (primary.ok) {
+    return { response: primary, source: 'primary' }
+  }
+
+  if ([401, 403, 429].includes(primary.status)) {
+    const fallbackUrl = `https://r.jina.ai/http://${url.replace(/^https?:\/\//, '')}`
+    logInfo('Extractor attempting fallback fetch', {
+      requestId,
+      url,
+      fallbackUrl,
+      primaryStatus: primary.status
+    })
+
+    const fallback = await fetch(fallbackUrl, {
+      redirect: 'follow',
+      headers: {
+        'user-agent': 'Mozilla/5.0 (compatible; CookbookBot/1.0; +https://github.com/carisaelam/cookbook-app)'
+      }
+    })
+
+    if (fallback.ok) {
+      return { response: fallback, source: 'fallback' }
+    }
+
+    return { response: fallback, source: 'fallback', primaryStatus: primary.status }
+  }
+
+  return { response: primary, source: 'primary' }
+}
+
 export async function handler(event) {
   const requestId = createRequestId()
 
@@ -147,24 +231,23 @@ export async function handler(event) {
   try {
     logInfo('Extractor fetch started', { requestId, url: parsedUrl.toString() })
 
-    const response = await fetch(parsedUrl.toString(), {
-      redirect: 'follow',
-      headers: {
-        'user-agent': 'Mozilla/5.0 (compatible; CookbookBot/1.0; +https://github.com/carisaelam/cookbook-app)'
-      }
-    })
+    const { response, source, primaryStatus } = await fetchWithFallback(parsedUrl.toString(), requestId)
 
     if (!response.ok) {
       logError('Extractor failed to fetch source URL', {
         requestId,
         url: parsedUrl.toString(),
-        status: response.status
+        status: response.status,
+        source,
+        primaryStatus: primaryStatus || null
       })
       return json({ error: `Failed to fetch recipe page (${response.status}).`, ingredients: [] }, 502, requestId)
     }
 
-    const html = await response.text()
-    const ingredients = extractIngredientsFromHtml(html)
+    const content = await response.text()
+    const ingredients = source === 'fallback'
+      ? extractIngredientsFromText(content)
+      : extractIngredientsFromHtml(content)
 
     if (!ingredients.length) {
       logInfo('Extractor completed with no ingredients', { requestId, url: parsedUrl.toString() })
