@@ -279,7 +279,7 @@ onUnmounted(() => {
               <option value="all">All</option>
               <option value="success">Ready</option>
               <option value="pending">Pending</option>
-              <option value="failed">Failed</option>
+              <option value="failed">Manual Needed</option>
             </select>
           </div>
         </div>

@@ -76,7 +76,7 @@ describe('RecipeCard', () => {
     })
 
     expect(wrapper.find('.no-link').exists()).toBe(true)
-    expect(wrapper.find('.status-pill').text()).toBe('Failed')
+    expect(wrapper.find('.status-pill').text()).toBe('Manual Needed')
     expect(wrapper.find('.text-muted.text-xs').text()).toContain('Missing URL')
 
     await wrapper.find('.ingredients-toggle').trigger('click')

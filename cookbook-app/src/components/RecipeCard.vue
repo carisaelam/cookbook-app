@@ -27,7 +27,7 @@ function getDomain(url) {
 const statusLabels = {
   pending: 'Pending',
   success: 'Ready',
-  failed: 'Failed'
+  failed: 'Manual Needed'
 }
 
 function getIngredientsStatus(recipe) {

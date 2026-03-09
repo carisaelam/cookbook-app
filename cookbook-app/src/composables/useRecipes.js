@@ -13,6 +13,8 @@ import { db, isFirebaseConfigured, extractIngredientsFromUrl } from '../lib/fire
 import { demoRecipes, demoCategories, getNextRecipeId } from '../lib/demoData'
 import { loadSeedData } from '../lib/demoSeed'
 
+const MANUAL_INGREDIENTS_MESSAGE = 'Auto-extract unavailable for this site. Add ingredients manually.'
+
 function toIsoString(value) {
   if (!value) return null
   if (typeof value === 'string') return value
@@ -228,7 +230,7 @@ export function useRecipes() {
     if (!isFirebaseConfigured || !db) {
       return updateLocalRecipe(recipe.id, {
         ingredients_status: 'failed',
-        ingredients_error: 'Firebase is not configured.',
+        ingredients_error: MANUAL_INGREDIENTS_MESSAGE,
         ingredients_updated_at: new Date().toISOString()
       })
     }
@@ -260,7 +262,7 @@ export function useRecipes() {
       const updates = {
         ingredients: hasExtracted ? normalized : (hasExisting ? recipe.ingredients : []),
         ingredients_status: hasExtracted ? 'success' : (hasExisting ? 'success' : 'failed'),
-        ingredients_error: hasExtracted ? null : (hasExisting ? null : (extraction?.error || 'No ingredients found.')),
+        ingredients_error: hasExtracted ? null : (hasExisting ? null : MANUAL_INGREDIENTS_MESSAGE),
         ingredients_updated_at: new Date().toISOString(),
         updated_at: new Date().toISOString()
       }
@@ -271,7 +273,7 @@ export function useRecipes() {
       const message = e?.message || 'Ingredient extraction failed.'
       return updateLocalRecipe(recipe.id, {
         ingredients_status: Array.isArray(recipe.ingredients) && recipe.ingredients.length ? 'success' : 'failed',
-        ingredients_error: Array.isArray(recipe.ingredients) && recipe.ingredients.length ? null : message,
+        ingredients_error: Array.isArray(recipe.ingredients) && recipe.ingredients.length ? null : MANUAL_INGREDIENTS_MESSAGE,
         ingredients_updated_at: new Date().toISOString()
       })
     }
