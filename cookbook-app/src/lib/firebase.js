@@ -75,20 +75,26 @@ export async function extractIngredientsFromUrl(url) {
 
     const payload = await response.json().catch(() => ({}))
     if (!response.ok) {
+      if (payload?.request_id) {
+        console.warn(`Extractor request failed (request_id=${payload.request_id})`)
+      }
       return {
         ingredients: [],
-        error: payload?.error || `Extractor request failed (${response.status}).`
+        error: payload?.error || `Extractor request failed (${response.status}).`,
+        request_id: payload?.request_id || null
       }
     }
 
     return {
       ingredients: Array.isArray(payload?.ingredients) ? payload.ingredients : [],
-      error: payload?.error || null
+      error: payload?.error || null,
+      request_id: payload?.request_id || null
     }
   } catch (e) {
     return {
       ingredients: [],
-      error: e?.message || 'Extractor request failed.'
+      error: e?.message || 'Extractor request failed.',
+      request_id: null
     }
   }
 }

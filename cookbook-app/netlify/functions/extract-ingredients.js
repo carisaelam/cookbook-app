@@ -1,6 +1,18 @@
 import * as cheerio from 'cheerio'
 
-function json(body, statusCode = 200) {
+function createRequestId() {
+  return `req_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`
+}
+
+function logInfo(message, meta = {}) {
+  console.log(JSON.stringify({ level: 'info', message, ...meta }))
+}
+
+function logError(message, meta = {}) {
+  console.error(JSON.stringify({ level: 'error', message, ...meta }))
+}
+
+function json(body, statusCode = 200, requestId = null) {
   return {
     statusCode,
     headers: {
@@ -9,7 +21,10 @@ function json(body, statusCode = 200) {
       'access-control-allow-methods': 'POST, OPTIONS',
       'access-control-allow-headers': 'content-type'
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify({
+      ...body,
+      request_id: requestId || body.request_id || null
+    })
   }
 }
 
@@ -87,38 +102,51 @@ function extractIngredientsFromHtml(html) {
 }
 
 export async function handler(event) {
+  const requestId = createRequestId()
+
   if (event.httpMethod === 'OPTIONS') {
-    return json({ ok: true }, 200)
+    return json({ ok: true }, 200, requestId)
   }
 
   if (event.httpMethod !== 'POST') {
-    return json({ error: 'Method not allowed.' }, 405)
+    logError('Extractor received unsupported method', { requestId, method: event.httpMethod })
+    return json({ error: 'Method not allowed.' }, 405, requestId)
   }
 
   let payload = {}
   try {
     payload = event.body ? JSON.parse(event.body) : {}
   } catch {
-    return json({ error: 'Invalid JSON body.' }, 400)
+    logError('Extractor received invalid JSON body', { requestId })
+    return json({ error: 'Invalid JSON body.' }, 400, requestId)
   }
 
   const url = String(payload.url || '').trim()
   if (!url) {
-    return json({ error: 'URL is required.' }, 400)
+    logError('Extractor request missing URL', { requestId })
+    return json({ error: 'URL is required.' }, 400, requestId)
   }
 
   let parsedUrl
   try {
     parsedUrl = new URL(url)
   } catch {
-    return json({ error: 'Invalid URL.' }, 400)
+    logError('Extractor request has invalid URL', { requestId, url })
+    return json({ error: 'Invalid URL.' }, 400, requestId)
   }
 
   if (!['http:', 'https:'].includes(parsedUrl.protocol)) {
-    return json({ error: 'URL must be http or https.' }, 400)
+    logError('Extractor request has invalid URL protocol', {
+      requestId,
+      protocol: parsedUrl.protocol,
+      url: parsedUrl.toString()
+    })
+    return json({ error: 'URL must be http or https.' }, 400, requestId)
   }
 
   try {
+    logInfo('Extractor fetch started', { requestId, url: parsedUrl.toString() })
+
     const response = await fetch(parsedUrl.toString(), {
       redirect: 'follow',
       headers: {
@@ -127,18 +155,34 @@ export async function handler(event) {
     })
 
     if (!response.ok) {
-      return json({ error: `Failed to fetch recipe page (${response.status}).`, ingredients: [] }, 502)
+      logError('Extractor failed to fetch source URL', {
+        requestId,
+        url: parsedUrl.toString(),
+        status: response.status
+      })
+      return json({ error: `Failed to fetch recipe page (${response.status}).`, ingredients: [] }, 502, requestId)
     }
 
     const html = await response.text()
     const ingredients = extractIngredientsFromHtml(html)
 
     if (!ingredients.length) {
-      return json({ ingredients: [], error: 'No ingredients found from this recipe URL.' }, 200)
+      logInfo('Extractor completed with no ingredients', { requestId, url: parsedUrl.toString() })
+      return json({ ingredients: [], error: 'No ingredients found from this recipe URL.' }, 200, requestId)
     }
 
-    return json({ ingredients, error: null }, 200)
+    logInfo('Extractor completed successfully', {
+      requestId,
+      url: parsedUrl.toString(),
+      ingredientCount: ingredients.length
+    })
+    return json({ ingredients, error: null }, 200, requestId)
   } catch (e) {
-    return json({ ingredients: [], error: e?.message || 'Extraction failed.' }, 500)
+    logError('Extractor crashed while processing URL', {
+      requestId,
+      url: parsedUrl.toString(),
+      error: e?.message || 'Unknown error'
+    })
+    return json({ ingredients: [], error: e?.message || 'Extraction failed.' }, 500, requestId)
   }
 }

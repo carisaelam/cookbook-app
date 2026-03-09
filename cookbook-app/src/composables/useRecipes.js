@@ -246,6 +246,16 @@ export function useRecipes() {
         .filter(Boolean)
       const hasExisting = Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0
       const hasExtracted = normalized.length > 0
+      const requestId = extraction?.request_id || null
+
+      if (!hasExtracted) {
+        console.warn('Ingredient extraction returned no ingredients', {
+          recipeId: recipe.id,
+          recipeUrl: recipe.url,
+          requestId,
+          reason: extraction?.error || 'No ingredients found'
+        })
+      }
 
       const updates = {
         ingredients: hasExtracted ? normalized : (hasExisting ? recipe.ingredients : []),
