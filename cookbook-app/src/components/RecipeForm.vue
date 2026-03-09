@@ -36,6 +36,9 @@ const form = ref({
 
 const isEditing = computed(() => !!props.recipe)
 const title = computed(() => isEditing.value ? 'Edit Recipe' : 'Add Recipe')
+const sortedCategories = computed(() => {
+  return [...props.categories].sort((a, b) => a.name.localeCompare(b.name))
+})
 
 watch(() => props.isOpen, (isOpen) => {
   if (isOpen) {
@@ -117,7 +120,7 @@ function handleSubmit() {
           :disabled="isSaving"
         >
           <option :value="null">Select a category...</option>
-          <option v-for="cat in categories" :key="cat.id" :value="cat.id">
+          <option v-for="cat in sortedCategories" :key="cat.id" :value="cat.id">
             {{ cat.name }}
           </option>
         </select>

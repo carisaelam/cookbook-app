@@ -11,7 +11,6 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 
 const localValue = ref(props.modelValue)
-let debounceTimer = null
 
 watch(() => props.modelValue, (newVal) => {
   localValue.value = newVal
@@ -19,12 +18,7 @@ watch(() => props.modelValue, (newVal) => {
 
 function handleInput(event) {
   localValue.value = event.target.value
-
-  // Debounce the emit
-  clearTimeout(debounceTimer)
-  debounceTimer = setTimeout(() => {
-    emit('update:modelValue', localValue.value)
-  }, 300)
+  emit('update:modelValue', localValue.value)
 }
 
 function clearSearch() {

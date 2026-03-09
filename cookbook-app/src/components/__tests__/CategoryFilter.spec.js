@@ -4,8 +4,8 @@ import CategoryFilter from '../CategoryFilter.vue'
 
 describe('CategoryFilter', () => {
   const categories = [
-    { id: 1, name: 'Salads' },
-    { id: 2, name: 'Soups' }
+    { id: 2, name: 'Soups' },
+    { id: 1, name: 'Salads' }
   ]
 
   it('marks the active filter and emits selections', async () => {
@@ -19,6 +19,8 @@ describe('CategoryFilter', () => {
     const buttons = wrapper.findAll('button')
     expect(buttons[0].classes()).not.toContain('active')
     expect(buttons[2].classes()).toContain('active')
+    expect(buttons[1].text()).toBe('Salads')
+    expect(buttons[2].text()).toBe('Soups')
 
     await buttons[1].trigger('click')
     expect(wrapper.emitted('select')[0]).toEqual([1])

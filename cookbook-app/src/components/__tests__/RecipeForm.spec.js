@@ -5,8 +5,8 @@ import RecipeForm from '../RecipeForm.vue'
 
 describe('RecipeForm', () => {
   const categories = [
-    { id: 1, name: 'Salads' },
-    { id: 2, name: 'Soups' }
+    { id: 2, name: 'Soups' },
+    { id: 1, name: 'Salads' }
   ]
 
   const baseProps = {
@@ -90,5 +90,20 @@ describe('RecipeForm', () => {
       url: 'https://example.com'
     })
     expect(wrapper.emitted('save')[0][0].id).toBeUndefined()
+  })
+
+  it('renders categories alphabetically in the dropdown', () => {
+    const wrapper = mount(RecipeForm, {
+      props: baseProps,
+      global: {
+        stubs: {
+          BaseModal: modalStub
+        }
+      }
+    })
+
+    const options = wrapper.findAll('#category option')
+    expect(options[1].text()).toBe('Salads')
+    expect(options[2].text()).toBe('Soups')
   })
 })

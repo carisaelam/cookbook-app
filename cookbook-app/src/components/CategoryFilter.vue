@@ -1,16 +1,22 @@
 <script setup>
-defineProps({
+import { computed } from 'vue'
+
+defineEmits(['select'])
+
+const props = defineProps({
   categories: {
     type: Array,
     required: true
   },
   selectedCategoryId: {
-    type: [Number, null],
+    type: [Number, String, null],
     default: null
   }
 })
 
-defineEmits(['select'])
+const sortedCategories = computed(() => {
+  return [...props.categories].sort((a, b) => a.name.localeCompare(b.name))
+})
 </script>
 
 <template>
@@ -23,7 +29,7 @@ defineEmits(['select'])
       All
     </button>
     <button
-      v-for="category in categories"
+      v-for="category in sortedCategories"
       :key="category.id"
       class="filter-btn"
       :class="{ active: selectedCategoryId === category.id }"
