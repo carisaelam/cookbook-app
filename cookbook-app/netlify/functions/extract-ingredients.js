@@ -102,26 +102,57 @@ function extractIngredientsFromHtml(html) {
 }
 
 function extractIngredientsFromText(rawText) {
-  const lines = String(rawText || '')
-    .split('\n')
-    .map(line => line.trim())
-    .filter(Boolean)
+  const lines = String(rawText || '').split('\n')
 
   if (!lines.length) return []
 
   const headingPattern = /^#{1,6}\s+|^[A-Z][A-Za-z0-9\s]{2,30}:?$/
+  const ingredientsHeadingPattern = /^#{1,6}\s*ingredients\s*$|^ingredients\s*:?\s*$/i
+  const navigationLinkPattern = /^\[[^\]]+\]\((https?:\/\/|\/).+\)$/
+  const quantityLeadPattern = /^(\d+([\/.]\d+)?|\d+\s+\d+\/\d+|[¼½¾⅓⅔⅛⅜⅝⅞])\b/
+  const unitPattern = /\b(cup|cups|tbsp|tablespoon|tablespoons|tsp|teaspoon|teaspoons|oz|ounce|ounces|lb|pound|pounds|g|kg|ml|l|clove|cloves|can|cans|package|packages|sheet|sheets|pinch)\b/i
+
+  function unwrapMarkdownLink(line) {
+    const match = line.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (!match) return line
+    return match[1].trim()
+  }
+
+  function isLikelyIngredientLine(line) {
+    if (!line) return false
+    if (navigationLinkPattern.test(line)) return false
+
+    const normalized = unwrapMarkdownLink(line)
+    if (normalized.length < 2) return false
+    if (/^(view all|occasions|ingredients a-z)$/i.test(normalized)) return false
+    if (quantityLeadPattern.test(normalized)) return true
+    if (unitPattern.test(normalized)) return true
+    if (/,/.test(normalized)) return true
+    return normalized.split(' ').length >= 3
+  }
+
   let inIngredients = false
+  let blankLinesAfterStart = 0
   const collected = []
 
-  for (const line of lines) {
+  for (const rawLine of lines) {
+    const line = rawLine.trim()
     const lower = line.toLowerCase()
 
     if (!inIngredients) {
-      if (lower === 'ingredients' || lower === 'ingredient' || lower.startsWith('ingredients:')) {
+      if (ingredientsHeadingPattern.test(line)) {
         inIngredients = true
+        blankLinesAfterStart = 0
       }
       continue
     }
+
+    if (!line) {
+      blankLinesAfterStart += 1
+      if (blankLinesAfterStart >= 2 && collected.length > 0) break
+      continue
+    }
+    blankLinesAfterStart = 0
 
     if (lower.includes('instructions') || lower.includes('directions') || lower.includes('method')) {
       break
@@ -136,7 +167,7 @@ function extractIngredientsFromText(rawText) {
       .replace(/^\d+[.)]\s+/, '')
       .trim()
 
-    if (cleaned) {
+    if (isLikelyIngredientLine(cleaned)) {
       collected.push(cleaned)
     }
   }
