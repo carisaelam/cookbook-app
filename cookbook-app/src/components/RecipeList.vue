@@ -45,7 +45,12 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
         :key="group.category.id || 'uncategorized'"
         class="category-section"
       >
-        <h2 class="category-title">{{ group.category.name }}</h2>
+        <div class="category-heading">
+          <h2 class="category-title">{{ group.category.name }}</h2>
+          <p class="category-count text-sm text-muted">
+            {{ group.recipes.length }} {{ group.recipes.length === 1 ? 'recipe' : 'recipes' }}
+          </p>
+        </div>
         <div class="recipe-grid">
           <RecipeCard
             v-for="recipe in group.recipes"
@@ -65,7 +70,7 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
 
 <style scoped>
 .recipe-list {
-  padding: 2.15rem 0;
+  padding: 1.75rem 0 2.25rem;
 }
 
 .loading-state,
@@ -114,23 +119,39 @@ defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
   animation: slideUp 0.3s ease;
 }
 
+.category-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
 .category-title {
-  font-size: 1.125rem;
-  font-weight: 600;
+  font-size: 1.2rem;
+  font-weight: 700;
   color: var(--text);
-  margin-bottom: 1.35rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary);
-  display: inline-block;
+  letter-spacing: -0.03em;
+}
+
+.category-count {
+  white-space: nowrap;
 }
 
 .recipe-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1.35rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.95rem;
 }
 
 @media (max-width: 640px) {
+  .category-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0.8rem;
+  }
+
   .recipe-grid {
     grid-template-columns: 1fr;
   }

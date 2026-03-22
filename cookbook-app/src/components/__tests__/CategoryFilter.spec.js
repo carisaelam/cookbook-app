@@ -8,24 +8,22 @@ describe('CategoryFilter', () => {
     { id: 1, name: 'Salads' }
   ]
 
-  it('marks the active filter and emits selections', async () => {
+  it('marks active filters and emits multi-select actions', async () => {
     const wrapper = mount(CategoryFilter, {
       props: {
         categories,
-        selectedCategoryId: 2
+        selectedCategoryIds: [2]
       }
     })
 
     const buttons = wrapper.findAll('button')
+    expect(wrapper.text()).toContain('Choose any combination.')
     expect(buttons[0].classes()).not.toContain('active')
-    expect(buttons[2].classes()).toContain('active')
-    expect(buttons[1].text()).toBe('Salads')
-    expect(buttons[2].text()).toBe('Soups')
-
-    await buttons[1].trigger('click')
-    expect(wrapper.emitted('select')[0]).toEqual([1])
+    expect(buttons[1].classes()).toContain('active')
+    expect(buttons[0].text()).toBe('Salads')
+    expect(buttons[1].text()).toBe('Soups')
 
     await buttons[0].trigger('click')
-    expect(wrapper.emitted('select')[1]).toEqual([null])
+    expect(wrapper.emitted('toggle')[0]).toEqual([1])
   })
 })

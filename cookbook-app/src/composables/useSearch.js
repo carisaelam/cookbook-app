@@ -1,24 +1,40 @@
 import { ref, computed } from 'vue'
 
+function normalizeSearchText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
+    .replace(/\s+/g, ' ')
+}
+
+function matchesSearch(query, recipe) {
+  const normalizedQuery = normalizeSearchText(query)
+  if (!normalizedQuery) return true
+
+  const searchableFields = [
+    recipe.name,
+    recipe.notes
+  ]
+
+  return searchableFields.some(field => normalizeSearchText(field).includes(normalizedQuery))
+}
+
 export function useSearch(recipes, categories) {
   const searchQuery = ref('')
-  const selectedCategoryId = ref(null)
+  const selectedCategoryIds = ref([])
 
   const filteredRecipes = computed(() => {
     let result = recipes.value
 
     // Filter by category
-    if (selectedCategoryId.value) {
-      result = result.filter(r => r.category_id === selectedCategoryId.value)
+    if (selectedCategoryIds.value.length) {
+      result = result.filter(r => selectedCategoryIds.value.includes(r.category_id))
     }
 
     // Filter by search query
     if (searchQuery.value.trim()) {
-      const query = searchQuery.value.toLowerCase().trim()
-      result = result.filter(r =>
-        r.name.toLowerCase().includes(query) ||
-        (r.notes && r.notes.toLowerCase().includes(query))
-      )
+      result = result.filter(r => matchesSearch(searchQuery.value, r))
     }
 
     return result
@@ -67,12 +83,12 @@ export function useSearch(recipes, categories) {
 
   function clearFilters() {
     searchQuery.value = ''
-    selectedCategoryId.value = null
+    selectedCategoryIds.value = []
   }
 
   return {
     searchQuery,
-    selectedCategoryId,
+    selectedCategoryIds,
     filteredRecipes,
     recipesByCategory,
     totalRecipes,

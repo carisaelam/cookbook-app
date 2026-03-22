@@ -37,7 +37,7 @@ const {
 
 const {
   searchQuery,
-  selectedCategoryId,
+  selectedCategoryIds,
   recipesByCategory,
   filteredCount,
   totalRecipes
@@ -216,8 +216,17 @@ function handleExportBackup() {
 
 function handleResetFilters() {
   searchQuery.value = ''
-  selectedCategoryId.value = null
+  selectedCategoryIds.value = []
   selectedStatus.value = 'all'
+}
+
+function handleToggleCategory(categoryId) {
+  if (selectedCategoryIds.value.includes(categoryId)) {
+    selectedCategoryIds.value = selectedCategoryIds.value.filter(id => id !== categoryId)
+    return
+  }
+
+  selectedCategoryIds.value = [...selectedCategoryIds.value, categoryId]
 }
 
 // Initialize
@@ -244,6 +253,7 @@ onUnmounted(() => {
 <template>
   <div class="app">
     <AppHeader
+      @reset-filters="handleResetFilters"
       @add-recipe="handleAddRecipe"
       @import-recipes="showImportModal = true"
       @backfill-ingredients="handleBackfillIngredients"
@@ -260,50 +270,66 @@ onUnmounted(() => {
 
     <main class="main-content">
       <div class="container">
-        <!-- Filters -->
-        <div class="filters-section">
-          <RecipeSearch v-model="searchQuery" />
-
-          <div class="filter-info text-muted text-sm">
-            <span v-if="searchQuery || selectedCategoryId">
-              Showing {{ filteredCount }} of {{ totalRecipes }} recipes
-            </span>
-            <span v-else>
-              {{ totalRecipes }} recipes
-            </span>
+        <section class="controls-panel fade-in" aria-label="Recipe controls">
+          <div class="controls-main">
+            <RecipeSearch v-model="searchQuery" />
           </div>
 
-          <div class="status-filter">
-            <label for="status-filter" class="text-muted text-sm">Status</label>
-            <select id="status-filter" v-model="selectedStatus" class="input select">
-              <option value="all">All</option>
-              <option value="success">Ready</option>
-              <option value="pending">Pending</option>
-              <option value="failed">Manual Needed</option>
-            </select>
+          <div class="controls-footer">
+            <CategoryFilter
+              v-if="categories.length > 0"
+              :categories="categories"
+              :selected-category-ids="selectedCategoryIds"
+              @select="selectedCategoryIds = $event"
+              @toggle="handleToggleCategory"
+            />
+
+            <div class="status-filter">
+              <label for="status-filter" class="filter-label">Ingredient status</label>
+              <select id="status-filter" v-model="selectedStatus" class="input select">
+                <option value="all">All recipes</option>
+                <option value="success">Ready</option>
+                <option value="pending">Pending</option>
+                <option value="failed">Manual needed</option>
+              </select>
+            </div>
+
+            <div class="controls-meta">
+              <p class="filter-info text-muted text-sm">
+                <span v-if="searchQuery || selectedCategoryIds.length || selectedStatus !== 'all'">
+                  Showing {{ filteredCount }} of {{ totalRecipes }} recipes
+                </span>
+                <span v-else>
+                  Browse all {{ totalRecipes }} recipes
+                </span>
+              </p>
+              <button
+                class="btn btn-secondary btn-reset"
+                type="button"
+                :disabled="!searchQuery && selectedCategoryIds.length === 0 && selectedStatus === 'all'"
+                @click="handleResetFilters"
+              >
+                Reset filters
+              </button>
+            </div>
           </div>
-        </div>
+        </section>
 
-        <CategoryFilter
-          v-if="categories.length > 0"
-          :categories="categories"
-          :selected-category-id="selectedCategoryId"
-          @select="selectedCategoryId = $event"
-        />
-
-        <div class="chefbot-cta">
+        <div class="utility-rail">
+          <p class="utility-copy text-sm text-muted">
+            Need help planning a menu or adapting a recipe?
+          </p>
           <a
-            class="button chefbot-button"
+            class="chefbot-button"
             href="https://app.scroll.ai/webchat/FgFJ7S5n0P"
             target="_blank"
             rel="noopener noreferrer"
           >
             <span class="chefbot-icon" aria-hidden="true">🍳</span>
-            <span>Ask Chefbot</span>
+            <span>Open Chefbot</span>
           </a>
         </div>
 
-        <!-- Recipe List -->
         <RecipeList
           :recipes-by-category="filteredRecipesByCategory"
           :loading="recipesLoading || categoriesLoading"
@@ -354,61 +380,98 @@ onUnmounted(() => {
 
 .main-content {
   flex: 1;
-  padding: 1.1rem 0 2.75rem;
+  padding: 1rem 0 3rem;
 }
 
-.filters-section {
+.controls-panel {
+  display: grid;
+  gap: 0.9rem;
+  padding: 1rem;
+  border-radius: 1.25rem;
+  background: linear-gradient(180deg, var(--surface-soft), var(--surface));
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(12px);
+}
+
+.controls-main {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.controls-footer {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.controls-meta {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.35rem;
-  margin: 1.9rem 0 1.35rem;
   flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .filter-info {
-  white-space: nowrap;
+  min-width: 0;
 }
 
 .status-filter {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+  display: grid;
+  gap: 0.4rem;
 }
 
-.status-filter .input {
-  min-width: 160px;
+.filter-label {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.chefbot-cta {
-  margin-top: 3.25rem;
-  margin-bottom: 1.1rem;
+.btn-reset {
+  min-height: 44px;
+}
+
+.utility-rail {
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+  flex-wrap: wrap;
 }
 
 .chefbot-button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  min-height: 46px;
+  padding: 0.75rem 1.15rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 0.01em;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  color: var(--text);
+  background: var(--surface-strong);
+  border: 1px solid var(--border);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+  box-shadow: var(--shadow);
 }
 
 .chefbot-button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+  border-color: rgba(181, 126, 66, 0.45);
+  box-shadow: var(--shadow-lg);
 }
 
 .chefbot-button:active {
   transform: translateY(0);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.14);
+}
+
+.chefbot-button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .chefbot-icon {
@@ -416,18 +479,28 @@ onUnmounted(() => {
   line-height: 1;
 }
 
+@media (min-width: 768px) {
+  .controls-main {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 640px) {
-  .filters-section {
-    flex-direction: column;
+  .main-content {
+    padding-top: 0.75rem;
+  }
+
+  .controls-panel {
+    padding: 0.85rem;
+    border-radius: 1rem;
+  }
+
+  .controls-meta {
     align-items: stretch;
-    margin-top: 1.35rem;
   }
 
-  .filter-info {
-    text-align: center;
-  }
-
-  .status-filter {
+  .btn-reset,
+  .chefbot-button {
     width: 100%;
   }
 }

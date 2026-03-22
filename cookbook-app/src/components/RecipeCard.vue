@@ -1,131 +1,229 @@
 <script setup>
-import { ref } from 'vue'
+import { ref } from 'vue';
 
 const props = defineProps({
   recipe: {
     type: Object,
-    required: true
+    required: true,
   },
   canEdit: {
     type: Boolean,
-    default: false
-  }
-})
+    default: false,
+  },
+});
 
-const emit = defineEmits(['edit', 'delete', 'import-ingredients', 'save-ingredients'])
+const emit = defineEmits([
+  'edit',
+  'delete',
+  'import-ingredients',
+  'save-ingredients',
+]);
 
 function getDomain(url) {
-  if (!url) return null
+  if (!url) return null;
   try {
-    const hostname = new URL(url).hostname
-    return hostname.replace('www.', '')
+    const hostname = new URL(url).hostname;
+    return hostname.replace('www.', '');
   } catch {
-    return null
+    return null;
   }
 }
 
 const statusLabels = {
   pending: 'Pending',
   success: 'Ready',
-  failed: 'Manual Needed'
-}
+  failed: 'Manual Needed',
+};
 
 function getIngredientsStatus(recipe) {
-  if (recipe.ingredients_status) return recipe.ingredients_status
-  if (Array.isArray(recipe.ingredients) && recipe.ingredients.length) return 'success'
-  if (!recipe.url) return 'failed'
-  return 'pending'
+  if (recipe.ingredients_status) return recipe.ingredients_status;
+  if (Array.isArray(recipe.ingredients) && recipe.ingredients.length)
+    return 'success';
+  if (!recipe.url) return 'failed';
+  return 'pending';
 }
 
 function getStatusLabel(status) {
-  return statusLabels[status] || 'Pending'
+  return statusLabels[status] || 'Pending';
 }
 
 function formatUpdatedAt(value) {
-  if (!value) return null
-  const date = new Date(value)
-  if (Number.isNaN(date.getTime())) return null
-  return date.toLocaleDateString()
+  if (!value) return null;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString();
 }
 
-const isEditingIngredients = ref(false)
-const manualIngredients = ref('')
-const isIngredientsOpen = ref(false)
+const isEditingIngredients = ref(false);
+const manualIngredients = ref('');
+const isIngredientsOpen = ref(false);
 
 function hasIngredients(recipe) {
-  return Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0
+  return Array.isArray(recipe.ingredients) && recipe.ingredients.length > 0;
 }
 
 function toggleIngredientsEditor() {
-  if (!props.canEdit) return
+  if (!props.canEdit) return;
   if (!isEditingIngredients.value) {
     manualIngredients.value = hasIngredients(props.recipe)
       ? props.recipe.ingredients.join('\n')
-      : ''
-    isIngredientsOpen.value = true
+      : '';
+    isIngredientsOpen.value = true;
   }
-  isEditingIngredients.value = !isEditingIngredients.value
+  isEditingIngredients.value = !isEditingIngredients.value;
 }
 
 function saveIngredients() {
-  if (!props.canEdit) return
+  if (!props.canEdit) return;
   const items = manualIngredients.value
     .split('\n')
-    .map(line => line.trim())
-    .filter(Boolean)
+    .map((line) => line.trim())
+    .filter(Boolean);
 
   emit('save-ingredients', {
     recipe: props.recipe,
-    ingredients: items
-  })
-  isEditingIngredients.value = false
+    ingredients: items,
+  });
+  isEditingIngredients.value = false;
 }
 </script>
 
 <template>
   <div class="recipe-card card">
-    <div class="recipe-content">
-      <a
-        v-if="recipe.url"
-        :href="recipe.url"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="recipe-name recipe-link"
-      >
-        {{ recipe.name }}
-        <svg class="external-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
-          <polyline points="15 3 21 3 21 9"/>
-          <line x1="10" y1="14" x2="21" y2="3"/>
-        </svg>
-      </a>
-      <span v-else class="recipe-name">{{ recipe.name }}</span>
+    <div class="recipe-topline">
+      <div class="recipe-content">
+        <a
+          v-if="recipe.url"
+          :href="recipe.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="recipe-name recipe-link"
+        >
+          {{ recipe.name }}
+          <svg
+            class="external-icon"
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+            />
+            <polyline points="15 3 21 3 21 9" />
+            <line x1="10" y1="14" x2="21" y2="3" />
+          </svg>
+        </a>
+        <span v-else class="recipe-name">{{ recipe.name }}</span>
 
-      <div class="recipe-meta">
-        <span v-if="recipe.url" class="recipe-domain text-muted text-sm">
-          {{ getDomain(recipe.url) }}
-        </span>
-        <span v-else class="no-link text-muted text-sm">No link added</span>
+        <div class="recipe-meta">
+          <span v-if="recipe.url" class="recipe-domain text-muted text-sm">
+            {{ getDomain(recipe.url) }}
+          </span>
+          <span v-else class="no-link text-muted text-sm">No link added</span>
+        </div>
       </div>
 
-      <p v-if="recipe.notes" class="recipe-notes text-muted text-sm">
-        {{ recipe.notes }}
-      </p>
-
-      <div class="ingredients-block">
-        <div class="ingredients-status text-sm">
-          <span class="status-pill" :class="`status-${getIngredientsStatus(recipe)}`">
-            {{ getStatusLabel(getIngredientsStatus(recipe)) }}
-          </span>
-          <span v-if="formatUpdatedAt(recipe.ingredients_updated_at)" class="text-muted text-xs">
-            Updated {{ formatUpdatedAt(recipe.ingredients_updated_at) }}
-          </span>
-        </div>
-        <p v-if="getIngredientsStatus(recipe) === 'failed' && recipe.ingredients_error" class="text-muted text-xs">
-          {{ recipe.ingredients_error }}
-        </p>
+      <div class="recipe-actions">
         <button
-          class="btn btn-primary btn-sm ingredients-toggle"
+          v-if="canEdit"
+          class="btn btn-ghost btn-sm action-btn"
+          :disabled="!recipe.url || getIngredientsStatus(recipe) === 'pending'"
+          @click="$emit('import-ingredients', recipe)"
+          aria-label="Import ingredients"
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 3v12" />
+            <path d="M8 11l4 4 4-4" />
+            <path d="M4 21h16" />
+          </svg>
+        </button>
+        <button
+          v-if="canEdit"
+          class="btn btn-ghost btn-sm action-btn"
+          @click="emit('edit', recipe)"
+          aria-label="Edit recipe"
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+            />
+            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+          </svg>
+        </button>
+        <button
+          v-if="canEdit"
+          class="btn btn-ghost btn-sm action-btn"
+          @click="emit('delete', recipe)"
+          aria-label="Delete recipe"
+        >
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="3 6 5 6 21 6" />
+            <path
+              d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <p v-if="recipe.notes" class="recipe-notes text-muted text-sm">
+      {{ recipe.notes }}
+    </p>
+
+    <div class="ingredients-block">
+      <div class="ingredients-status text-sm">
+        <span
+          v-if="formatUpdatedAt(recipe.ingredients_updated_at)"
+          class="text-muted text-xs"
+        >
+          Updated {{ formatUpdatedAt(recipe.ingredients_updated_at) }}
+        </span>
+        <span class="text-muted text-xs">
+          {{
+            Array.isArray(recipe.ingredients) ? recipe.ingredients.length : 0
+          }}
+          {{
+            Array.isArray(recipe.ingredients) && recipe.ingredients.length === 1
+              ? 'ingredient'
+              : 'ingredients'
+          }}
+        </span>
+      </div>
+      <p
+        v-if="
+          getIngredientsStatus(recipe) === 'failed' && recipe.ingredients_error
+        "
+        class="text-muted text-xs"
+      >
+        {{ recipe.ingredients_error }}
+      </p>
+      <div class="ingredients-actions">
+        <button
+          class="btn btn-secondary btn-sm ingredients-toggle"
           type="button"
           :aria-expanded="isIngredientsOpen"
           :aria-controls="`ingredients-panel-${recipe.id}`"
@@ -133,17 +231,6 @@ function saveIngredients() {
         >
           {{ isIngredientsOpen ? 'Hide ingredients' : 'Show ingredients' }}
         </button>
-        <div v-if="isIngredientsOpen" :id="`ingredients-panel-${recipe.id}`" class="ingredients-panel">
-          <ul
-            v-if="Array.isArray(recipe.ingredients) && recipe.ingredients.length"
-            class="ingredients-list text-sm"
-          >
-            <li v-for="(item, index) in recipe.ingredients" :key="`${recipe.id}-ingredient-${index}`">
-              {{ item }}
-            </li>
-          </ul>
-          <p v-else class="text-muted text-xs">No ingredients yet.</p>
-        </div>
 
         <button
           v-if="canEdit"
@@ -151,76 +238,97 @@ function saveIngredients() {
           type="button"
           @click="toggleIngredientsEditor"
         >
-          {{ isEditingIngredients ? 'Cancel' : (hasIngredients(recipe) ? 'Edit ingredients' : 'Add ingredients') }}
+          {{
+            isEditingIngredients
+              ? 'Cancel'
+              : hasIngredients(recipe)
+                ? 'Edit ingredients'
+                : 'Add ingredients'
+          }}
         </button>
+      </div>
+      <div
+        v-if="isIngredientsOpen"
+        :id="`ingredients-panel-${recipe.id}`"
+        class="ingredients-panel"
+      >
+        <ul
+          v-if="Array.isArray(recipe.ingredients) && recipe.ingredients.length"
+          class="ingredients-list text-sm"
+        >
+          <li
+            v-for="(item, index) in recipe.ingredients"
+            :key="`${recipe.id}-ingredient-${index}`"
+          >
+            {{ item }}
+          </li>
+        </ul>
+        <p v-else class="text-muted text-xs">No ingredients yet.</p>
+      </div>
 
-        <div v-if="isEditingIngredients" class="ingredients-editor">
-          <textarea
-            v-model="manualIngredients"
-            class="input textarea"
-            rows="4"
-            placeholder="One ingredient per line"
-          ></textarea>
-          <button class="btn btn-secondary btn-sm" type="button" @click="saveIngredients">
-            Save ingredients
-          </button>
-        </div>
+      <div v-if="isEditingIngredients" class="ingredients-editor">
+        <textarea
+          v-model="manualIngredients"
+          class="input textarea"
+          rows="4"
+          placeholder="One ingredient per line"
+        ></textarea>
+        <button
+          class="btn btn-secondary btn-sm"
+          type="button"
+          @click="saveIngredients"
+        >
+          Save ingredients
+        </button>
       </div>
     </div>
 
-    <div class="recipe-actions">
-      <button
-        v-if="canEdit"
-        class="btn btn-ghost btn-sm"
-        :disabled="!recipe.url || getIngredientsStatus(recipe) === 'pending'"
-        @click="$emit('import-ingredients', recipe)"
-        aria-label="Import ingredients"
+    <div class="card-footer">
+      <span
+        class="status-pill"
+        :class="`status-${getIngredientsStatus(recipe)}`"
       >
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M12 3v12"/>
-          <path d="M8 11l4 4 4-4"/>
-          <path d="M4 21h16"/>
-        </svg>
-      </button>
-      <button v-if="canEdit" class="btn btn-ghost btn-sm" @click="emit('edit', recipe)" aria-label="Edit recipe">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
-          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
-        </svg>
-      </button>
-      <button v-if="canEdit" class="btn btn-ghost btn-sm" @click="emit('delete', recipe)" aria-label="Delete recipe">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="3 6 5 6 21 6"/>
-          <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>
-        </svg>
-      </button>
+        {{ getStatusLabel(getIngredientsStatus(recipe)) }}
+      </span>
     </div>
   </div>
 </template>
 
 <style scoped>
 .recipe-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.35rem;
-  transition: box-shadow 0.15s ease;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.95rem;
+  padding: 1.05rem;
+  border: 1px solid var(--border);
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    border-color 0.18s ease;
 }
 
 .recipe-card:hover {
   box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+  border-color: rgba(181, 126, 66, 0.35);
+}
+
+.recipe-topline {
+  display: contents;
 }
 
 .recipe-content {
-  flex: 1;
+  grid-column: 1;
   min-width: 0;
 }
 
 .recipe-name {
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 700;
   color: var(--text);
   display: block;
-  margin-bottom: 0.55rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
 }
 
 .recipe-link {
@@ -244,20 +352,24 @@ function saveIngredients() {
 }
 
 .recipe-meta {
-  margin-bottom: 0.55rem;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  flex-wrap: wrap;
 }
 
 .ingredients-block {
-  margin-top: 0.8rem;
+  grid-column: 1;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
+  gap: 0.65rem;
 }
 
 .ingredients-status {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.55rem;
+  flex-wrap: wrap;
 }
 
 .status-pill {
@@ -300,6 +412,13 @@ function saveIngredients() {
   margin-top: 0.2rem;
 }
 
+.ingredients-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .ingredients-toggle {
   align-self: flex-start;
 }
@@ -320,6 +439,15 @@ function saveIngredients() {
   gap: 0.55rem;
 }
 
+.card-footer {
+  grid-column: 2;
+  align-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-top: 0.15rem;
+}
+
 .recipe-domain {
   display: inline-block;
 }
@@ -337,20 +465,39 @@ function saveIngredients() {
 }
 
 .recipe-actions {
+  grid-column: 2;
+  grid-row: 1 / span 2;
   display: flex;
-  gap: 0.55rem;
+  flex-direction: column;
+  gap: 0.4rem;
   align-items: center;
-  opacity: 0;
-  transition: opacity 0.15s ease;
+  align-self: start;
+  flex-shrink: 0;
+  justify-content: flex-start;
 }
 
-.recipe-card:hover .recipe-actions {
-  opacity: 1;
+.action-btn {
+  min-width: 40px;
+  min-height: 40px;
+  border-radius: 999px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+  .recipe-card {
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
   .recipe-actions {
-    opacity: 1;
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .card-footer {
+    grid-column: 2;
   }
 }
 </style>

@@ -19,7 +19,7 @@ async function mountApp({ canEdit = true, recipesByCategoryOverride } = {}) {
   const saveIngredientsForRecipe = vi.fn()
   const getOrCreateCategory = vi.fn()
   const searchQuery = ref('')
-  const selectedCategoryId = ref(null)
+  const selectedCategoryIds = ref([])
 
   vi.doMock('../lib/firebase', () => ({
     isFirebaseConfigured: true
@@ -59,7 +59,7 @@ async function mountApp({ canEdit = true, recipesByCategoryOverride } = {}) {
   vi.doMock('../composables/useSearch', () => ({
     useSearch: () => ({
       searchQuery,
-      selectedCategoryId,
+      selectedCategoryIds,
       recipesByCategory: ref(recipesByCategoryOverride || [
         {
           category: { id: '1', name: 'Salads' },

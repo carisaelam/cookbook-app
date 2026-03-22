@@ -16,12 +16,12 @@ describe('useSearch', () => {
   it('filters by category and search term', () => {
     const {
       searchQuery,
-      selectedCategoryId,
+      selectedCategoryIds,
       filteredRecipes,
       filteredCount
     } = useSearch(recipes, categories)
 
-    selectedCategoryId.value = 1
+    selectedCategoryIds.value = [1]
     expect(filteredRecipes.value).toHaveLength(1)
 
     searchQuery.value = 'kale'
@@ -31,6 +31,20 @@ describe('useSearch', () => {
     expect(filteredCount.value).toBe(0)
   })
 
+  it('matches punctuation and spacing variations', () => {
+    const fuzzyRecipes = ref([
+      { id: 1, name: 'Chick-fil-A Sandwich', notes: '', category_id: 1 },
+      { id: 2, name: 'Chicken Salad', notes: 'chick fil a style', category_id: 1 },
+      { id: 3, name: 'Pasta', notes: '', category_id: 1 }
+    ])
+
+    const { searchQuery, filteredRecipes } = useSearch(fuzzyRecipes, categories)
+
+    searchQuery.value = 'chick fil a'
+
+    expect(filteredRecipes.value.map(recipe => recipe.id)).toEqual([1, 2])
+  })
+
   it('groups recipes by category with uncategorized last', () => {
     const { recipesByCategory } = useSearch(recipes, categories)
 
@@ -38,14 +52,22 @@ describe('useSearch', () => {
     expect(groupNames).toEqual(['Soups', 'Salads', 'Uncategorized'])
   })
 
+  it('supports multiple selected categories', () => {
+    const { selectedCategoryIds, filteredRecipes } = useSearch(recipes, categories)
+
+    selectedCategoryIds.value = [1, 2]
+
+    expect(filteredRecipes.value.map(recipe => recipe.id)).toEqual([1, 2])
+  })
+
   it('clears filters', () => {
-    const { searchQuery, selectedCategoryId, clearFilters } = useSearch(recipes, categories)
+    const { searchQuery, selectedCategoryIds, clearFilters } = useSearch(recipes, categories)
 
     searchQuery.value = 'salad'
-    selectedCategoryId.value = 2
+    selectedCategoryIds.value = [2]
     clearFilters()
 
     expect(searchQuery.value).toBe('')
-    expect(selectedCategoryId.value).toBe(null)
+    expect(selectedCategoryIds.value).toEqual([])
   })
 })
